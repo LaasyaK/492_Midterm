@@ -1,0 +1,4 @@
+header = ["Year", "Month", "Expense_category", "Expense_name", "Amount_Due", "Due_Date", "Amount_Paid", "Payment_Date", "Payment_Method"]
+Expense_category = ["CCBill", "Utility", "Mortgage", "Misc"]
+Expense_name = ["House1", "House2", "Water", "Internet", "Power", "Amex"]
+Payment_Method = ["Bank draft", "Check"]
