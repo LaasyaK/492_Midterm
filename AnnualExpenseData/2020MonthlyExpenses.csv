@@ -1,0 +1,3 @@
+Year,Month,Expense_category,Expense_name,Amount_Due,Due_Date,Amount_Paid,Payment_Date,Payment_Method
+2020,June,Utility,Water,,,,Utility
+2020,June,Mortgage,House1,,,,CCBill

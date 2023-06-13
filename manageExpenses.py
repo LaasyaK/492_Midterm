@@ -4,19 +4,13 @@
     # make func to check validity
 
 
-from add_a_new_expense import add_new_expense                   # option a
-from search_mod_expense import search_mod_expense               # option b
-from add_category_name_method import add_categ_name_method      # option c
-
-# import datetime
-# import calendar
-# import string
-# import csv
-import os
-import re
+from MainMenuOptions import add_new_expense                     # option a
+from search_mod_expense import search_mod_expense               # option b in progress
+from MainMenuOptions import add_categ_name_method               # option c
 
 
-# ------------------------------------------------- Main Menu Program -------------------------------------------------_
+
+# ------------------------------------------------- Main Menu Program --------------------------------------------------
 prog_stop = False
 while not(prog_stop):
 
