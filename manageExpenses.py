@@ -1,13 +1,16 @@
-# When the application is run (python manageExpenses.py), it will give user the following options which you can
-    # print to the screen,  The user can choose one by entering a to e
-
 # sanity: check for any other inputs than those given and make sure not crashed
+# TODO OPTION B AND D
 
+from add_a_new_expense import add_new_expense                   # option a
+from add_category_name_method import add_categ_name_method      # option c
 
-import datetime
-import calendar
+# import datetime
+# import calendar
+# import string
+# import csv
+import os
 import re
-import csv
+
 
 
 # getting the header, expense_category, names, and payment_method info from DefaultsRecord
@@ -33,241 +36,75 @@ with open("DefaultsRecord.txt", 'r', newline='') as defaults:
 
 # -------------------------------------------- Main Menu Options Functions ---------------------------------------------
 
-# adds a new expense row to any existing year datasheet or new datasheet # TODO 4 OF THEM
-def add_new_expense():              # TODO GIVE OPTION TO EXIT TO MAIN MENU AFTER EACH INPUT TO AVOID CRASH
-    print("\nAdd a expense Function __________________________________________________________________________________")
+# searches and modifies an expense in a datasheet
+def search_mod_expense():
+    print("\nSearch/Modify an expense Function _______________________________________________________________________")
 
-    # get and validate year
-    not_valid = True
-    while not_valid:
-        year_change = input("What year do you want to add the expense to? : ")
-        try:
-            if int(year_change) < 1980 or int(year_change) > (datetime.date.today().year):
-                print("Can't input data before 1980 and after the current year or an invalid year, try again.\n")
-            # elif year_change
-            else:
-                not_valid = False
-        except ValueError:
-            print("Can't input data before 1980 and after the current year or an invalid year, try again.\n")
+    # ask user for search criteria in a format
+    print("Type in what search criteria you want to search for by typing Field:Data, Field:Data, Field:Data, etc.")
+    print("For example: Year:2020, Month:May, Expense_Category:Utility, Payment_Method:Check (make sure if field has 2 "
+          "words put an '_' between the words, capitalize field and data entries, and add a ',' to every new field "
+          "entry, or type 'main' to return to the main menu.)")
+    search_crit = input("Type here: ")
 
-    # get and validate month
-    not_valid = True
-    while not_valid:
-        month_change = input("What month do you want to add the expense to? (no abbreviations and must capitalize first"
-                             " letter of the month): ")
-        for month in range(0, 12):
-            if month_change == calendar.month_name[month]:
-                not_valid = False
-                break
-        if not_valid:
-            print("Can't input an invalid month name, try again.\n")
+    # getting search object from user input
+    year_input = re.search(r"Year:(.*?)(?=,)", search_crit)
+    month_input = re.search(r"Month:(.*?)(?=,)", search_crit)
+    categ_input = re.search(r"Expense_Category:(.*?)(?=,)", search_crit)
+    name_input = re.search(r"Expense_Name:(.*?)(?=,)", search_crit)
+    due_input = re.search(r"Amount_Due:(.*?)(?=,)", search_crit)
+    date_input = re.search(r"Due_Date:(.*?)(?=,)", search_crit)
+    paid_input = re.search(r"Amount_Paid:(.*?)(?=,)", search_crit)
+    pay_due_input = re.search(r"Payment_Date:(.*?)(?=,)", search_crit)
+    method_input = re.search(r"Payment_Method:(.*?)(?=,)", search_crit)
 
-    # user chooses expense_category from option menu
-    not_valid = True
-    while not_valid:
+    # if user types main, function stops
+    if search_crit == "main":
+        return 0
 
-        # printing the menu
-        print("You will be shown a menu of the available expense categories.")
-        for categ in range(0, len(Expense_category)):
-            print(str(categ) + "  " + str(Expense_category[categ]))
+    # if year data exists, find if a file for that year exists
+    if not(year_input == "None"):
+        year_search = year_input.group(1)
+        current_folder = os.path.dirname(os.path.abspath(__file__))
+        filename = current_folder + "\\AnnualExpenseData\\" + str(year_search) + "MonthlyExpenses.csv"
+        if not(os.path.exists(filename)):
+            print("The year entered doesn't have data. Being directed to the main menu.")
+            return 0
 
-        # getting the user option
-        categ_change = input("Which expense category do you want to add the expense to? (type in the number associated): ")
-        try:
-            if not (int(categ_change) in range(0, len(Expense_category))):
-                print("Can't input an input that isn't the associated 1 digit number, try again.\n")
-            else:
-                not_valid = False
-        except ValueError:
-            print("Can't input an input that isn't the associated 1 digit number, try again.\n")
-    categ_change = Expense_category[int(categ_change)]
+    # TODO ASK PROF HOW TO GET MINTH DATA W/O YEAR DATA
+    if not(month_input == "None"):
+        month_search = month_input.group(1)
 
-    # user chooses expense_name from option menu
-    not_valid = True
-    while not_valid:
+    if not(categ_input == "None"):
+        categ_search = categ_input.group(1)
 
-        # printing the menu
-        print("You will be shown a menu of the available expense names.")
-        for name in range(0, len(Expense_name)):
-            print(str(name) + "  " + str(Expense_name[name]))
+    if not(name_input == "None"):
+        name_search = name_input.group(1)
 
-        # getting the user option
-        name_change = input("Which expense name do you want to add the expense to? (type in the number associated): ")
-        try:
-            if not (int(name_change) in range(0, len(Expense_name))):
-                print("Can't input an input that isn't the associated 1 digit number, try again.\n")
-            else:
-                not_valid = False
-        except ValueError:
-            print("Can't input an input that isn't the associated 1 digit number, try again.\n")
-    name_change = Expense_name[int(name_change)]
+    if not(due_input == "None"):
+        due_search = due_input.group(1)
 
-    # user enters amount due
-    not_valid = True
-    while not_valid:
-        due_change = input("How much is due for the expense? : ")
-        try:
-            if float(due_change) < 0:
-                print("Can't input a non-number or a negative number, try again.\n")
-            else:
-                not_valid = False
-        except ValueError:
-            print("Can't input a non-number or a negative number, try again.\n")
-    due_change = round(float(due_change), 2)
+    if not(date_input == "None"):
+        date_search = date_input.group(1)
 
-    # user may or may not enter due date    # TODO THIS PART CRASHES IF NIT INOUT CORRECTLY, NEED TO CATCH ERROR
-    not_valid = True
-    date_change = input("What due date do you want to change the expense to? (enter in mm/dd/yyyy format or press enter"
-                        " to skip): ")
-    if date_change == "":
-        not_valid = False
-    else:
-        try:
-            while not_valid:
-                dates = re.search(r'(\d+)\/', date_change)
-                month = dates.group(1)
-                dates = re.search(r'\/(\d+)\/', date_change)
-                day = dates.group(1)
-                dates = re.findall(r'\/(\d+)', date_change)
-                year = dates[1]
-                month_range = calendar.monthrange(int(year), int(month))
-                if int(month) > 12 or int(month) < 1:
-                    print("Can't enter an invalid date or an unreasonable date, try again.\n")
-                elif int(year) < 1980 or int(year) > 3050:
-                    print("Can't enter an invalid date or an unreasonable date, try again.\n")
-                elif int(day) > int(month_range[1]) or int(day) < 0:
-                    print("Can't enter an invalid date or an unreasonable date, try again.\n")
-                else:
-                    not_valid = False
-        except ValueError:
-                print("Can't enter an invalid date or an unreasonable date, try again.\n")
-        except TypeError:
-                print("Can't enter an invalid date or an unreasonable date, try again.\n")
-        date_change = str(month) + "/" + str(day) + "/" + str(year)
+    if not(paid_input == "None"):
+        paid_search = paid_input.group(1)
 
-    # user may or may not enter amount paid
-    not_valid = True
-    while not_valid:
-        paid_change = input("What amount do you want to enter for amount paid? (press enter to skip) : ")
-        try:
-            if paid_change == "":
-                paid_change = ""
-                not_valid = False
-                break
-            elif paid_change < 0:
-                print("Can't input a non-number or a negative number, try again.\n")
-            elif type(paid_change) == float or type(paid_change) == int:
-                not_valid = False
-                paid_change = round(paid_change, 2)
-                break
-            else:
-                print("Can't input a non-number or a negative number, try again.\n")
-        except TypeError:
-            print("Can't input a non-number or a negative number, try again.\n")
+    if not(pay_due_input == "None"):
+        pay_due_search = pay_due_input.group(1)
 
-    # user may or may not enter payment date        # TODO THIS PART CRASHES IF NIT INOUT CORRECTLY, NEED TO CATCH ERROR
-    not_valid = True
-    while not_valid:
-        pay_date_change = input("What payment date do you want add to the expense? (enter in mm/dd/yyyy format or press"
-                                " enter to skip): ")
-        if pay_date_change == "":
-            not_valid = False
-        else:
-            try:
-                dates2 = re.search(r'(\d+)\/', pay_date_change)
-                month2 = dates2.group(1)
-                dates2 = re.search(r'\/(\d+)\/', pay_date_change)
-                day2 = dates2.group(1)
-                dates2 = re.findall(r'\/(\d+)', pay_date_change)
-                year2 = dates2[1]
-                month_range2 = calendar.monthrange(int(year2), int(month2))
-                if int(month2) > 12 or int(month2) < 1:
-                    print("Can't enter an invalid date or an unreasonable date, try again.\n")
-                elif int(year2) < 1980 or int(year2) > 3050:
-                    print("Can't enter an invalid date or an unreasonable date, try again.\n")
-                elif int(day2) > int(month_range2[1]) or int(day2) < 0:
-                    print("Can't enter an invalid date or an unreasonable date, try again.\n")
-                else:
-                    not_valid = False
-            except ValueError:
-                print("Can't enter an invalid date or an unreasonable date, try again.\n")
-            except TypeError:
-                print("Can't enter an invalid date or an unreasonable date, try again.\n")
-            pay_date_change = str(month2) + "/" + str(day2) + "/" + str(year2)
-
-    # user may or may not enter payment method
-    not_valid = True
-    while not_valid:
-
-        # printing the menu
-        print("You will be shown a menu of the available payment methods.")
-        for meth in range(0, len(Payment_Method)):
-            print(str(meth) + "  " + str(Payment_Method[meth]))
-
-        # getting the user option
-        method_change = input(
-            "Which payment method do you want to add the expense to? (type in the number associated or press enter to"
-            " skip): ")
-        if method_change == "":
-            not_valid = False
-        else:
-            try:
-                if not (int(method_change) in range(0, len(Payment_Method))):
-                    print("Can't input an input that isn't the associated 1 digit number, try again.\n")
-                else:
-                    not_valid = False
-            except ValueError:
-                print("Can't input an input that isn't the associated 1 digit number, try again.\n")
-            method_change = Expense_category[int(method_change)]
-
-    # double check all info and adding info to file # TODO THE HEADER WONT COPY ONTO CSV
-    print("\nThis will be added to the the " + year_change + " data sheet." )
-    print("Month: "+month_change)
-    print("Expense_category: "+categ_change)
-    print("Expense_name: "+name_change)
-    print("Amount_Due: "+str(due_change))
-    print("Due_Date: "+str(date_change))
-    print("Amount_Paid: "+str(paid_change))
-    print("Payment_Date: "+str(pay_date_change))
-    print("Payment_Method: "+str(method_change))
-    not_valid = True
-    while not_valid:
-        response = input("Do you want to add this expense? (y or n) : ")
-        if response == "y":
-            filename = "C:\\Users\\lpkal\\Desktop\\ECE 492\\ECE_492_Midterm\\AnnualExpenseData" + "\\" + str(year_change) + "MonthlyExpenses.csv"
-            row = []
-            row.append(str(year_change))
-            row.append(str(month_change))
-            row.append(str(categ_change))
-            row.append(str(name_change))
-            row.append(str(date_change))
-            row.append(str(paid_change))
-            row.append(str(pay_date_change))
-            row.append(str(method_change))
-            try:
-                with open(filename, 'a', newline='') as file:
-                    add = csv.writer(file)
-                    add.writerow(row)
-                    not_valid = False
-            except FileNotFoundError:
-                with open(filename, 'w', newline='') as f:
-                    writer = csv.writer(f)
-                    writer.writerow(header)
-                    writer.writerow(row)
-                    not_valid = False
-        elif response == "n":
-            print("No expense added. Being directed to the main menu.")
-            not_valid = False
-        else:
-            print("Can't enter characters other than 'y' or 'n', try again.")
+    if not(method_input == "None"):
+        method_search = method_input.group(1)
 
 
-# ------------------------------------------------- Main Menu Program --------------------------------------------------
+
+
+# ------------------------------------------------- Main Menu Program -------------------------------------------------_
 prog_stop = False
 while not(prog_stop):
 
     # main menu of options
-    print("\nMain Menu _________________________________________________________________________________________________")
+    print("\nMain Menu _______________________________________________________________________________________________")
     print(" a. Add a new expense")
     print(" b. Search/Modify an expense")
     print(" c. Add an expense category or expense name")
@@ -280,11 +117,9 @@ while not(prog_stop):
     if option == "a":
         add_new_expense()
     elif option == "b":
-        print("")
-        # run func
+        search_mod_expense()
     elif option == "c":
-        print("")
-        # run func
+        add_categ_name_method()
     elif option == "d":
         print("")
         # run func
