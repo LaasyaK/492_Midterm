@@ -35,7 +35,6 @@ def add_new_expense():
         try:
             if int(year_change) < 1980 or int(year_change) > (datetime.date.today().year):
                 print("Can't input data before 1980 and after the current year or an invalid year, try again.\n")
-            # elif year_change
             else:
                 not_valid = False
         except ValueError:
