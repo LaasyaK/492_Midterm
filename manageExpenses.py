@@ -4,7 +4,7 @@
 
 
 from MainMenuOptions import add_new_expense                     # option a
-from search_mod_expense import search_mod_expense               # option b in progress
+from MainMenuOptions import search_mod_expense                  # option b
 from MainMenuOptions import add_categ_name_method               # option c
 
 
@@ -31,11 +31,10 @@ while not(prog_stop):
     elif option == "c":
         add_categ_name_method()
     elif option == "d":
-        print("")
+        print("Not made yet")
         # run func
     elif option == "e":
         prog_stop = True
         break
     else:
         print("That is not a valid option, try again.\n")
-

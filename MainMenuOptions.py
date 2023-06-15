@@ -6,6 +6,7 @@ import calendar
 import re
 import csv
 import os
+from OtherFunctions import search_validity
 
 
 
@@ -32,7 +33,7 @@ def add_new_expense():
     # get and validate year
     not_valid = True
     while not_valid:
-        year_change = input("What year do you want to add the expense to? (or type 'main' to return to the main "
+        year_change = input("\nWhat year do you want to add the expense to? (or type 'main' to return to the main "
                             "menu.) : ")
         if year_change == "main":
             return 0
@@ -47,7 +48,7 @@ def add_new_expense():
     # get and validate month
     not_valid = True
     while not_valid:
-        month_change = input("What month do you want to add the expense to? (no abbreviations and must capitalize first"
+        month_change = input("\nWhat month do you want to add the expense to? (no abbreviations and must capitalize first"
                              " letter of the month or type 'main' to return to the main menu.) : ")
         if month_change == "main":
             return 0
@@ -68,7 +69,7 @@ def add_new_expense():
             print(str(categ) + "  " + str(Expense_Category[categ]))
 
         # getting the user option
-        categ_change_num = input("Which expense category do you want to add the expense to? (type in the number "
+        categ_change_num = input("\nWhich expense category do you want to add the expense to? (type in the number "
                                  "associated or type 'main' to return to the main menu.) : ")
         if categ_change_num == "main":
             return 0
@@ -86,7 +87,7 @@ def add_new_expense():
     while not_valid:
 
         # printing the menu
-        print("You will be shown a menu of the available expense names.")
+        print("\nYou will be shown a menu of the available expense names.")
         categ_change_num = int(categ_change_num)
         for name in range(0, len(Expense_Name[categ_change_num])):
             print(str(name) + "  " + str(Expense_Name[categ_change_num][name]))
@@ -98,19 +99,21 @@ def add_new_expense():
             return 0
         try:
             if int(name_change) == 0:
-                break
-            if not (int(name_change) in range(0, len(Expense_Name[categ_change_num][int(name_change)]))):
+                not_valid = False
+            if not (int(name_change) in range(len(Expense_Name[categ_change_num][int(name_change)]))):
                 print("Can't input an input that isn't the associated 1 digit number, try again.\n")
             else:
                 not_valid = False
         except ValueError:
+            print("Can't input an input that isn't the associated 1 digit number, try again.\n")
+        except IndexError:
             print("Can't input an input that isn't the associated 1 digit number, try again.\n")
     name_change = Expense_Name[categ_change_num][int(name_change)]
 
     # user enters amount due
     not_valid = True
     while not_valid:
-        due_change = input("How much is due for the expense? (or type 'main' to return to the main menu.) : ")
+        due_change = input("\nHow much is due for the expense? (or type 'main' to return to the main menu.) : ")
         if year_change == "main":
             return 0
         try:
@@ -124,51 +127,41 @@ def add_new_expense():
 
     # user may or may not enter due date    # TODO THIS PART CRASHES IF NIT INOUT CORRECTLY, NEED TO CATCH ERROR
     not_valid = True
-    date_change = input("What due date do you want to change the expense to? (enter in mm/dd/yyyy format, press enter"
-                        " to skip, or type 'main' to return to the main menu.) : ")
-    if year_change == "main":
-        return 0
-    elif date_change == "":
-        not_valid = False
-    else:
-        try:
-            while not_valid:
-                dates = re.search(r'(\d+)\/', date_change)
-                month = dates.group(1)
-                dates = re.search(r'\/(\d+)\/', date_change)
-                day = dates.group(1)
-                dates = re.findall(r'\/(\d+)', date_change)
-                year = dates[1]
-                month_range = calendar.monthrange(int(year), int(month))
-                if int(month) > 12 or int(month) < 1:
-                    print("Can't enter an invalid date or an unreasonable date, try again.\n")
-                elif int(year) < 1980 or int(year) > 3050:
-                    print("Can't enter an invalid date or an unreasonable date, try again.\n")
-                elif int(day) > int(month_range[1]+1) or int(day) < 0:
-                    print("Can't enter an invalid date or an unreasonable date, try again.\n")
-                else:
-                    not_valid = False
-        except ValueError:
+    while not_valid:
+        date_change = input("\nWhat due date do you want to change the expense to? (enter in mm/dd/yyyy format, press enter"
+                            " to skip, or type 'main' to return to the main menu.) : ")
+        if date_change == "main":
+            return 0
+        elif date_change == "":
+            not_valid = False
+        elif not(search_validity(date_change) == 0):        # TODO MAKE ANOTHER VALIDITY FUNC TO CHECK FOR THE VALIDITY OF THE YEAR INPUTED W/O 'Due_Date:'
+            date = search_validity(date_change)
+            date_change = date[5]
+            if date_change == "":
                 print("Can't enter an invalid date or an unreasonable date, try again.\n")
-        except TypeError:
-                print("Can't enter an invalid date or an unreasonable date, try again.\n")
-        date_change = str(month) + "/" + str(day) + "/" + str(year)
+            else:
+                not_valid = False
+                print(date_change)
+
+        else:
+            print("Can't enter an invalid date or an unreasonable date, try again.\n")
+
+            #date_change = str(month) + "/" + str(day) + "/" + str(year)
 
     # user may or may not enter amount paid     # TODO ERROR DIDNT LET ME PUT IN #
     not_valid = True
     while not_valid:
-        paid_change = input("What amount do you want to enter for amount paid? (press enter to skip or type 'main' to "
+        paid_change = input("\nWhat amount do you want to enter for amount paid? (press enter to skip or type 'main' to "
                             "return to the main menu.) : ")
-        if year_change == "main":
+        if paid_change == "main":
             return 0
         try:
             if paid_change == "":
-                paid_change = ""
                 not_valid = False
                 break
             elif paid_change < 0:
                 print("Can't input a non-number or a negative number, try again.\n")
-            elif type(paid_change) == float or type(paid_change) == int:
+            elif float(paid_change):
                 not_valid = False
                 paid_change = round(paid_change, 2)
                 break
@@ -180,9 +173,9 @@ def add_new_expense():
     # user may or may not enter payment date        # TODO THIS PART CRASHES IF NIT INOUT CORRECTLY, NEED TO CATCH ERROR
     not_valid = True
     while not_valid:
-        pay_date_change = input("What payment date do you want add to the expense? (enter in mm/dd/yyyy format, press"
+        pay_date_change = input("\nWhat payment date do you want add to the expense? (enter in mm/dd/yyyy format, press"
                                 " enter to skip, or type 'main' to return to the main menu.) : ")
-        if year_change == "main":
+        if pay_date_change == "main":
             return 0
         elif pay_date_change == "":
             not_valid = False
@@ -214,7 +207,7 @@ def add_new_expense():
     while not_valid:
 
         # printing the menu
-        print("You will be shown a menu of the available payment methods.")
+        print("\nYou will be shown a menu of the available payment methods.")
         for meth in range(0, len(Payment_Method)):
             print(str(meth) + "  " + str(Payment_Method[meth]))
 
@@ -222,7 +215,7 @@ def add_new_expense():
         method_change = input(
             "Which payment method do you want to add the expense to? (type in the number associated, press enter to"
             " skip, or type 'main' to return to the main menu.) : ")
-        if year_change == "main":
+        if method_change == "main":
             return 0
         elif method_change == "":
             not_valid = False
@@ -249,7 +242,7 @@ def add_new_expense():
     not_valid = True
     while not_valid:
         response = input("Do you want to add this expense? (type 'y', 'n', or 'main' to return to the main menu.) : ")
-        if year_change == "main":
+        if response == "main":
             return 0
         elif response == "y":
             current_folder = os.path.dirname(os.path.abspath(__file__))
@@ -284,13 +277,336 @@ def add_new_expense():
 
 # ------------------------------------ Option (b) Searching and modifying an expense -----------------------------------
 
+# searches and modifies an expense in a datasheet                               # *** DONE ***
+def search_mod_expense():
+    print("\nSearch/Modify an expense Function _______________________________________________________________________")
 
+    # while loop until user enters valid search criteria
+    not_valid = True
+    while not_valid:
 
+        # ask user for search criteria in a format
+        print("Type in what search criteria you want to search for by typing Field:Data, Field:Data, Field:Data, etc.")
+        print("For example: Year:2020, Month:May, Expense_Category:Utility, Payment_Method:Check ")
+        print("Requirements when entering search criteria:")
+        print(" - If the field has 2 words, an '_' needs to be between them.")
+        print(" - The first letter of the field and data entries need to be capitalized.")
+        print(" - Each field and data entry needs to be separated by a ', '.")
+        print(" - If a field is misspelled, it will not be included when searching the data.")
+        print(" - Or type 'main' to return to the main menu.")
+        search_crit = input("Type here: ")
 
+        # check if user input is main
+        if search_crit == "main":
+            return 0
 
+        elif search_crit == "":
+            print("No Search Criteria is inputted, returning to Main Menu.")
+            return 0
 
+        # check if input is valid
+        elif not((search_validity(search_crit)) == 0):
+            not_valid = False
 
+    # finds the criteria that is being searched and put into list
+    criteria = search_validity(search_crit)
+    print("This is the search criteria that will be searched for: ")
+    print(criteria)
 
+    # *** check if year is entered in str ***
+    year_input = re.search(r"Year:(.*?)(?=,)", search_crit)
+    year_input2 = re.search(r"Year:(.*)", search_crit)
+    if year_input or year_input2:
+        if year_input:
+            year_search = year_input.group(1)
+        else:
+            year_search = year_input2.group(1)
+        current_folder = os.path.dirname(os.path.abspath(__file__))
+        filename = current_folder + "\\AnnualExpenseData\\" + str(year_search) + "MonthlyExpenses.csv"
+
+        # data for that year doesn't exist
+        if not(os.path.exists(filename)):
+            print("The year entered doesn't have data, so no data will be printed. Being directed to the main menu.")
+            return 0
+
+        # data for that year exists
+        else:
+
+            # reading all the data from that year in 2D Array
+            file_2d_array = []
+            with open(filename, 'r') as file:
+                reader = csv.reader(file)
+                for row in reader:
+                    file_2d_array.append(row)
+
+            # storing the col numbers the criteria exists in a list
+            criteria_exist =[]
+            for i in range(len(criteria)):
+                if not(criteria[i] == ""):
+                    criteria_exist.append(i)
+
+            # appending what matches search criteria to another list
+            for_printing = []
+
+            # for loop to check every row in file_2d_array
+            for rows in range(len(file_2d_array)):
+                match = True
+
+                # for loop to check search criteria contents in a row
+                for num in criteria_exist:
+                    if not(criteria[num] == file_2d_array[rows][num]):
+                        match = False
+                if match:
+                    for_printing.append(file_2d_array[rows])
+
+            # printing the search results when less than 10 of them
+            if len(for_printing) < 10:
+                print("\nPrinting Search Results ...")
+                for index in range(0, len(for_printing)):
+                    print(str(index) + "  " + str(for_printing[index]))
+
+            # printing the search results when more than 10 of them
+            else:
+                not_valid = True
+                while not_valid:
+                    print("\nPrinting Search Results ...")
+                    for index in range(0, len(for_printing)):
+                        if ((index+1) % 10) == 0:
+                            print_resume = input("\nMore than 10 matching expense entries, print ('y', 'n', or 'main' to "
+                                                 "return to the main menu): ")
+                            if print_resume == "main":
+                                return 0
+                            elif print_resume == "y":
+                                not_valid = False
+                                continue
+                            elif print_resume == "n":
+                                not_valid = False
+                                break
+                            else:
+                                print("Can only input 'y', 'n', or 'main', try again.\n")
+                                break
+                        print(str(index) + "  " + str(for_printing[index]))
+
+            # ask user which record to change
+            print("\n")
+            not_valid = True
+            while not_valid:
+                modifying_index = input("What record do you want to modify? (type in the number to the left of it "
+                                        "or type 'main' to return to the main menu.) : ")
+                if modifying_index == "main":
+                    return 0
+                try:
+                    if not(int(modifying_index) in range(0, len(for_printing))):
+                        print("Can't input an input that isn't the associated 1 digit number, try again.\n")
+                    elif not(int(modifying_index) in range(index)):
+                        print("Can't input an input that isn't the associated 1 digit number, try again.\n")
+                    else:
+                        not_valid = False
+                except ValueError:
+                    print("Can't input an input that isn't the associated 1 digit number, try again.\n")
+
+            # asking user which field to change
+            print("\n")
+            not_valid = True
+            while not_valid:
+                for elem in range(len(Header)):
+                    print(str(elem) + "  " + Header[elem])
+                modifying_field = input("What field do you want to modify? (type in the number to the left of it "
+                                        "or type 'main' to return to the main menu.) : ")
+                if modifying_field == "main":
+                    return 0
+                try:
+                    if not(int(modifying_field) in range(0, len(Header))):
+                        print("Can't input an input that isn't the associated 1 digit number, try again.\n")
+                    else:
+                        not_valid = False
+                except ValueError:
+                    print("Can't input an input that isn't the associated 1 digit number, try again.\n")
+
+            # asking what the new value will be
+            print("\n")
+            not_valid = True
+            while not_valid:
+                value_change = input("What is the new value (or type 'main' to return to the main menu.) : ")
+                validity_check = str(Header[int(modifying_field)]) + ":" + str(value_change)
+                if value_change == "main":
+                    return 0
+
+                # checking the validity of the value
+                elif (search_validity(validity_check)) == 0:
+                    print("")
+                else:
+                    not_valid = False
+
+            # copy existing record to new list and modify new list to have change in field
+            new_row = for_printing[int(modifying_index)][:]
+            new_row[int(modifying_field)] = str(value_change)
+
+            # find index the record exists in the file_2d_array
+            for line_num in range(len(file_2d_array)):
+                if file_2d_array[line_num] == for_printing[int(modifying_index)]:
+                    index_whole = line_num
+
+            # delete the row that is being modified
+            if (int(index_whole)) < len(file_2d_array):
+                del file_2d_array[(int(index_whole))]
+
+            # Write the updated data back to the CSV file
+            with open(filename, 'w', newline='') as f:
+                csv_writer = csv.writer(f)
+                csv_writer.writerows(file_2d_array)
+                csv_writer.writerow(new_row)
+            print("Record is Modified.")
+
+    # *** year is not entered ***
+    else:
+
+        # find how many files in the AnnualExpenseData folder
+        current_folder = os.path.dirname(os.path.abspath(__file__))
+        filename = current_folder + "\\AnnualExpenseData"
+        years_files = os.listdir(filename)
+        years_files_count = len(os.listdir(filename))
+
+        # add all the data from all the files to a 2D array
+        files_2d_array = []
+
+        # open each file and put all the data into files_2d_array
+        for file in years_files:
+            filename = current_folder + "\\AnnualExpenseData\\" + str(file)
+            with open(filename, 'r') as f:
+                reader = csv.reader(f)
+                for row in reader:
+                    files_2d_array.append(row)
+
+        # storing the col numbers the criteria exists in a list
+        criteria_exist = []
+        for i in range(len(criteria)):
+            if not (criteria[i] == ""):
+                criteria_exist.append(i)
+
+        # appending what matches search criteria to another list
+        for_printing = []
+
+        # for loop to check every row in file_2d_array
+        for rows in range(len(files_2d_array)):
+            match = True
+
+            # for loop to check search criteria contents in a row
+            for num in criteria_exist:
+                if not (criteria[num] == files_2d_array[rows][num]):
+                    match = False
+            if match:
+                for_printing.append(files_2d_array[rows])
+
+        # printing the search results when less than 10 of them
+        if len(for_printing) < 10:
+            print("\nPrinting Search Results ...")
+            for index in range(0, len(for_printing)):
+                print(str(index) + "  " + str(for_printing[index]))
+
+        # printing the search results when more than 10 of them
+        else:
+            not_valid = True
+            while not_valid:
+                print("\nPrinting Search Results ...")
+                for index in range(0, len(for_printing)):
+                    if ((index + 1) % 10) == 0:
+                        print_resume = input(
+                            "More than 10 matching expense entries, print ('y', 'n', or 'main' to "
+                            "return to the main menu): ")
+                        if print_resume == "main":
+                            return 0
+                        elif print_resume == "y":
+                            not_valid = False
+                            continue
+                        elif print_resume == "n":
+                            not_valid = False
+                            break
+                        else:
+                            print("Can only input 'y', 'n', or 'main', try again.\n")
+                            break
+                    print(str(index) + "  " + str(for_printing[index]))
+
+        # ask user which record to change
+        print("\n")
+        not_valid = True
+        while not_valid:
+            modifying_index = input(
+                "What record do you want to modify? (type in the number to the left of it "
+                "or type 'main' to return to the main menu.) : ")
+            if modifying_index == "main":
+                return 0
+            try:
+                if not (int(modifying_index) in range(0, len(for_printing))):
+                    print("Can't input an input that isn't the associated 1 digit number, try again.\n")
+                elif not (int(modifying_index) in range(index)):
+                    print("Can't input an input that isn't the associated 1 digit number, try again.\n")
+                else:
+                    not_valid = False
+            except ValueError:
+                print("Can't input an input that isn't the associated 1 digit number, try again.\n")
+
+        # asking user which field to change
+        print("\n")
+        not_valid = True
+        while not_valid:
+            for elem in range(len(Header)):
+                print(str(elem) + "  " + Header[elem])
+            modifying_field = input("What field do you want to modify? (type in the number to the left of it "
+                                    "or type 'main' to return to the main menu.) : ")
+            if modifying_field == "main":
+                return 0
+            try:
+                if not (int(modifying_field) in range(0, len(Header))):
+                    print("Can't input an input that isn't the associated 1 digit number, try again.\n")
+                else:
+                    not_valid = False
+            except ValueError:
+                print("Can't input an input that isn't the associated 1 digit number, try again.\n")
+
+        # asking what the new value will be
+        print("\n")
+        not_valid = True
+        while not_valid:
+            value_change = input("What is the new value (or type 'main' to return to the main menu.) : ")
+            validity_check = str(Header[int(modifying_field)]) + ":" + str(value_change)
+            if value_change == "main":
+                return 0
+
+            # checking the validity of the value
+            elif (search_validity(validity_check)) == 0:
+                print("")
+            else:
+                not_valid = False
+
+        # copy existing record to new list and modify new list to have change in field
+        new_row = for_printing[int(modifying_index)][:]
+        new_row[int(modifying_field)] = str(value_change)
+
+        # make new list of which year file the record is being held
+        current_year_data = []
+        year = new_row[0]
+        filename = current_folder + "\\AnnualExpenseData\\" + str(year) + "MonthlyExpenses.csv"
+        with open(filename, 'r') as file:
+            reader = csv.reader(file)
+            for row in reader:
+                current_year_data.append(row)
+
+        # find index of where the record exists in current_year_data
+        for line_num in range(len(current_year_data)):
+            if current_year_data[line_num] == for_printing[int(modifying_index)]:
+                index_whole = line_num
+
+        # delete the row that is being modified
+        if (int(index_whole)) < len(current_year_data):
+            del current_year_data[(int(index_whole))]
+
+        # Write the updated data back to the CSV file
+        with open(filename, 'w', newline='') as f:
+            csv_writer = csv.writer(f)
+            csv_writer.writerows(current_year_data)
+            csv_writer.writerow(new_row)
+        print("Record is Modified.")
 
 
 # ---------------------------- Option (c) Adding a expense category, name, or payment method ---------------------------
@@ -383,3 +699,6 @@ def add_categ_name_method():
             writer.write("Header = " + str(Header) + "\n")
             writer.write("Payment_Method = " + str(Payment_Method) + "\n")
             writer.write("Expense_Dict = " + str(Expense_Dict) + "\n")
+
+
+# ------------------------------- Option (d) Import Expense Data from a csv or text file -------------------------------

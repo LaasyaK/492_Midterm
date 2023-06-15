@@ -20,7 +20,7 @@ with open("DefaultsRecord.txt", 'r', newline='') as defaults:
 
 # make func to check validity of users inputed search criteria
 # that prints errors based on which info is not correct and returns the search criteria in a list
-def search_validity(search_crit):
+def search_validity(search_crit):                                   # *** DONE ***
     criteria = []
 
     # getting search object from user input
