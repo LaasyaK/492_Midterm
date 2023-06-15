@@ -1,0 +1,85 @@
+Year,Month,Expense_category,Expense_name,Amount_Due,Due_Date,Amount_Paid,Payment_Date,Payment_Method
+2010,January,CCBill,Amex,1029.34,1/7/2010,1029.34,1/19/2010,Bank draft
+2010,January,Utility,Water,58.33,1/26/2010,,,
+2010,January,Utility,Internet,32.01,1/22/2010,,,
+2010,January,Utility,Power,95.07,1/22/2010,,,
+2010,January,Mortgage,House1,1896.48,1/6/2010,,,
+2010,January,Mortgage,House2,1233.49,1/10/2010,1233.49,1/29/2010,Check
+2010,January,Misc,,107.69,1/17/2010,107.69,1/17/2010,Bank draft
+2010,February,CCBill,Amex,1504.4,2/19/2010,,,
+2010,February,Utility,Water,48.12,2/6/2010,48.12,2/16/2010,Check
+2010,February,Utility,Internet,32.1,2/19/2010,32.1,2/22/2010,Check
+2010,February,Utility,Power,78.32,2/23/2010,78.32,2/25/2010,Check
+2010,February,Mortgage,House1,1985.1,2/18/2010,1985.1,2/25/2010,Bank draft
+2010,February,Mortgage,House2,1253.49,2/13/2010,1253.49,2/21/2010,Check
+2010,February,Misc,,90.81,2/7/2010,90.81,2/8/2010,Bank draft
+2010,March,CCBill,Amex,821.3,3/8/2010,821.3,3/27/2010,Bank draft
+2010,March,Utility,Water,80.2,3/19/2010,,,
+2010,March,Utility,Internet,37.59,3/4/2010,37.59,3/6/2010,Bank draft
+2010,March,Utility,Power,86.74,3/24/2010,86.74,3/24/2010,Check
+2010,March,Mortgage,House1,1517.11,3/23/2010,1517.11,3/24/2010,Check
+2010,March,Mortgage,House2,1565.29,3/16/2010,1565.29,3/16/2010,Check
+2010,March,Misc,,105.93,3/1/2010,,,
+2010,April,CCBill,Amex,1780.89,4/12/2010,1780.89,4/21/2010,Bank draft
+2010,April,Utility,Water,21.02,4/13/2010,21.02,4/13/2010,Check
+2010,April,Utility,Internet,37.93,4/22/2010,37.93,4/26/2010,Check
+2010,April,Utility,Power,98.52,4/25/2010,98.52,4/28/2010,Bank draft
+2010,April,Mortgage,House1,1478.44,4/4/2010,,,
+2010,April,Mortgage,House2,1825.55,4/3/2010,1825.55,4/23/2010,Bank draft
+2010,April,Misc,,29.33,4/1/2010,29.33,4/4/2010,Check
+2010,May,CCBill,Amex,943.56,5/26/2010,,,
+2010,May,Utility,Water,55.94,5/22/2010,55.94,5/29/2010,Check
+2010,May,Utility,Internet,22.59,5/26/2010,22.59,5/26/2010,Check
+2010,May,Utility,Power,79.16,5/20/2010,79.16,5/26/2010,Bank draft
+2010,May,Mortgage,House1,1304.46,5/10/2010,,,
+2010,May,Mortgage,House2,1734.92,5/18/2010,,,
+2010,May,Misc,,101.22,5/24/2010,101.22,5/29/2010,Bank draft
+2010,June,CCBill,Amex,1442.38,6/7/2010,1442.38,6/7/2010,Check
+2010,June,Utility,Water,24.94,6/26/2010,24.94,6/27/2010,Check
+2010,June,Utility,Internet,29.12,6/23/2010,29.12,6/29/2010,Bank draft
+2010,June,Utility,Power,82.16,6/29/2010,82.16,6/29/2010,Check
+2010,June,Mortgage,House1,1195.81,6/12/2010,,,
+2010,June,Mortgage,House2,1480.63,6/27/2010,1480.63,6/29/2010,Check
+2010,June,Misc,,43.51,6/15/2010,43.51,6/24/2010,Bank draft
+2010,July,CCBill,Amex,1208.23,7/29/2010,,,
+2010,July,Utility,Water,85.3,7/24/2010,85.3,7/27/2010,Check
+2010,July,Utility,Internet,23.93,7/14/2010,,,
+2010,July,Utility,Power,75.53,7/17/2010,75.53,7/21/2010,Check
+2010,July,Mortgage,House1,1296.61,7/20/2010,1296.61,7/28/2010,Check
+2010,July,Mortgage,House2,1856.44,7/3/2010,1856.44,7/9/2010,Check
+2010,July,Misc,,79.25,7/9/2010,79.25,7/29/2010,Bank draft
+2010,August,CCBill,Amex,1119.54,8/22/2010,1119.54,8/22/2010,Bank draft
+2010,August,Utility,Water,36.56,8/15/2010,36.56,8/20/2010,Bank draft
+2010,August,Utility,Internet,47.08,8/23/2010,47.08,8/24/2010,Check
+2010,August,Utility,Power,107.17,8/14/2010,107.17,8/18/2010,Check
+2010,August,Mortgage,House1,1770.58,8/16/2010,,,
+2010,August,Mortgage,House2,1036.69,8/6/2010,1036.69,8/20/2010,Check
+2010,August,Misc,,82.29,8/14/2010,82.29,8/26/2010,Bank draft
+2010,September,CCBill,Amex,960.55,9/18/2010,,,
+2010,September,Utility,Water,49.08,9/2/2010,49.08,9/16/2010,Check
+2010,September,Utility,Internet,25.27,9/8/2010,25.27,9/25/2010,Check
+2010,September,Utility,Power,75.01,9/10/2010,75.01,9/17/2010,Bank draft
+2010,September,Mortgage,House1,1694.06,9/22/2010,1694.06,9/23/2010,Check
+2010,September,Mortgage,House2,1727.22,9/24/2010,,,
+2010,September,Misc,,109.62,9/16/2010,,,
+2010,October,CCBill,Amex,1666.48,10/20/2010,1666.48,10/20/2010,Bank draft
+2010,October,Utility,Water,71.15,10/6/2010,71.15,10/9/2010,Bank draft
+2010,October,Utility,Internet,33.77,10/28/2010,33.77,10/28/2010,Bank draft
+2010,October,Utility,Power,98.21,10/3/2010,98.21,10/5/2010,Check
+2010,October,Mortgage,House1,1883.6,10/12/2010,1883.6,10/14/2010,Check
+2010,October,Mortgage,House2,1240.65,10/1/2010,1240.65,10/15/2010,Bank draft
+2010,October,Misc,,48.14,10/5/2010,48.14,10/15/2010,Bank draft
+2010,November,CCBill,Amex,1407.97,11/16/2010,1407.97,11/22/2010,Check
+2010,November,Utility,Water,51.1,11/19/2010,51.1,11/19/2010,Bank draft
+2010,November,Utility,Internet,19.95,11/18/2010,19.95,11/25/2010,Bank draft
+2010,November,Utility,Power,95.18,11/7/2010,95.18,11/9/2010,Check
+2010,November,Mortgage,House1,1730.08,11/11/2010,1730.08,11/21/2010,Bank draft
+2010,November,Mortgage,House2,1337.06,11/27/2010,1337.06,11/28/2010,Bank draft
+2010,November,Misc,,29.45,11/24/2010,29.45,11/29/2010,Check
+2010,December,CCBill,Amex,1740.1,12/28/2010,1740.1,12/28/2010,Bank draft
+2010,December,Utility,Water,64.73,12/10/2010,,,
+2010,December,Utility,Internet,17.74,12/16/2010,17.74,12/28/2010,Check
+2010,December,Utility,Power,109.81,12/29/2010,109.81,12/29/2010,Bank draft
+2010,December,Mortgage,House1,1672.6,12/22/2010,,,
+2010,December,Mortgage,House2,1544.18,12/24/2010,,,
+2010,December,Misc,,30.12,12/24/2010,30.12,12/29/2010,Check

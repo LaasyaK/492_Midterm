@@ -1,7 +1,6 @@
 # sanity: check for any other inputs than those given and make sure not crashed
 # TODO OPTION B AND D(optional)
-    # make func to get header and other info from DefaultRecords
-    # make func to check validity
+
 
 
 from MainMenuOptions import add_new_expense                     # option a

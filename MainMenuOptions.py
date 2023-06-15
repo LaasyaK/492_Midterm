@@ -1,10 +1,12 @@
 # TODO 4 OF THEM
 
+
 import datetime
 import calendar
 import re
 import csv
 import os
+
 
 
 with open("DefaultsRecord.txt", 'r', newline='') as defaults:
@@ -30,7 +32,8 @@ def add_new_expense():
     # get and validate year
     not_valid = True
     while not_valid:
-        year_change = input("What year do you want to add the expense to? (or type 'main' to return to the main menu.) : ")
+        year_change = input("What year do you want to add the expense to? (or type 'main' to return to the main "
+                            "menu.) : ")
         if year_change == "main":
             return 0
         try:
