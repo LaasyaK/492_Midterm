@@ -220,7 +220,7 @@ def search_validity(search_crit):                                   # *** DONE *
             elif int(year) < 1980 or int(year) > 3050:
                 print("Due Date can't be an invalid date or year be before 1980, try again.\n")
                 return 0
-            elif int(day) > int(month_range[1]+1) or int(day) < 0:
+            elif int(day) > int(month_range[1]) or int(day) < 0:
                 print("Due Date can't be an invalid date, try again.\n")
                 return 0
         except ValueError:
@@ -250,7 +250,7 @@ def search_validity(search_crit):                                   # *** DONE *
             elif int(year) < 1980 or int(year) > 3050:
                 print("Due Date can't be an invalid date or year be before 1980, try again.\n")
                 return 0
-            elif int(day) > int(month_range[1] + 1) or int(day) < 0:
+            elif int(day) > int(month_range[1]) or int(day) < 0:
                 print("Due Date can't be an invalid date, try again.\n")
                 return 0
         except ValueError:
@@ -314,7 +314,7 @@ def search_validity(search_crit):                                   # *** DONE *
             elif int(year) < 1980 or int(year) > 3050:
                 print("Payment Date can't be an invalid date or year be before 1980, try again.\n")
                 return 0
-            elif int(day) > int(month_range[1] + 1) or int(day) < 0:
+            elif int(day) > int(month_range[1]) or int(day) < 0:
                 print("Payment Date can't be an invalid date, try again.\n")
                 return 0
         except ValueError:
@@ -344,7 +344,7 @@ def search_validity(search_crit):                                   # *** DONE *
             elif int(year) < 1980 or int(year) > 3050:
                 print("Payment Date can't be an invalid date or year be before 1980, try again.\n")
                 return 0
-            elif int(day) > int(month_range[1] + 1) or int(day) < 0:
+            elif int(day) > int(month_range[1]) or int(day) < 0:
                 print("Payment Date can't be an invalid date, try again.\n")
                 return 0
         except ValueError:
@@ -388,15 +388,29 @@ def search_validity(search_crit):                                   # *** DONE *
     return criteria
 
 
+# make func to check validity of an inputted year
+def date_validity(date_input):
 
-
-
-
-
-
-
-
-
-
-
-
+    # checking if due date is an actual date
+    try:
+        dates1 = re.search(r'(\d+)\/', date_input)
+        dates2 = re.search(r'\/(\d+)\/', date_input)
+        dates3 = re.findall(r'\/(\d+)', date_input)
+        if dates1 and dates2 and dates3:
+            month = dates1.group(1)
+            day = dates2.group(1)
+            year = dates3[1]
+            month_range = calendar.monthrange(int(year), int(month))
+            if int(month) > 12 or int(month) < 1:
+                return 0
+            elif int(year) < 1980 or int(year) > 3050:
+                return 0
+            elif int(day) > int(month_range[1]) or int(day) < 0:
+                return 0
+            else:
+                return date_input
+    except ValueError:
+        return 0
+    except TypeError:
+        return 0
+    return 0

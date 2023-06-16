@@ -1,12 +1,10 @@
-# TODO 4 OF THEM
-
-
 import datetime
 import calendar
 import re
 import csv
 import os
 from OtherFunctions import search_validity
+from OtherFunctions import date_validity
 
 
 
@@ -26,7 +24,7 @@ with open("DefaultsRecord.txt", 'r', newline='') as defaults:
 
 # ------------------------------------------- Option (a) Adding a new expense ------------------------------------------
 
-# adds a new expense row to any existing year datasheet or new datasheet            # TODO 4 OF THEM
+# adds a new expense row to any existing year datasheet or new datasheet            # *** DONE ***
 def add_new_expense():
     print("\nAdd a expense Function __________________________________________________________________________________")
 
@@ -82,7 +80,7 @@ def add_new_expense():
             print("Can't input an input that isn't the associated 1 digit number, try again.\n")
     categ_change = Expense_Category[int(categ_change_num)]
 
-    # user chooses Expense_Name from option menu        # TODO FOR CCBILL IT DONT WORK
+    # user chooses Expense_Name from option menu
     not_valid = True
     while not_valid:
 
@@ -114,7 +112,7 @@ def add_new_expense():
     not_valid = True
     while not_valid:
         due_change = input("\nHow much is due for the expense? (or type 'main' to return to the main menu.) : ")
-        if year_change == "main":
+        if due_change == "main":
             return 0
         try:
             if float(due_change) < 0:
@@ -125,7 +123,7 @@ def add_new_expense():
             print("Can't input a non-number or a negative number, try again.\n")
     due_change = round(float(due_change), 2)
 
-    # user may or may not enter due date    # TODO THIS PART CRASHES IF NIT INOUT CORRECTLY, NEED TO CATCH ERROR
+    # user may or may not enter due date
     not_valid = True
     while not_valid:
         date_change = input("\nWhat due date do you want to change the expense to? (enter in mm/dd/yyyy format, press enter"
@@ -134,43 +132,28 @@ def add_new_expense():
             return 0
         elif date_change == "":
             not_valid = False
-        elif not(search_validity(date_change) == 0):        # TODO MAKE ANOTHER VALIDITY FUNC TO CHECK FOR THE VALIDITY OF THE YEAR INPUTED W/O 'Due_Date:'
-            date = search_validity(date_change)
-            date_change = date[5]
-            if date_change == "":
-                print("Can't enter an invalid date or an unreasonable date, try again.\n")
-            else:
-                not_valid = False
-                print(date_change)
-
+        elif date_validity(date_change) == date_change:
+            not_valid = False
         else:
-            print("Can't enter an invalid date or an unreasonable date, try again.\n")
+            print("Can't enter an invalid date or an unreasonable date, try again.")
 
-            #date_change = str(month) + "/" + str(day) + "/" + str(year)
-
-    # user may or may not enter amount paid     # TODO ERROR DIDNT LET ME PUT IN #
+    # user may or may not enter amount paid
     not_valid = True
     while not_valid:
-        paid_change = input("\nWhat amount do you want to enter for amount paid? (press enter to skip or type 'main' to "
-                            "return to the main menu.) : ")
+        paid_change = input("\nWhat amount do you want to enter for amount paid? (press enter to skip or type 'main' "
+                            "to return to the main menu.) : ")
         if paid_change == "main":
             return 0
         try:
-            if paid_change == "":
-                not_valid = False
-                break
-            elif paid_change < 0:
+            if float(paid_change) < 0:
                 print("Can't input a non-number or a negative number, try again.\n")
-            elif float(paid_change):
-                not_valid = False
-                paid_change = round(paid_change, 2)
-                break
             else:
-                print("Can't input a non-number or a negative number, try again.\n")
-        except TypeError:
+                not_valid = False
+        except ValueError:
             print("Can't input a non-number or a negative number, try again.\n")
+    paid_change = round(float(paid_change), 2)
 
-    # user may or may not enter payment date        # TODO THIS PART CRASHES IF NIT INOUT CORRECTLY, NEED TO CATCH ERROR
+    # user may or may not enter payment date
     not_valid = True
     while not_valid:
         pay_date_change = input("\nWhat payment date do you want add to the expense? (enter in mm/dd/yyyy format, press"
@@ -179,28 +162,10 @@ def add_new_expense():
             return 0
         elif pay_date_change == "":
             not_valid = False
+        elif date_validity(pay_date_change) == pay_date_change:
+            not_valid = False
         else:
-            try:
-                dates2 = re.search(r'(\d+)\/', pay_date_change)
-                month2 = dates2.group(1)
-                dates2 = re.search(r'\/(\d+)\/', pay_date_change)
-                day2 = dates2.group(1)
-                dates2 = re.findall(r'\/(\d+)', pay_date_change)
-                year2 = dates2[1]
-                month_range2 = calendar.monthrange(int(year2), int(month2))
-                if int(month2) > 12 or int(month2) < 1:
-                    print("Can't enter an invalid date or an unreasonable date, try again.\n")
-                elif int(year2) < 1980 or int(year2) > 3050:
-                    print("Can't enter an invalid date or an unreasonable date, try again.\n")
-                elif int(day2) > int(month_range2[1]) or int(day2) < 0:
-                    print("Can't enter an invalid date or an unreasonable date, try again.\n")
-                else:
-                    not_valid = False
-            except ValueError:
-                print("Can't enter an invalid date or an unreasonable date, try again.\n")
-            except TypeError:
-                print("Can't enter an invalid date or an unreasonable date, try again.\n")
-            pay_date_change = str(month2) + "/" + str(day2) + "/" + str(year2)
+            print("Can't enter an invalid date or an unreasonable date, try again.")
 
     # user may or may not enter payment method
     not_valid = True
