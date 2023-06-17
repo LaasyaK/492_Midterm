@@ -1,8 +1,4 @@
-# TODO CHECK HOW PROF WANTS INPUTS FROM COMMANDLINE
-
-
-
-import calendar
+import calendar                 # *** DONE ***
 import datetime
 import random
 import re
@@ -27,35 +23,33 @@ with open("DefaultsRecord.txt", 'r', newline='') as defaults:
     Expense_Name = list(Expense_Dict.values())
 
 # checking for command line arguments
-if len(sys.argv) < 4:
-    print("Not enough parameters provided.")
+if len(sys.argv) < 7:
+    print("The arguments need to be inputted in the format for example: -Year1 2013 -Year2 2016 -folder "
+          "AnnualExpenseData ")
     exit(0)
 else:
 
     # getting the variables from the command line prompt
-    year1_data = sys.argv[1]
-    year1_temp = re.search(r'\-(.*)', year1_data)
+    year1_data = sys.argv[2]
     try:
-        year1 = int(year1_temp.group(1))
+        year1 = int(year1_data)
         if year1 < 1980 or year1 > (datetime.date.today().year):
             print("Can't generate data before 1980 or after the current year.")
             exit(0)
     except ValueError:
         print("Can't input an invalid year.")
 
-    year2_data = sys.argv[2]
-    year2_temp = re.search(r'\-(.*)', year2_data)
+    year2_data = sys.argv[4]
     try:
-        year2 = int(year2_temp.group(1))
+        year2 = int(year2_data)
         if year2 < 1980 or year2 > (datetime.date.today().year):
             print("Can't generate data before 1980 or after the current year.")
             exit(0)
     except ValueError:
         print("Can't input an invalid year.")
 
-    filename_data = sys.argv[3]
-    filename_data_temp = re.search(r'\-(.*)', filename_data)
-    filename = str(filename_data_temp.group(1))
+    filename_data = sys.argv[6]
+    filename = str(filename_data)
 
 # for loop for the years
 years_length = (year2 - year1) + 1
@@ -108,7 +102,7 @@ for i in range(0, years_length):
                     rand_pay_date = ""
                     rand_meth = ""
                 else:
-                    amt_paid = amount_due
+                    amt_paid = float(amount_due)
                     rand_day2 = random.randint(rand_day, 29)
                     rand_pay_date = str(month) + "/" + str(rand_day2) + "/" + str(working_year)
                     rand_meth = random.choice(Payment_Method)

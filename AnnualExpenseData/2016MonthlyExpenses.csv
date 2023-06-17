@@ -1,85 +1,85 @@
 Year,Month,Expense_Category,Expense_Name,Amount_Due,Due_Date,Amount_Paid,Payment_Date,Payment_Method
-2016,January,CCBill,Amex,607.53,1/15/2016,607.53,1/20/2016,Check
-2016,January,Utility,Water,88.35,1/20/2016,88.35,1/22/2016,Bank Draft
-2016,January,Utility,Internet,11.68,1/10/2016,11.68,1/11/2016,Check
-2016,January,Utility,Power,70.7,1/18/2016,,,
-2016,January,Mortgage,House1,1172.5,1/6/2016,,,
-2016,January,Mortgage,House2,1524.3,1/4/2016,,,
-2016,January,Misc,,81.26,1/28/2016,81.26,1/28/2016,Bank Draft
-2016,February,CCBill,Amex,784.72,2/27/2016,784.72,2/28/2016,Check
-2016,February,Utility,Water,35.01,2/24/2016,35.01,2/26/2016,Bank Draft
-2016,February,Utility,Internet,10.11,2/1/2016,10.11,2/27/2016,Bank Draft
-2016,February,Utility,Power,98.17,2/5/2016,98.17,2/6/2016,Check
-2016,February,Mortgage,House1,1894.46,2/22/2016,1894.46,2/26/2016,Check
-2016,February,Mortgage,House2,1187.78,2/10/2016,,,
-2016,February,Misc,,77.23,2/22/2016,77.23,2/28/2016,Bank Draft
-2016,March,CCBill,Amex,1786.12,3/19/2016,1786.12,3/24/2016,Bank Draft
-2016,March,Utility,Water,26.32,3/22/2016,26.32,3/29/2016,Check
-2016,March,Utility,Internet,49.27,3/7/2016,49.27,3/18/2016,Check
-2016,March,Utility,Power,80.64,3/21/2016,80.64,3/22/2016,Bank Draft
-2016,March,Mortgage,House1,1969.02,3/9/2016,1969.02,3/21/2016,Check
-2016,March,Mortgage,House2,1696.06,3/6/2016,1696.06,3/7/2016,Bank Draft
-2016,March,Misc,,51.48,3/12/2016,51.48,3/26/2016,Check
-2016,April,CCBill,Amex,786.17,4/23/2016,786.17,4/23/2016,Check
-2016,April,Utility,Water,62.3,4/23/2016,62.3,4/23/2016,Bank Draft
-2016,April,Utility,Internet,33.8,4/12/2016,33.8,4/25/2016,Bank Draft
-2016,April,Utility,Power,105.49,4/3/2016,105.49,4/3/2016,Check
-2016,April,Mortgage,House1,1834.24,4/25/2016,1834.24,4/29/2016,Check
-2016,April,Mortgage,House2,1412.14,4/1/2016,,,
-2016,April,Misc,,29.01,4/24/2016,29.01,4/25/2016,Check
-2016,May,CCBill,Amex,1110.28,5/20/2016,1110.28,5/21/2016,Check
-2016,May,Utility,Water,46.38,5/23/2016,46.38,5/23/2016,Bank Draft
-2016,May,Utility,Internet,31.84,5/16/2016,,,
-2016,May,Utility,Power,76.27,5/18/2016,,,
-2016,May,Mortgage,House1,1717.24,5/9/2016,1717.24,5/28/2016,Check
-2016,May,Mortgage,House2,1161.85,5/10/2016,1161.85,5/19/2016,Bank Draft
-2016,May,Misc,,94.67,5/17/2016,,,
-2016,June,CCBill,Amex,1739.45,6/16/2016,1739.45,6/17/2016,Check
-2016,June,Utility,Water,26.09,6/18/2016,26.09,6/21/2016,Bank Draft
-2016,June,Utility,Internet,32.42,6/10/2016,,,
-2016,June,Utility,Power,85.75,6/11/2016,85.75,6/26/2016,Check
-2016,June,Mortgage,House1,1481.46,6/2/2016,1481.46,6/21/2016,Bank Draft
-2016,June,Mortgage,House2,1801.28,6/17/2016,1801.28,6/26/2016,Check
-2016,June,Misc,,93.86,6/25/2016,,,
-2016,July,CCBill,Amex,622.05,7/13/2016,622.05,7/24/2016,Bank Draft
-2016,July,Utility,Water,23.33,7/4/2016,23.33,7/20/2016,Check
-2016,July,Utility,Internet,36.34,7/7/2016,,,
-2016,July,Utility,Power,80.7,7/24/2016,80.7,7/28/2016,Check
-2016,July,Mortgage,House1,1762.97,7/19/2016,1762.97,7/27/2016,Bank Draft
-2016,July,Mortgage,House2,1567.79,7/7/2016,1567.79,7/19/2016,Bank Draft
-2016,July,Misc,,23.43,7/10/2016,23.43,7/28/2016,Bank Draft
-2016,August,CCBill,Amex,854.83,8/2/2016,854.83,8/26/2016,Bank Draft
-2016,August,Utility,Water,63.57,8/28/2016,63.57,8/29/2016,Check
-2016,August,Utility,Internet,38.96,8/8/2016,,,
-2016,August,Utility,Power,73.43,8/5/2016,73.43,8/5/2016,Check
-2016,August,Mortgage,House1,1557.93,8/21/2016,1557.93,8/22/2016,Check
-2016,August,Mortgage,House2,1930.41,8/24/2016,1930.41,8/27/2016,Bank Draft
-2016,August,Misc,,109.95,8/4/2016,109.95,8/9/2016,Bank Draft
-2016,September,CCBill,Amex,780.36,9/10/2016,780.36,9/17/2016,Check
-2016,September,Utility,Water,82.07,9/11/2016,,,
-2016,September,Utility,Internet,48.12,9/2/2016,48.12,9/18/2016,Check
-2016,September,Utility,Power,89.17,9/24/2016,89.17,9/26/2016,Check
-2016,September,Mortgage,House1,1711.38,9/1/2016,1711.38,9/13/2016,Check
-2016,September,Mortgage,House2,1308.84,9/16/2016,,,
-2016,September,Misc,,76.93,9/27/2016,76.93,9/28/2016,Bank Draft
-2016,October,CCBill,Amex,789.4,10/3/2016,789.4,10/9/2016,Bank Draft
-2016,October,Utility,Water,38.8,10/2/2016,,,
-2016,October,Utility,Internet,5.77,10/8/2016,5.77,10/19/2016,Bank Draft
-2016,October,Utility,Power,100.84,10/1/2016,,,
-2016,October,Mortgage,House1,1818.88,10/18/2016,1818.88,10/18/2016,Check
-2016,October,Mortgage,House2,1101.44,10/8/2016,,,
-2016,October,Misc,,86.89,10/12/2016,86.89,10/27/2016,Bank Draft
-2016,November,CCBill,Amex,1381.19,11/22/2016,1381.19,11/23/2016,Check
-2016,November,Utility,Water,35.6,11/18/2016,35.6,11/20/2016,Bank Draft
-2016,November,Utility,Internet,36.79,11/26/2016,36.79,11/27/2016,Bank Draft
-2016,November,Utility,Power,80.44,11/29/2016,,,
-2016,November,Mortgage,House1,1694.73,11/3/2016,,,
-2016,November,Mortgage,House2,1436.0,11/15/2016,,,
-2016,November,Misc,,94.2,11/19/2016,94.2,11/23/2016,Check
-2016,December,CCBill,Amex,1024.45,12/28/2016,,,
-2016,December,Utility,Water,54.32,12/3/2016,,,
-2016,December,Utility,Internet,46.65,12/7/2016,,,
-2016,December,Utility,Power,75.83,12/2/2016,75.83,12/12/2016,Bank Draft
-2016,December,Mortgage,House1,1732.3,12/21/2016,1732.3,12/23/2016,Bank Draft
-2016,December,Mortgage,House2,1185.22,12/5/2016,1185.22,12/24/2016,Check
-2016,December,Misc,,86.21,12/1/2016,86.21,12/12/2016,Check
+2016,January,CCBill,Amex,1536.82,1/27/2016,1536.82,1/29/2016,Bank Draft
+2016,January,Utility,Water,79.6,1/18/2016,,,
+2016,January,Utility,Internet,44.12,1/17/2016,,,
+2016,January,Utility,Power,100.59,1/11/2016,100.59,1/13/2016,Check
+2016,January,Mortgage,House1,1489.51,1/23/2016,,,
+2016,January,Mortgage,House2,1318.81,1/26/2016,1318.81,1/28/2016,Bank Draft
+2016,January,Misc,Grocery,73.9,1/14/2016,,,
+2016,February,CCBill,Amex,1060.41,2/8/2016,,,
+2016,February,Utility,Water,34.26,2/21/2016,,,
+2016,February,Utility,Internet,28.53,2/21/2016,,,
+2016,February,Utility,Power,77.72,2/10/2016,77.72,2/16/2016,Bank Draft
+2016,February,Mortgage,House1,1553.18,2/12/2016,1553.18,2/21/2016,Bank Draft
+2016,February,Mortgage,House2,1504.3,2/6/2016,,,
+2016,February,Misc,Grocery,108.95,2/12/2016,108.95,2/12/2016,Bank Draft
+2016,March,CCBill,Amex,1260.99,3/18/2016,,,
+2016,March,Utility,Water,30.45,3/14/2016,,,
+2016,March,Utility,Internet,17.41,3/21/2016,,,
+2016,March,Utility,Power,72.27,3/20/2016,72.27,3/29/2016,Check
+2016,March,Mortgage,House1,1484.7,3/1/2016,1484.7,3/8/2016,Check
+2016,March,Mortgage,House2,1267.85,3/29/2016,1267.85,3/29/2016,Check
+2016,March,Misc,Grocery,22.6,3/12/2016,22.6,3/24/2016,Check
+2016,April,CCBill,Amex,1624.88,4/23/2016,1624.88,4/27/2016,Check
+2016,April,Utility,Water,59.63,4/20/2016,59.63,4/25/2016,Check
+2016,April,Utility,Internet,27.02,4/26/2016,27.02,4/28/2016,Bank Draft
+2016,April,Utility,Power,94.42,4/12/2016,94.42,4/27/2016,Bank Draft
+2016,April,Mortgage,House1,1136.95,4/1/2016,1136.95,4/20/2016,Bank Draft
+2016,April,Mortgage,House2,1147.37,4/10/2016,1147.37,4/13/2016,Check
+2016,April,Misc,Grocery,64.69,4/25/2016,,,
+2016,May,CCBill,Amex,1044.31,5/29/2016,1044.31,5/29/2016,Bank Draft
+2016,May,Utility,Water,32.88,5/25/2016,32.88,5/29/2016,Bank Draft
+2016,May,Utility,Internet,48.26,5/21/2016,48.26,5/23/2016,Bank Draft
+2016,May,Utility,Power,89.22,5/11/2016,89.22,5/21/2016,Bank Draft
+2016,May,Mortgage,House1,1273.76,5/16/2016,1273.76,5/23/2016,Bank Draft
+2016,May,Mortgage,House2,1669.5,5/23/2016,,,
+2016,May,Misc,Grocery,101.65,5/28/2016,101.65,5/28/2016,Bank Draft
+2016,June,CCBill,Amex,986.81,6/16/2016,986.81,6/16/2016,Check
+2016,June,Utility,Water,38.91,6/15/2016,38.91,6/25/2016,Check
+2016,June,Utility,Internet,45.79,6/4/2016,45.79,6/12/2016,Bank Draft
+2016,June,Utility,Power,84.69,6/27/2016,84.69,6/28/2016,Check
+2016,June,Mortgage,House1,1107.16,6/29/2016,1107.16,6/29/2016,Bank Draft
+2016,June,Mortgage,House2,1530.7,6/10/2016,,,
+2016,June,Misc,Grocery,96.75,6/4/2016,96.75,6/19/2016,Check
+2016,July,CCBill,Amex,1700.13,7/14/2016,1700.13,7/23/2016,Check
+2016,July,Utility,Water,38.27,7/20/2016,38.27,7/28/2016,Bank Draft
+2016,July,Utility,Internet,15.72,7/7/2016,15.72,7/7/2016,Bank Draft
+2016,July,Utility,Power,77.65,7/2/2016,77.65,7/28/2016,Check
+2016,July,Mortgage,House1,1972.14,7/24/2016,,,
+2016,July,Mortgage,House2,1257.73,7/23/2016,1257.73,7/23/2016,Check
+2016,July,Misc,Grocery,95.89,7/23/2016,95.89,7/26/2016,Bank Draft
+2016,August,CCBill,Amex,1420.99,8/3/2016,1420.99,8/28/2016,Check
+2016,August,Utility,Water,73.45,8/8/2016,73.45,8/12/2016,Check
+2016,August,Utility,Internet,45.92,8/1/2016,45.92,8/28/2016,Bank Draft
+2016,August,Utility,Power,70.25,8/18/2016,70.25,8/29/2016,Check
+2016,August,Mortgage,House1,1730.71,8/5/2016,1730.71,8/16/2016,Check
+2016,August,Mortgage,House2,1708.57,8/17/2016,1708.57,8/24/2016,Check
+2016,August,Misc,Grocery,78.87,8/19/2016,,,
+2016,September,CCBill,Amex,1059.59,9/8/2016,,,
+2016,September,Utility,Water,36.83,9/20/2016,,,
+2016,September,Utility,Internet,26.91,9/27/2016,26.91,9/29/2016,Check
+2016,September,Utility,Power,101.22,9/11/2016,101.22,9/11/2016,Check
+2016,September,Mortgage,House1,1467.31,9/13/2016,,,
+2016,September,Mortgage,House2,1880.55,9/16/2016,1880.55,9/20/2016,Check
+2016,September,Misc,Grocery,96.11,9/22/2016,96.11,9/22/2016,Check
+2016,October,CCBill,Amex,1315.94,10/27/2016,1315.94,10/28/2016,Check
+2016,October,Utility,Water,75.58,10/18/2016,,,
+2016,October,Utility,Internet,5.94,10/22/2016,,,
+2016,October,Utility,Power,74.84,10/22/2016,,,
+2016,October,Mortgage,House1,1874.03,10/14/2016,1874.03,10/29/2016,Bank Draft
+2016,October,Mortgage,House2,1637.48,10/9/2016,1637.48,10/27/2016,Check
+2016,October,Misc,Grocery,106.29,10/5/2016,106.29,10/24/2016,Check
+2016,November,CCBill,Amex,980.25,11/21/2016,980.25,11/29/2016,Bank Draft
+2016,November,Utility,Water,67.32,11/7/2016,67.32,11/18/2016,Bank Draft
+2016,November,Utility,Internet,22.05,11/16/2016,22.05,11/25/2016,Bank Draft
+2016,November,Utility,Power,85.26,11/18/2016,85.26,11/28/2016,Check
+2016,November,Mortgage,House1,1794.52,11/2/2016,,,
+2016,November,Mortgage,House2,1914.25,11/10/2016,1914.25,11/18/2016,Bank Draft
+2016,November,Misc,Grocery,85.42,11/20/2016,85.42,11/29/2016,Bank Draft
+2016,December,CCBill,Amex,1699.88,12/17/2016,1699.88,12/22/2016,Bank Draft
+2016,December,Utility,Water,20.49,12/6/2016,20.49,12/15/2016,Check
+2016,December,Utility,Internet,30.96,12/4/2016,,,
+2016,December,Utility,Power,71.62,12/2/2016,71.62,12/21/2016,Bank Draft
+2016,December,Mortgage,House1,1741.27,12/18/2016,,,
+2016,December,Mortgage,House2,1383.05,12/10/2016,1383.05,12/20/2016,Bank Draft
+2016,December,Misc,Grocery,39.92,12/23/2016,39.92,12/28/2016,Bank Draft

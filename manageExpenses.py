@@ -1,15 +1,36 @@
 # sanity: check for any other inputs than those given and make sure not crashed
-# TODO OPTION B AND D(optional)
 
 
-
+import sys
+import re
 from MainMenuOptions import add_new_expense                     # option a
 from MainMenuOptions import search_mod_expense                  # option b
 from MainMenuOptions import add_categ_name_method               # option c
+from ReportAndGraphFunctions import report                      # report function
+
 
 
 
 # ------------------------------------------------- Main Menu Program --------------------------------------------------
+
+# taking the arguments to run different functions if typed in
+if len(sys.argv) > 1:
+    option = sys.argv[1]
+    try:
+        option_temp = re.search(r"\-\-(.*)", option)
+        option = str(option_temp.group(1))
+        if option == "report":
+            report()
+        elif option == "graph":
+            print("run graph func")
+        else:
+            print("The argument passed is not valid, available arguments are '--report' and '--graph'.")
+            exit(0)
+    except ValueError:
+        print("The argument passed is not valid, available arguments are '--report' and '--graph'.")
+        exit(0)
+
+# running the main menu
 prog_stop = False
 while not(prog_stop):
 

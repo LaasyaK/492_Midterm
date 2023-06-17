@@ -1,3 +1,6 @@
+# TODO OPTION D (optional)
+
+
 import datetime
 import calendar
 import re
@@ -8,6 +11,7 @@ from OtherFunctions import date_validity
 
 
 
+# getting the header, expense_category, names, and payment_method info from DefaultsRecord
 with open("DefaultsRecord.txt", 'r', newline='') as defaults:
     content = defaults.read()
     groups = re.findall(r'(\[.*?\])', content)
@@ -140,18 +144,21 @@ def add_new_expense():
     # user may or may not enter amount paid
     not_valid = True
     while not_valid:
-        paid_change = input("\nWhat amount do you want to enter for amount paid? (press enter to skip or type 'main' "
-                            "to return to the main menu.) : ")
+        paid_change = input("\nDid you want to enter that the amount is paid? (type 'y', 'n', or "
+                            "'main' to return to the main menu.) : ")
         if paid_change == "main":
             return 0
         try:
-            if float(paid_change) < 0:
-                print("Can't input a non-number or a negative number, try again.\n")
-            else:
+            if str(paid_change) == "y":
+                paid_change = due_change
                 not_valid = False
+            elif str(paid_change) == "n":
+                paid_change = ""
+                not_valid = False
+            else:
+                print("Need to enter 'y', 'n', or 'main', try again.\n")
         except ValueError:
-            print("Can't input a non-number or a negative number, try again.\n")
-    paid_change = round(float(paid_change), 2)
+            print("Need to enter 'y', 'n', or 'main', try again.\n")
 
     # user may or may not enter payment date
     not_valid = True

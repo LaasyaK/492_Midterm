@@ -1,9 +1,12 @@
 import re
 import datetime
 import calendar
+import os
+import csv
 
 
 
+# getting the header, expense_category, names, and payment_method info from DefaultsRecord
 with open("DefaultsRecord.txt", 'r', newline='') as defaults:
     content = defaults.read()
     groups = re.findall(r'(\[.*?\])', content)
@@ -18,7 +21,7 @@ with open("DefaultsRecord.txt", 'r', newline='') as defaults:
     Expense_Name = list(Expense_Dict.values())
 
 
-# make func to check validity of users inputed search criteria
+# make func to check validity of users inputted search criteria
 # that prints errors based on which info is not correct and returns the search criteria in a list
 def search_validity(search_crit):                                   # *** DONE ***
     criteria = []
@@ -389,7 +392,7 @@ def search_validity(search_crit):                                   # *** DONE *
 
 
 # make func to check validity of an inputted year
-def date_validity(date_input):
+def date_validity(date_input):              # *** DONE ***
 
     # checking if due date is an actual date
     try:
@@ -414,3 +417,101 @@ def date_validity(date_input):
     except TypeError:
         return 0
     return 0
+
+
+# using the criteria given searching all the records and putting them into a list for a year
+def search_all_expense_data(search_crit):
+
+    # finds the criteria that is being searched and put into list
+    criteria = search_validity(search_crit)
+
+    # *** check if year is entered in str ***
+    year_input = re.search(r"Year:(.*?)(?=,)", search_crit)
+    year_input2 = re.search(r"Year:(.*)", search_crit)
+    if year_input or year_input2:
+        if year_input:
+            year_search = year_input.group(1)
+        else:
+            year_search = year_input2.group(1)
+        current_folder = os.path.dirname(os.path.abspath(__file__))
+        filename = current_folder + "\\AnnualExpenseData\\" + str(year_search) + "MonthlyExpenses.csv"
+
+        # data for that year doesn't exist
+        if not (os.path.exists(filename)):
+            print("The year entered doesn't have data, so no data will be printed. Being directed to the main menu.")
+            return 0
+
+        # data for that year exists
+        else:
+
+            # reading all the data from that year in 2D Array
+            file_2d_array = []
+            with open(filename, 'r') as file:
+                reader = csv.reader(file)
+                for row in reader:
+                    file_2d_array.append(row)
+
+            # storing the col numbers the criteria exists in a list
+            criteria_exist = []
+            for i in range(len(criteria)):
+                if not (criteria[i] == ""):
+                    criteria_exist.append(i)
+
+            # appending what matches search criteria to another list
+            for_printing = []
+
+            # for loop to check every row in file_2d_array
+            for rows in range(len(file_2d_array)):
+                match = True
+
+                # for loop to check search criteria contents in a row
+                for num in criteria_exist:
+                    if not (criteria[num] == file_2d_array[rows][num]):
+                        match = False
+                if match:
+                    for_printing.append(file_2d_array[rows])
+
+            return(for_printing)
+
+
+    # *** year is not entered ***
+    else:
+
+        # find how many files in the AnnualExpenseData folder
+        current_folder = os.path.dirname(os.path.abspath(__file__))
+        filename = current_folder + "\\AnnualExpenseData"
+        years_files = os.listdir(filename)
+        years_files_count = len(os.listdir(filename))
+
+        # add all the data from all the files to a 2D array
+        files_2d_array = []
+
+        # open each file and put all the data into files_2d_array
+        for file in years_files:
+            filename = current_folder + "\\AnnualExpenseData\\" + str(file)
+            with open(filename, 'r') as f:
+                reader = csv.reader(f)
+                for row in reader:
+                    files_2d_array.append(row)
+
+        # storing the col numbers the criteria exists in a list
+        criteria_exist = []
+        for i in range(len(criteria)):
+            if not (criteria[i] == ""):
+                criteria_exist.append(i)
+
+        # appending what matches search criteria to another list
+        for_printing = []
+
+        # for loop to check every row in file_2d_array
+        for rows in range(len(files_2d_array)):
+            match = True
+
+            # for loop to check search criteria contents in a row
+            for num in criteria_exist:
+                if not (criteria[num] == files_2d_array[rows][num]):
+                    match = False
+            if match:
+                for_printing.append(files_2d_array[rows])
+
+        return (for_printing)

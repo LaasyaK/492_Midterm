@@ -1,85 +1,85 @@
 Year,Month,Expense_Category,Expense_Name,Amount_Due,Due_Date,Amount_Paid,Payment_Date,Payment_Method
-2013,January,CCBill,Amex,670.5,1/6/2013,670.5,1/19/2013,Bank Draft
-2013,January,Utility,Water,50.66,1/4/2013,50.66,1/11/2013,Bank Draft
-2013,January,Utility,Internet,29.79,1/22/2013,29.79,1/29/2013,Check
-2013,January,Utility,Power,71.75,1/1/2013,71.75,1/11/2013,Bank Draft
-2013,January,Mortgage,House1,1301.27,1/15/2013,1301.27,1/25/2013,Check
-2013,January,Mortgage,House2,1074.26,1/14/2013,,,
-2013,January,Misc,,74.23,1/27/2013,74.23,1/29/2013,Check
-2013,February,CCBill,Amex,796.6,2/18/2013,796.6,2/28/2013,Bank Draft
-2013,February,Utility,Water,84.0,2/13/2013,84.0,2/14/2013,Bank Draft
-2013,February,Utility,Internet,21.82,2/20/2013,,,
-2013,February,Utility,Power,72.13,2/17/2013,72.13,2/27/2013,Check
-2013,February,Mortgage,House1,1986.41,2/5/2013,1986.41,2/28/2013,Bank Draft
-2013,February,Mortgage,House2,1361.02,2/6/2013,1361.02,2/22/2013,Bank Draft
-2013,February,Misc,,29.43,2/5/2013,29.43,2/15/2013,Bank Draft
-2013,March,CCBill,Amex,755.71,3/11/2013,755.71,3/11/2013,Bank Draft
-2013,March,Utility,Water,62.42,3/2/2013,62.42,3/4/2013,Bank Draft
-2013,March,Utility,Internet,39.9,3/2/2013,39.9,3/14/2013,Check
-2013,March,Utility,Power,76.01,3/24/2013,76.01,3/29/2013,Bank Draft
-2013,March,Mortgage,House1,1402.51,3/24/2013,1402.51,3/24/2013,Check
-2013,March,Mortgage,House2,1145.17,3/23/2013,,,
-2013,March,Misc,,74.51,3/11/2013,74.51,3/17/2013,Check
-2013,April,CCBill,Amex,1768.21,4/15/2013,1768.21,4/24/2013,Bank Draft
-2013,April,Utility,Water,45.87,4/5/2013,45.87,4/13/2013,Check
-2013,April,Utility,Internet,37.43,4/23/2013,37.43,4/28/2013,Check
-2013,April,Utility,Power,87.24,4/26/2013,87.24,4/26/2013,Check
-2013,April,Mortgage,House1,1077.67,4/7/2013,,,
-2013,April,Mortgage,House2,1833.25,4/18/2013,1833.25,4/19/2013,Bank Draft
-2013,April,Misc,,88.83,4/11/2013,88.83,4/18/2013,Check
-2013,May,CCBill,Amex,747.44,5/28/2013,,,
-2013,May,Utility,Water,59.53,5/3/2013,,,
-2013,May,Utility,Internet,32.64,5/7/2013,32.64,5/7/2013,Bank Draft
-2013,May,Utility,Power,75.48,5/28/2013,75.48,5/29/2013,Bank Draft
-2013,May,Mortgage,House1,1938.84,5/24/2013,1938.84,5/24/2013,Check
-2013,May,Mortgage,House2,1811.04,5/9/2013,1811.04,5/29/2013,Bank Draft
-2013,May,Misc,,68.39,5/14/2013,68.39,5/23/2013,Check
-2013,June,CCBill,Amex,742.49,6/28/2013,,,
-2013,June,Utility,Water,81.56,6/1/2013,81.56,6/2/2013,Check
-2013,June,Utility,Internet,11.51,6/11/2013,11.51,6/16/2013,Bank Draft
-2013,June,Utility,Power,80.85,6/25/2013,80.85,6/28/2013,Check
-2013,June,Mortgage,House1,1203.68,6/11/2013,1203.68,6/19/2013,Bank Draft
-2013,June,Mortgage,House2,1275.43,6/17/2013,1275.43,6/23/2013,Bank Draft
-2013,June,Misc,,28.07,6/21/2013,28.07,6/24/2013,Bank Draft
-2013,July,CCBill,Amex,968.26,7/16/2013,968.26,7/23/2013,Check
-2013,July,Utility,Water,53.02,7/7/2013,53.02,7/16/2013,Bank Draft
-2013,July,Utility,Internet,14.25,7/10/2013,14.25,7/12/2013,Bank Draft
-2013,July,Utility,Power,92.28,7/9/2013,92.28,7/15/2013,Check
-2013,July,Mortgage,House1,1145.46,7/19/2013,1145.46,7/29/2013,Bank Draft
-2013,July,Mortgage,House2,1737.42,7/5/2013,,,
-2013,July,Misc,,21.0,7/24/2013,21.0,7/26/2013,Check
-2013,August,CCBill,Amex,744.97,8/17/2013,,,
-2013,August,Utility,Water,39.31,8/25/2013,39.31,8/27/2013,Check
-2013,August,Utility,Internet,43.99,8/15/2013,43.99,8/18/2013,Bank Draft
-2013,August,Utility,Power,106.25,8/11/2013,106.25,8/20/2013,Check
-2013,August,Mortgage,House1,1950.48,8/29/2013,,,
-2013,August,Mortgage,House2,1910.35,8/9/2013,,,
-2013,August,Misc,,91.81,8/19/2013,,,
-2013,September,CCBill,Amex,1422.17,9/26/2013,1422.17,9/28/2013,Check
-2013,September,Utility,Water,32.15,9/23/2013,,,
-2013,September,Utility,Internet,26.78,9/28/2013,26.78,9/28/2013,Check
-2013,September,Utility,Power,100.15,9/5/2013,,,
-2013,September,Mortgage,House1,1101.38,9/17/2013,,,
-2013,September,Mortgage,House2,1767.71,9/15/2013,1767.71,9/21/2013,Check
-2013,September,Misc,,79.95,9/25/2013,,,
-2013,October,CCBill,Amex,788.51,10/7/2013,,,
-2013,October,Utility,Water,42.61,10/10/2013,42.61,10/10/2013,Bank Draft
-2013,October,Utility,Internet,38.79,10/6/2013,38.79,10/22/2013,Bank Draft
-2013,October,Utility,Power,93.94,10/2/2013,93.94,10/28/2013,Bank Draft
-2013,October,Mortgage,House1,1164.14,10/2/2013,1164.14,10/13/2013,Check
-2013,October,Mortgage,House2,1750.71,10/22/2013,1750.71,10/22/2013,Check
-2013,October,Misc,,63.75,10/9/2013,,,
-2013,November,CCBill,Amex,1054.58,11/15/2013,1054.58,11/27/2013,Bank Draft
-2013,November,Utility,Water,20.57,11/26/2013,20.57,11/28/2013,Bank Draft
-2013,November,Utility,Internet,7.97,11/24/2013,,,
-2013,November,Utility,Power,101.83,11/17/2013,,,
-2013,November,Mortgage,House1,1200.41,11/12/2013,1200.41,11/17/2013,Check
-2013,November,Mortgage,House2,1125.49,11/27/2013,1125.49,11/27/2013,Check
-2013,November,Misc,,76.57,11/19/2013,76.57,11/24/2013,Bank Draft
-2013,December,CCBill,Amex,1517.86,12/17/2013,1517.86,12/22/2013,Bank Draft
-2013,December,Utility,Water,75.49,12/15/2013,75.49,12/24/2013,Check
-2013,December,Utility,Internet,25.85,12/1/2013,,,
-2013,December,Utility,Power,87.57,12/27/2013,,,
-2013,December,Mortgage,House1,1315.72,12/28/2013,1315.72,12/28/2013,Check
-2013,December,Mortgage,House2,1997.39,12/2/2013,1997.39,12/7/2013,Check
-2013,December,Misc,,97.45,12/25/2013,,,
+2013,January,CCBill,Amex,1389.37,1/9/2013,1389.37,1/28/2013,Check
+2013,January,Utility,Water,71.64,1/13/2013,71.64,1/27/2013,Check
+2013,January,Utility,Internet,7.96,1/17/2013,7.96,1/25/2013,Check
+2013,January,Utility,Power,80.1,1/20/2013,80.1,1/22/2013,Bank Draft
+2013,January,Mortgage,House1,1876.18,1/1/2013,1876.18,1/16/2013,Bank Draft
+2013,January,Mortgage,House2,1474.48,1/25/2013,1474.48,1/26/2013,Check
+2013,January,Misc,Grocery,88.62,1/28/2013,,,
+2013,February,CCBill,Amex,1638.07,2/26/2013,1638.07,2/29/2013,Bank Draft
+2013,February,Utility,Water,63.02,2/18/2013,63.02,2/28/2013,Check
+2013,February,Utility,Internet,6.52,2/20/2013,6.52,2/21/2013,Check
+2013,February,Utility,Power,105.56,2/7/2013,105.56,2/15/2013,Bank Draft
+2013,February,Mortgage,House1,1062.56,2/19/2013,,,
+2013,February,Mortgage,House2,1227.85,2/6/2013,1227.85,2/21/2013,Bank Draft
+2013,February,Misc,Grocery,109.8,2/25/2013,,,
+2013,March,CCBill,Amex,1194.46,3/7/2013,1194.46,3/23/2013,Bank Draft
+2013,March,Utility,Water,22.05,3/21/2013,22.05,3/29/2013,Check
+2013,March,Utility,Internet,31.7,3/10/2013,31.7,3/28/2013,Bank Draft
+2013,March,Utility,Power,70.66,3/15/2013,,,
+2013,March,Mortgage,House1,1381.24,3/4/2013,,,
+2013,March,Mortgage,House2,1508.02,3/2/2013,1508.02,3/17/2013,Check
+2013,March,Misc,Grocery,63.2,3/28/2013,63.2,3/29/2013,Check
+2013,April,CCBill,Amex,897.85,4/13/2013,897.85,4/29/2013,Check
+2013,April,Utility,Water,38.5,4/2/2013,38.5,4/16/2013,Check
+2013,April,Utility,Internet,9.36,4/13/2013,,,
+2013,April,Utility,Power,102.0,4/3/2013,102.0,4/25/2013,Bank Draft
+2013,April,Mortgage,House1,1425.18,4/26/2013,1425.18,4/27/2013,Check
+2013,April,Mortgage,House2,1783.81,4/15/2013,1783.81,4/19/2013,Check
+2013,April,Misc,Grocery,50.24,4/3/2013,50.24,4/7/2013,Bank Draft
+2013,May,CCBill,Amex,808.79,5/11/2013,808.79,5/13/2013,Check
+2013,May,Utility,Water,20.75,5/2/2013,20.75,5/16/2013,Check
+2013,May,Utility,Internet,20.17,5/10/2013,20.17,5/29/2013,Check
+2013,May,Utility,Power,90.38,5/21/2013,90.38,5/27/2013,Bank Draft
+2013,May,Mortgage,House1,1779.18,5/9/2013,1779.18,5/24/2013,Check
+2013,May,Mortgage,House2,1049.54,5/4/2013,1049.54,5/14/2013,Check
+2013,May,Misc,Grocery,28.39,5/22/2013,28.39,5/26/2013,Bank Draft
+2013,June,CCBill,Amex,1747.09,6/1/2013,1747.09,6/18/2013,Check
+2013,June,Utility,Water,42.98,6/23/2013,,,
+2013,June,Utility,Internet,36.66,6/2/2013,36.66,6/3/2013,Check
+2013,June,Utility,Power,97.46,6/17/2013,97.46,6/24/2013,Check
+2013,June,Mortgage,House1,1545.61,6/29/2013,,,
+2013,June,Mortgage,House2,1111.47,6/27/2013,1111.47,6/27/2013,Bank Draft
+2013,June,Misc,Grocery,20.96,6/13/2013,20.96,6/23/2013,Check
+2013,July,CCBill,Amex,1775.0,7/22/2013,1775.0,7/26/2013,Check
+2013,July,Utility,Water,65.22,7/8/2013,65.22,7/11/2013,Check
+2013,July,Utility,Internet,46.2,7/10/2013,46.2,7/20/2013,Check
+2013,July,Utility,Power,87.08,7/17/2013,87.08,7/20/2013,Check
+2013,July,Mortgage,House1,1185.35,7/1/2013,1185.35,7/10/2013,Check
+2013,July,Mortgage,House2,1789.39,7/18/2013,1789.39,7/22/2013,Check
+2013,July,Misc,Grocery,47.6,7/27/2013,47.6,7/28/2013,Bank Draft
+2013,August,CCBill,Amex,1798.59,8/6/2013,1798.59,8/18/2013,Check
+2013,August,Utility,Water,86.02,8/2/2013,,,
+2013,August,Utility,Internet,43.4,8/8/2013,,,
+2013,August,Utility,Power,98.58,8/23/2013,98.58,8/28/2013,Bank Draft
+2013,August,Mortgage,House1,1198.19,8/20/2013,1198.19,8/23/2013,Check
+2013,August,Mortgage,House2,1630.32,8/25/2013,1630.32,8/29/2013,Bank Draft
+2013,August,Misc,Grocery,40.12,8/8/2013,40.12,8/8/2013,Bank Draft
+2013,September,CCBill,Amex,1719.77,9/13/2013,1719.77,9/13/2013,Check
+2013,September,Utility,Water,56.7,9/1/2013,,,
+2013,September,Utility,Internet,14.82,9/20/2013,14.82,9/20/2013,Bank Draft
+2013,September,Utility,Power,102.42,9/15/2013,102.42,9/24/2013,Check
+2013,September,Mortgage,House1,1736.45,9/11/2013,,,
+2013,September,Mortgage,House2,1061.22,9/6/2013,,,
+2013,September,Misc,Grocery,101.62,9/2/2013,101.62,9/27/2013,Check
+2013,October,CCBill,Amex,1630.9,10/4/2013,1630.9,10/20/2013,Check
+2013,October,Utility,Water,46.54,10/7/2013,,,
+2013,October,Utility,Internet,10.42,10/29/2013,10.42,10/29/2013,Bank Draft
+2013,October,Utility,Power,87.32,10/25/2013,87.32,10/29/2013,Bank Draft
+2013,October,Mortgage,House1,1001.44,10/27/2013,1001.44,10/28/2013,Check
+2013,October,Mortgage,House2,1149.72,10/10/2013,,,
+2013,October,Misc,Grocery,77.82,10/2/2013,77.82,10/24/2013,Check
+2013,November,CCBill,Amex,747.61,11/4/2013,,,
+2013,November,Utility,Water,21.82,11/25/2013,,,
+2013,November,Utility,Internet,32.57,11/3/2013,32.57,11/7/2013,Bank Draft
+2013,November,Utility,Power,72.2,11/4/2013,,,
+2013,November,Mortgage,House1,1477.33,11/6/2013,1477.33,11/16/2013,Check
+2013,November,Mortgage,House2,1403.21,11/9/2013,1403.21,11/25/2013,Bank Draft
+2013,November,Misc,Grocery,72.71,11/26/2013,72.71,11/28/2013,Bank Draft
+2013,December,CCBill,Amex,1140.57,12/9/2013,1140.57,12/23/2013,Bank Draft
+2013,December,Utility,Water,35.76,12/1/2013,,,
+2013,December,Utility,Internet,10.82,12/3/2013,,,
+2013,December,Utility,Power,103.6,12/28/2013,103.6,12/29/2013,Bank Draft
+2013,December,Mortgage,House1,1415.84,12/26/2013,1415.84,12/28/2013,Bank Draft
+2013,December,Mortgage,House2,1283.01,12/19/2013,1283.01,12/28/2013,Check
+2013,December,Misc,Grocery,96.25,12/4/2013,,,

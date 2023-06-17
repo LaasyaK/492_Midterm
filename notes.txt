@@ -3,30 +3,7 @@
     - platform.system()
         - returns what OS is being used
 
-- understand what cna be used in calander lib
+- put int documentation for everything
 
-- import sys
-    - figure out what 'argv' is
-
-- gen exp
-    - faker lib might help
-
-- task 1
-    - for loop for each year
-        - for loop for each month
-            - creating dictionary objects to be added to the foldername(AnnualExpDate)
-    - if file donsnt exist create if does create file and add dictionarys (from hw2)
-
-- add a new exp
-    - user catagories are given, dont make them type it, given menu
-    - check for not crashing
-    - user can press enter key if they have no data to input
-
-- search/modify
-    - use regx to get info of what to search for (regex101.com to test what will be found)
-    - modify
-        - read all data
-        - put into numpy array
-        - find cell to change and modify
-
+- sanity check everything
 
