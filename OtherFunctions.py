@@ -88,7 +88,7 @@ def search_validity(search_crit):                                   # *** DONE *
 
         # checking if month str given is valid
         month_right = False
-        for month in range(0, 12):
+        for month in range(1, 13):
             if month_search == calendar.month_name[month]:
                 month_right = True
         if not(month_right):
@@ -102,7 +102,7 @@ def search_validity(search_crit):                                   # *** DONE *
 
         # checking if month str given is valid
         month_right = False
-        for month in range(0, 12):
+        for month in range(1, 13):
             if month_search == calendar.month_name[month]:
                 month_right = True
         if not (month_right):
