@@ -7,6 +7,7 @@ from MainMenuOptions import add_new_expense                     # option a
 from MainMenuOptions import search_mod_expense                  # option b
 from MainMenuOptions import add_categ_name_method               # option c
 from ReportAndGraphFunctions import report                      # report function
+from ReportAndGraphFunctions import graph                       # graph function
 
 
 
@@ -22,7 +23,7 @@ if len(sys.argv) > 1:
         if option == "report":
             report()
         elif option == "graph":
-            print("run graph func")
+            graph()
         else:
             print("The argument passed is not valid, available arguments are '--report' and '--graph'.")
             exit(0)

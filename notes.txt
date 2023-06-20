@@ -7,3 +7,5 @@
 
 - sanity check everything
 
+- installed matplotlib so put that somewhere
+

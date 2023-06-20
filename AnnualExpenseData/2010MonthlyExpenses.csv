@@ -1,0 +1,85 @@
+Year,Month,Expense_Category,Expense_Name,Amount_Due,Due_Date,Amount_Paid,Payment_Date,Payment_Method
+2010,January,Utility,Water,21.69,1/6/2010,21.69,1/8/2010,Bank Draft
+2010,January,Utility,Internet,35.87,1/14/2010,35.87,1/16/2010,Check
+2010,January,Mortgage,House1,1196.67,1/1/2010,1196.67,1/16/2010,Check
+2010,January,Misc,Grocery,109.91,1/26/2010,109.91,1/29/2010,Check
+2010,February,CCBill,Amex,899.71,2/11/2010,899.71,2/21/2010,Check
+2010,February,Utility,Water,65.09,2/28/2010,65.09,2/29/2010,Bank Draft
+2010,February,Utility,Power,74.53,2/29/2010,74.53,2/29/2010,Check
+2010,February,Mortgage,House1,1263.34,2/2/2010,1263.34,2/13/2010,Bank Draft
+2010,February,Mortgage,House2,1085.48,2/23/2010,1085.48,2/28/2010,Check
+2010,February,Misc,Grocery,66.4,2/12/2010,,,
+2010,March,CCBill,Amex,711.47,3/11/2010,,,
+2010,March,Utility,Water,47.01,3/18/2010,,,
+2010,March,Utility,Internet,19.53,3/25/2010,19.53,3/29/2010,Bank Draft
+2010,March,Utility,Power,109.72,3/1/2010,109.72,3/19/2010,Check
+2010,March,Mortgage,House1,1190.56,3/20/2010,1190.56,3/23/2010,Check
+2010,March,Mortgage,House2,1206.91,3/21/2010,1206.91,3/26/2010,Bank Draft
+2010,March,Misc,Grocery,72.55,3/1/2010,72.55,3/23/2010,Check
+2010,April,CCBill,Amex,1184.56,4/27/2010,1184.56,4/28/2010,Bank Draft
+2010,April,Utility,Water,45.69,4/17/2010,45.69,4/29/2010,Bank Draft
+2010,April,Utility,Internet,7.53,4/22/2010,7.53,4/27/2010,Bank Draft
+2010,April,Utility,Power,99.43,4/8/2010,,,
+2010,April,Mortgage,House1,1203.02,4/16/2010,1203.02,4/28/2010,Bank Draft
+2010,April,Mortgage,House2,1415.56,4/27/2010,1415.56,4/29/2010,Bank Draft
+2010,April,Misc,Grocery,104.76,4/4/2010,104.76,4/9/2010,Check
+2010,May,CCBill,Amex,1320.39,5/17/2010,1320.39,5/21/2010,Bank Draft
+2010,May,Utility,Water,24.24,5/29/2010,24.24,5/29/2010,Bank Draft
+2010,May,Utility,Internet,44.9,5/22/2010,44.9,5/26/2010,Bank Draft
+2010,May,Utility,Power,96.95,5/6/2010,96.95,5/6/2010,Bank Draft
+2010,May,Mortgage,House1,1039.97,5/20/2010,1039.97,5/21/2010,Bank Draft
+2010,May,Misc,Grocery,39.98,5/21/2010,39.98,5/24/2010,Bank Draft
+2010,June,CCBill,Amex,1311.86,6/9/2010,1311.86,6/23/2010,Bank Draft
+2010,June,Utility,Water,89.9,6/1/2010,89.9,6/16/2010,Bank Draft
+2010,June,Utility,Power,88.56,6/25/2010,88.56,6/26/2010,Bank Draft
+2010,June,Mortgage,House1,1066.18,6/8/2010,1066.18,6/26/2010,Check
+2010,June,Mortgage,House2,1549.84,6/27/2010,1549.84,6/28/2010,Bank Draft
+2010,June,Misc,Grocery,52.65,6/10/2010,52.65,6/24/2010,Bank Draft
+2010,July,CCBill,Amex,1492.12,7/24/2010,1492.12,7/28/2010,Bank Draft
+2010,July,Utility,Water,68.69,7/17/2010,,,
+2010,July,Utility,Internet,11.94,7/22/2010,11.94,7/24/2010,Bank Draft
+2010,July,Utility,Power,87.26,7/11/2010,,,
+2010,July,Mortgage,House1,1175.99,7/3/2010,,,
+2010,July,Mortgage,House2,1831.5,7/12/2010,1831.5,7/12/2010,Bank Draft
+2010,July,Misc,Grocery,96.37,7/21/2010,96.37,7/25/2010,Bank Draft
+2010,August,CCBill,Amex,1317.82,8/5/2010,,,
+2010,August,Utility,Water,65.58,8/27/2010,65.58,8/28/2010,Bank Draft
+2010,August,Utility,Internet,11.54,8/1/2010,11.54,8/26/2010,Check
+2010,August,Utility,Power,108.47,8/29/2010,108.47,8/29/2010,Bank Draft
+2010,August,Mortgage,House1,1934.47,8/23/2010,1934.47,8/25/2010,Check
+2010,August,Mortgage,House2,1255.08,8/25/2010,1255.08,8/28/2010,Bank Draft
+2010,August,Misc,Grocery,96.71,8/4/2010,,,
+2010,September,CCBill,Amex,1194.36,9/3/2010,1194.36,9/5/2010,Bank Draft
+2010,September,Utility,Water,35.25,9/13/2010,35.25,9/22/2010,Bank Draft
+2010,September,Utility,Internet,28.74,9/27/2010,28.74,9/29/2010,Check
+2010,September,Utility,Power,102.12,9/27/2010,102.12,9/29/2010,Check
+2010,September,Mortgage,House1,1527.8,9/4/2010,,,
+2010,September,Mortgage,House2,1718.28,9/12/2010,,,
+2010,September,Misc,Grocery,50.41,9/9/2010,50.41,9/20/2010,Check
+2010,October,CCBill,Amex,1222.31,10/7/2010,1222.31,10/22/2010,Bank Draft
+2010,October,Utility,Water,89.63,10/3/2010,,,
+2010,October,Utility,Internet,15.54,10/14/2010,15.54,10/24/2010,Check
+2010,October,Utility,Power,101.6,10/17/2010,,,
+2010,October,Mortgage,House1,1792.3,10/5/2010,,,
+2010,October,Mortgage,House2,1303.66,10/4/2010,1303.66,10/4/2010,Check
+2010,October,Misc,Grocery,42.54,10/17/2010,42.54,10/25/2010,Bank Draft
+2010,November,CCBill,Amex,1275.98,11/14/2010,,,
+2010,November,Utility,Water,20.58,11/18/2010,20.58,11/27/2010,Bank Draft
+2010,November,Utility,Internet,12.5,11/15/2010,12.5,11/26/2010,Bank Draft
+2010,November,Utility,Power,91.45,11/5/2010,,,
+2010,November,Mortgage,House1,1825.1,11/16/2010,1825.1,11/25/2010,Check
+2010,November,Mortgage,House2,1079.33,11/2/2010,1079.33,11/28/2010,Bank Draft
+2010,November,Misc,Grocery,99.57,11/22/2010,99.57,11/27/2010,Check
+2010,December,CCBill,Amex,1371.04,12/23/2010,1371.04,12/23/2010,Check
+2010,December,Utility,Water,65.4,12/26/2010,,,
+2010,December,Utility,Internet,42.97,12/14/2010,,,
+2010,December,Utility,Power,88.79,12/6/2010,88.79,12/9/2010,Check
+2010,December,Mortgage,House1,1344.85,12/12/2010,1344.85,12/29/2010,Check
+2010,December,Mortgage,House2,1855.76,12/6/2010,1855.76,12/16/2010,Bank Draft
+2010,December,Misc,Grocery,49.56,12/4/2010,49.56,12/20/2010,Check
+2010,January,Mortgage,House2,1751.07,1/12/2010,-6,1/26/2010,Bank Draft
+2010,January,Utility,Power,70,1/16/2010,77.55,1/27/2010,Bank Draft
+2010,February,Utility,Water,10.43,2/23/2010,10.43,2/23/2010,Bank Draft
+2010,June,Misc,Internet,27.78,6/29/2010,27.78,6/29/2010,Bank Draft
+2010,February,CCBill,Amex,869.87,1/27/2010,,,
+2010,May,Mortgage,House2,1920.1,5/24/2010,,,Check

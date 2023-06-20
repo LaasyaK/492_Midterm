@@ -1,5 +1,5 @@
-# TODO 3 OF THEM
-# TODO START CODING 3RD GRAPH
+# TODO GRAPH FUNCS
+# TODO TO ALL LEGENDS ADD NOTE: IF AMOUNT_DUE NOT SHOWN AMOUNT_DUE = AMOUNT_PAID
 
 
 
@@ -8,7 +8,6 @@ import os
 import datetime
 import csv
 import calendar
-import numpy
 from matplotlib import pyplot as plt
 from OtherFunctions import search_all_expense_data
 
@@ -31,6 +30,7 @@ with open("DefaultsRecord.txt", 'r', newline='') as defaults:
 
 # function to run when user wants reports on expenses
 def report():
+
     print("\nMaking a Report__________________________________________________________________________________________")
 
     # give user menu and asks for option
@@ -38,8 +38,8 @@ def report():
     while not_valid:
 
         print("\nYou will be shown a menu of options of what report can be made.")
-        print("0  Annual Yearly Expense Category or Name amount paid for inputted range of years Report.")
-        print("1  Annual Yearly Expense Category and Name amount paid for inputted range of years Report.")
+        print("0  Annual Yearly Expense for an Expense_Category for inputted range of years Report.")
+        print("1  Annual Yearly Expense for each Expense_Name in a Category for inputted range of years Report.")
         print("2  Annual Monthly Expenses for a year Report.")
         option_pick = input("Which option do you want to make a report for? (type in the number "
                                  "associated or type 'main' to return to the main menu.) : ")
@@ -58,7 +58,7 @@ def report():
     # *** making the 1st report ***
 
     if int(option_pick) == 0:
-        print("\nAnnual Yearly Expense Report___________________________________________________________________________")
+        print("\nAnnual Yearly Expense for a Expense_Category Report_______________________________________________")
 
         # asks user which report type and checks if input is valid
         not_valid = True
@@ -78,65 +78,25 @@ def report():
             except ValueError:
                 print("Can't input an input that isn't the associated 1 digit number, try again.\n")
 
-        # ask user to pick a specific expense category or name and check if input is valid
-        not_valid = True
-        while not_valid:
-
-            print("\n0  Expense_Category")
-            print("1  Expense_Name")
-            categ_name = input("Which option do you want to get data from ? (type in the number associated or type "
-                                "'main' to return to the main menu.) : ")
-            if categ_name == "main":
-                return 0
-            try:
-                if not (int(categ_name) in range(2)):
-                    print("Can't input an input that isn't the associated 1 digit number, try again.\n")
-                else:
-                    not_valid = False
-            except ValueError:
-                print("Can't input an input that isn't the associated 1 digit number, try again.\n")
-
+        # printing and choosing a category
         print("\n")
         not_valid = True
         while not_valid:
 
-            # printing and choosing a category
-            if int(categ_name) == 0:
-                for elem in range(len(Expense_Category)):
-                    print(str(elem) + "  " + str(Expense_Category[int(elem)]))
-                categ_pick = input("Which option do you want to get data from ? (type in the number associated or type "
-                            "'main' to return to the main menu.) : ")
-                if categ_pick == "main":
-                    return 0
-                try:
-                    if not (int(categ_pick) in range(len(Expense_Category))):
-                        print("Can't input an input that isn't the associated 1 digit number, try again.\n")
-                    else:
-                        categ_pick = Expense_Category[int(categ_pick)]
-                        not_valid = False
-                except ValueError:
+            for elem in range(len(Expense_Category)):
+                print(str(elem) + "  " + str(Expense_Category[int(elem)]))
+            categ_pick = input("Which option do you want to get data from ? (type in the number associated or type "
+                        "'main' to return to the main menu.) : ")
+            if categ_pick == "main":
+                return 0
+            try:
+                if not (int(categ_pick) in range(len(Expense_Category))):
                     print("Can't input an input that isn't the associated 1 digit number, try again.\n")
-
-            # printing and choosing a name
-            else:
-                new_Expense_Name = []
-                for group in range(0, len(Expense_Name)):
-                    for elem in range(len(Expense_Name[group])):
-                        new_Expense_Name.append(str(Expense_Name[group][elem]))
-                for i in range(len(new_Expense_Name)):
-                    print(str(i) + "  " + new_Expense_Name[i])
-                name_pick = input("Which option do you want to get data from? (type in the number associated or "
-                                          "type 'main' to return to the main menu.) : ")
-                if name_pick == "main":
-                        return 0
-                try:
-                    if not (int(name_pick) in range(len(new_Expense_Name))):
-                        print("Can't input an input that isn't the associated 1 digit number, try again.\n")
-                    else:
-                        name_pick = new_Expense_Name[int(name_pick)]
-                        not_valid = False
-                except ValueError:
-                    print("Can't input an input that isn't the associated 1 digit number, try again.\n")
+                else:
+                    categ_pick = Expense_Category[int(categ_pick)]
+                    not_valid = False
+            except ValueError:
+                print("Can't input an input that isn't the associated 1 digit number, try again.\n")
 
         # ask user to enter year1 in the range of years and validate it
         not_valid = True
@@ -199,11 +159,7 @@ def report():
         for year in year_list:
 
             # putting info from user into a str
-            search_criteria = "Year:" + str(year)
-            try:
-                search_criteria = search_criteria + ", Expense_Category:" + str(categ_pick)
-            except UnboundLocalError:
-                search_criteria = search_criteria + ", Expense_Name:" + str(name_pick)
+            search_criteria = "Year:" + str(year) + ", Expense_Category:" + str(categ_pick)
 
             # get all searched results based on criteria and sum up amt paid and due
             to_search = search_all_expense_data(str(search_criteria))
@@ -222,24 +178,16 @@ def report():
         # add rows of data to csv file in ExpenseReports
         current_folder = os.path.dirname(os.path.abspath(__file__))
         if int(report_type) == 0:
-            try:
-                filename = current_folder + "\\ExpenseReports\\" + str(categ_pick) + "_Expense_" + str(year1) + "_to_" +\
-                           str(year2) + ".csv"
-            except UnboundLocalError:
-                filename = current_folder + "\\ExpenseReports\\" + str(name_pick) + "_Expense_" + str(year1) + "_to_" +\
-                           str(year2) + ".csv"
+            filename = current_folder + "\\ExpenseReports\\" + str(categ_pick) + "_Category_Expense_" + str(year1)\
+                       + "_to_" +str(year2) + ".csv"
             with open(filename, 'w', newline='') as f:
                 writer = csv.writer(f)
                 writer.writerows(data_for_report)
 
         # add rows of data to txt file in ExpenseReports
         else:
-            try:
-                filename = current_folder + "\\ExpenseReports\\" + str(categ_pick) + "_Expense_" + str(year1) + "_to_" +\
-                           str(year2) + ".txt"
-            except UnboundLocalError:
-                filename = current_folder + "\\ExpenseReports\\" + str(name_pick) + "_Expense_" + str(year1) + "_to_" +\
-                           str(year2) + ".txt"
+            filename = current_folder + "\\ExpenseReports\\" + str(categ_pick) + "_Category_Expense_" + str(year1)\
+                       + "_to_" + str(year2) + ".txt"
             with open(filename, 'w') as f:
                 for n in data_for_report:
                     f.write(str(n) + "\n")
@@ -247,15 +195,10 @@ def report():
         print("Report made")
 
 
-    # making 2nd report     # TODO I DONT UNDERSTAND WHAT THIS REPORT WILL HOLD
-        print("")
-
-    # A text or csv report for expenses in for an expense type or category for a year range {year 1 to year 2} or a
-        # particular year. 4 columns: expense name, expense category, year, expense. Name the file accordingly.
-
+    # *** making 2nd report ***
 
     elif int(option_pick) == 1:
-        print("\nAnnual Yearly Expense with Category and Name_________________________________________________________")
+        print("\nAnnual Yearly Expense for each Expense_Name Report_________________________________________________________")
 
         # asks user which report type and checks if input is valid
         not_valid = True
@@ -275,68 +218,24 @@ def report():
             except ValueError:
                 print("Can't input an input that isn't the associated 1 digit number, try again.\n")
 
-        # ask user to pick a specific expense category or name and check if input is valid
+        print("\n")
         not_valid = True
         while not_valid:
 
-            print("\n0  Expense_Category")
-            print("1  Expense_Name")
-            categ_name = input(
-                "Which option do you want to get data from ? (type in the number associated or type "
-                "'main' to return to the main menu.) : ")
-            if categ_name == "main":
+            # printing and choosing a category to get all Expense names from
+            for elem in range(len(Expense_Category)):
+                print(str(elem) + "  " + str(Expense_Category[int(elem)]))
+            categ_pick = input("Which option do you want to get all the Expense names from ? (type in the number "
+                               "associated or type 'main' to return to the main menu.) : ")
+            if categ_pick == "main":
                 return 0
             try:
-                if not (int(categ_name) in range(2)):
+                if not (int(categ_pick) in range(len(Expense_Category))):
                     print("Can't input an input that isn't the associated 1 digit number, try again.\n")
                 else:
                     not_valid = False
             except ValueError:
                 print("Can't input an input that isn't the associated 1 digit number, try again.\n")
-
-        print("\n")
-        not_valid = True
-        while not_valid:
-
-            # printing and choosing a category
-            if int(categ_name) == 0:
-                for elem in range(len(Expense_Category)):
-                    print(str(elem) + "  " + str(Expense_Category[int(elem)]))
-                categ_pick = input(
-                    "Which option do you want to get data from ? (type in the number associated or type "
-                    "'main' to return to the main menu.) : ")
-                if categ_pick == "main":
-                    return 0
-                try:
-                    if not (int(categ_pick) in range(len(Expense_Category))):
-                        print("Can't input an input that isn't the associated 1 digit number, try again.\n")
-                    else:
-                        categ_pick = Expense_Category[int(categ_pick)]
-                        not_valid = False
-                except ValueError:
-                    print("Can't input an input that isn't the associated 1 digit number, try again.\n")
-
-            # printing and choosing a name
-            else:
-                new_Expense_Name = []
-                for group in range(0, len(Expense_Name)):
-                    for elem in range(len(Expense_Name[group])):
-                        new_Expense_Name.append(str(Expense_Name[group][elem]))
-                for i in range(len(new_Expense_Name)):
-                    print(str(i) + "  " + new_Expense_Name[i])
-                name_pick = input(
-                    "Which option do you want to get data from? (type in the number associated or "
-                    "type 'main' to return to the main menu.) : ")
-                if name_pick == "main":
-                    return 0
-                try:
-                    if not (int(name_pick) in range(len(new_Expense_Name))):
-                        print("Can't input an input that isn't the associated 1 digit number, try again.\n")
-                    else:
-                        name_pick = new_Expense_Name[int(name_pick)]
-                        not_valid = False
-                except ValueError:
-                    print("Can't input an input that isn't the associated 1 digit number, try again.\n")
 
         # ask user to enter year1 in the range of years and validate it
         not_valid = True
@@ -395,40 +294,63 @@ def report():
             year_list.append(year_num)
             year_num = year_num + 1
 
-
-        # TODO FIGURE OUT WHAT THE REPORTS COLUOMNS ARE
-        data_for_report = [['Year', 'Expense_Category', 'Expense_Name', 'Amount_Due', 'Amount_Paid']]
+        # make a header for the report based on the Expense_Names and add it to all the data for report
+        header = ['Year']
+        for name in Expense_Name[int(categ_pick)]:
+            header.append(name + " Amount_Due")
+            header.append(name + " Amount_Paid")
+        data_for_report = [header]
 
         # for loop of getting data for each year to put in a list
         for year in year_list:
+            row = [str(year)]
 
-            # putting info from user into a str
-            search_criteria = "Year:" + str(year)
-            try:
-                search_criteria = search_criteria + ", Expense_Category:" + str(categ_pick)
-            except UnboundLocalError:
-                search_criteria = search_criteria + ", Expense_Name:" + str(name_pick)
+            # for loop for each Expense_Name
+            for name in Expense_Name[int(categ_pick)]:
 
-            # get all searched results based on criteria and sum up amt paid and due
-            to_search = search_all_expense_data(str(search_criteria))
+                # putting info from user into a str
+                search_criteria = "Year:" + str(year) + ", Expense_Name:" + str(name)
 
-            amt_due_sum = 0
-            for each_row in to_search:
-                amt_due_sum = amt_due_sum + float(each_row[4])
+                # get all searched results based on criteria and sum up amt paid and due
+                to_search = search_all_expense_data(str(search_criteria))
 
-            amt_paid_sum = 0
-            for each_ro in to_search:
-                if not (each_ro[6] == ''):
-                    amt_paid_sum = amt_paid_sum + float(each_ro[6])
+                amt_due_sum = 0
+                for each_row in to_search:
+                    amt_due_sum = amt_due_sum + float(each_row[4])
 
-            data_for_report.append([str(year), round(amt_due_sum, 2), round(amt_paid_sum, 2)])
+                amt_paid_sum = 0
+                for each_ro in to_search:
+                    if not (each_ro[6] == ''):
+                        amt_paid_sum = amt_paid_sum + float(each_ro[6])
 
+                row.append(round(amt_due_sum, 2))
+                row.append(round(amt_paid_sum, 2))
 
+            data_for_report.append([row])
+
+        # add rows of data to csv file in ExpenseReports
+        current_folder = os.path.dirname(os.path.abspath(__file__))
+        if int(report_type) == 0:
+            filename = current_folder + "\\ExpenseReports\\" + "Each_Expense_Name_Expense_in_" + \
+                       str(Expense_Category[int(categ_pick)]) + "_" + str(year1) + "_to_" + str(year2) + ".csv"
+            with open(filename, 'w', newline='') as f:
+                writer = csv.writer(f)
+                writer.writerows(data_for_report)
+
+        # add rows of data to txt file in ExpenseReports
+        else:
+            filename = current_folder + "\\ExpenseReports\\" + "Each_Expense_Name_Expense_in_" + \
+                       str(Expense_Category[int(categ_pick)]) + "_" + str(year1) + "_to_" + str(year2) + ".txt"
+            with open(filename, 'w') as f:
+                for n in data_for_report:
+                    f.write(str(n) + "\n")
+
+        print("Report made")
 
 
     # *** making the 3rd report ***
     elif int(option_pick) == 2:
-        print("\nAnnual Monthly Expenses Report_________________________________________________________________________")
+        print("\nAnnual Monthly Expenses Report________________________________________________________________________")
 
         # asks user which report type and checks if input is valid
         not_valid = True
@@ -591,7 +513,7 @@ def report():
 
 
 # function to run when user wants graphs
-def graph():
+def graph():            # TODO TO ALL LEGENDS ADD NOTE: IF AMOUNT_DUE NOT SHOWN AMOUNT_DUE = AMOUNT_PAID
     print("\nMaking a Graph___________________________________________________________________________________________")
 
     # give user menu and asks for option
@@ -618,7 +540,7 @@ def graph():
             print("Can't input an input that isn't the associated 1 digit number, try again.\n")
 
 
-    # *** making the 1st report ***         # TODO MAKES THE X-AXIS WITH DECIMALS
+    # *** making the 1st graph ***                                 # *** DONE ***
 
     if int(option_pick) == 0:
         print("\nBar graph for Annual Yearly Expense Category or Name___________________________________________________")
@@ -766,7 +688,7 @@ def graph():
                     amt_paid_sum = amt_paid_sum + float(each_ro[6])
 
             # add the expense to category or name
-            x_axis.append(year)
+            x_axis.append(str(year))
             due_y_axis.append(round(amt_due_sum, 2))
             paid_y_axis.append(round(amt_paid_sum, 2))
 
@@ -774,21 +696,24 @@ def graph():
         plt.bar(x_axis, due_y_axis)
         plt.bar(x_axis, paid_y_axis)
         try:
-            plt.xlabel(str(categ_pick) + " Expense")
+            plt.xlabel("Year")
             plt.ylabel("Amount of Expense ($)")
-            plt.title("The " + str(categ_pick) + " Expense for Each Year")
+            plt.title("The " + str(categ_pick) + " Expense for Each Year" + str(year1) + " to " + str(year2))
         except UnboundLocalError:
-            plt.xlabel(str(name_pick) + " Expense Year")
+            plt.xlabel("Year")
             plt.ylabel("Amount of Expense ($)")
             plt.title("The " + str(name_pick) + " Expense for Each Year " + str(year1) + " to " + str(year2))
         plt.legend(["Amount_Due", "Amount_Paid"])
         plt.show()
 
 
-    # *** making the 2nd report ***     # TODO THIS CODE BLOCK IS RUNNING FOREVER
+    # *** making the 2nd graph ***     # TODO THIS CODE BLOCK IS RUNNING FOREVER
 
     elif int(option_pick) == 1:
         print("\nSub Bar graphs for Annual Yearly Expense Categories or Names___________________________________________")
+
+        print("IN PROGRESS DIRECTED TO MAIN MENU")
+        return 0
 
         # ask user to pick a specific expense category or name and check if input is valid
         not_valid = True
@@ -932,11 +857,23 @@ def graph():
 
 
 
-    # *** making the 3rd report ***
+    # *** making the 3rd graph ***
 
     elif int(option_pick) == 2:
         print(
-            "\nPie Chart for Annual Year Expense Categories or Names___________________________________________________")
+            "\nPie Chart for Annual Year Expense Categories or Names__________________________________________________")
+
+        print("IN PROGRESS DIRECTED TO MAIN MENU")
+        return 0
+
+        # A pie chart which has slices representing expense in each expense type or category for a given year.
+
+        # ask user to pick a specific expense category or name and check if input is valid
+        # printing and choosing a category
+        # printing and choosing a name
+        # ask user to enter year to get data from and validate it
+        # for each category or name get amount due and paid (make 2 pie charts for due and paid)
+        # make pie chart
 
 
 
@@ -944,7 +881,10 @@ def graph():
 
 
 
-    # *** making the 4th report ***                 # *** DONE ***
+
+
+
+    # *** making the 4th graph ***                                 # *** DONE ***
 
     elif int(option_pick) == 3:
         print(
@@ -1006,31 +946,7 @@ def graph():
         plt.bar(x_axis, due_y_axis)
         plt.bar(x_axis, paid_y_axis)
         plt.xlabel("Months")
-        plt.ylabel("Amount of Monthly Expenses ($)")
+        plt.ylabel("Amount of Monthly Expense ($)")
         plt.title("The Monthly Expenses for " + str(year1))
         plt.legend(["Amount_Due", "Amount_Paid"])
         plt.show()
-
-
-
-
-
-
-
-    # A bar graph with sub bars representing each expense type / category category for a year range {year 1 to year 2}.
-        # Total expense in a category vs. year (for all categories, where each sub bar represents a category)
-    # A pie chart which has slices representing expense in each expense type or category for a given year.
-
-
-
-
-graph()
-
-
-
-
-
-
-
-
-
