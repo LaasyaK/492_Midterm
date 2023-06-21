@@ -1,3 +1,10 @@
+"""
+Author: Laasya Kallepalli
+Date: 6/20/2023
+Purpose: Holds the other functions that are used to help run the main menu functions
+Functions: search_validity, date_validity, search_all_expense_data
+"""
+
 import re
 import datetime
 import calendar
@@ -21,9 +28,14 @@ with open("DefaultsRecord.txt", 'r', newline='') as defaults:
     Expense_Name = list(Expense_Dict.values())
 
 
-# make func to check validity of users inputted search criteria
-# that prints errors based on which info is not correct and returns the search criteria in a list
-def search_validity(search_crit):                                   # *** DONE ***
+def search_validity(search_crit):
+    """
+    Author: Laasya Kallepalli
+    Date: 6/20/2023
+    Purpose: Check validity of users inputted search criteria and throws errors telling user what is wrong
+    Input(s): Takes the string of the search criteria
+    Output(s): Returns the criteria without the fields if all the checks are passed
+    """
     criteria = []
 
     # getting search object from user input
@@ -232,6 +244,9 @@ def search_validity(search_crit):                                   # *** DONE *
         except TypeError:
             print("Due Date can't be an invalid date, try again.\n")
             return 0
+        except AttributeError:
+            print("Payment Date can't be an invalid date, try again.\n")
+            return 0
         criteria.append(date_search)
 
     # checking if due date is given at end of str
@@ -261,6 +276,9 @@ def search_validity(search_crit):                                   # *** DONE *
             return 0
         except TypeError:
             print("Due Date can't be an invalid date, try again.\n")
+            return 0
+        except AttributeError:
+            print("Payment Date can't be an invalid date, try again.\n")
             return 0
         criteria.append(date_search)
 
@@ -326,6 +344,9 @@ def search_validity(search_crit):                                   # *** DONE *
         except TypeError:
             print("Payment Date can't be an invalid date, try again.\n")
             return 0
+        except AttributeError:
+            print("Payment Date can't be an invalid date, try again.\n")
+            return 0
         criteria.append(pay_due_search)
 
     # checking if payment date is given at end of str
@@ -354,6 +375,9 @@ def search_validity(search_crit):                                   # *** DONE *
             print("Payment Date can't be an invalid date, try again.\n")
             return 0
         except TypeError:
+            print("Payment Date can't be an invalid date, try again.\n")
+            return 0
+        except AttributeError:
             print("Payment Date can't be an invalid date, try again.\n")
             return 0
         criteria.append(pay_due_search)
@@ -391,8 +415,14 @@ def search_validity(search_crit):                                   # *** DONE *
     return criteria
 
 
-# make func to check validity of an inputted year
-def date_validity(date_input):              # *** DONE ***
+def date_validity(date_input):
+    """
+    Author: Laasya Kallepalli
+    Date: 6/20/2023
+    Purpose: Checks validity of an inputed string of a date
+    Input(s): Takes the string of a date
+    Output(s): Returns the date if all the checks are passed
+    """
 
     # checking if due date is an actual date
     try:
@@ -416,11 +446,19 @@ def date_validity(date_input):              # *** DONE ***
         return 0
     except TypeError:
         return 0
+    except AttributeError:
+        return 0
     return 0
 
 
-# using the criteria given searching all the records and putting them into a list for a year
 def search_all_expense_data(search_crit):
+    """
+    Author: Laasya Kallepalli
+    Date: 6/20/2023
+    Purpose: Searches all the datasheets available and puts the data into a list
+    Input(s): Takes the string of the search criteria
+    Output(s): Returns a large 2D list of all the records according to the search criteria
+    """
 
     # finds the criteria that is being searched and put into list
     criteria = search_validity(search_crit)
@@ -455,7 +493,7 @@ def search_all_expense_data(search_crit):
             criteria_exist = []
             for i in range(len(criteria)):
                 if not (criteria[i] == ""):
-                    criteria_exist.append(i)
+                    criteria_exist.append(criteria[i])
 
             # appending what matches search criteria to another list
             for_printing = []
@@ -465,8 +503,8 @@ def search_all_expense_data(search_crit):
                 match = True
 
                 # for loop to check search criteria contents in a row
-                for num in criteria_exist:
-                    if not (criteria[num] == file_2d_array[rows][num]):
+                for elem in criteria_exist:
+                    if not (elem in file_2d_array[rows]):
                         match = False
                 if match:
                     for_printing.append(file_2d_array[rows])
@@ -498,7 +536,7 @@ def search_all_expense_data(search_crit):
         criteria_exist = []
         for i in range(len(criteria)):
             if not (criteria[i] == ""):
-                criteria_exist.append(i)
+                criteria_exist.append(criteria[i])
 
         # appending what matches search criteria to another list
         for_printing = []

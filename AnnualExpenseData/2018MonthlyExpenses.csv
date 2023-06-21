@@ -1,85 +1,85 @@
 Year,Month,Expense_Category,Expense_Name,Amount_Due,Due_Date,Amount_Paid,Payment_Date,Payment_Method
-2018,January,CCBill,Amex,1493.48,1/21/2018,1493.48,1/22/2018,Check
-2018,January,Utility,Water,21.91,1/15/2018,21.91,1/27/2018,Check
-2018,January,Utility,Internet,25.98,1/21/2018,25.98,1/26/2018,Check
-2018,January,Utility,Power,85.54,1/11/2018,85.54,1/11/2018,Bank Draft
-2018,January,Mortgage,House1,1660.25,1/23/2018,1660.25,1/29/2018,Bank Draft
-2018,January,Mortgage,House2,1532.46,1/22/2018,,,
-2018,January,Misc,Grocery,103.74,1/18/2018,,,
-2018,February,CCBill,Amex,1194.88,2/4/2018,,,
-2018,February,Utility,Water,57.8,2/18/2018,57.8,2/18/2018,Bank Draft
-2018,February,Utility,Internet,14.02,2/16/2018,14.02,2/26/2018,Bank Draft
-2018,February,Utility,Power,106.1,2/12/2018,,,
-2018,February,Mortgage,House1,1928.6,2/14/2018,,,
-2018,February,Mortgage,House2,1836.04,2/21/2018,1836.04,2/27/2018,Check
-2018,February,Misc,Grocery,24.86,2/13/2018,,,
-2018,March,CCBill,Amex,660.0,3/18/2018,660.0,3/25/2018,Check
-2018,March,Utility,Water,73.93,3/13/2018,73.93,3/24/2018,Check
-2018,March,Utility,Internet,39.7,3/8/2018,39.7,3/17/2018,Check
-2018,March,Utility,Power,100.44,3/8/2018,100.44,3/24/2018,Check
-2018,March,Mortgage,House1,1047.06,3/4/2018,,,
-2018,March,Mortgage,House2,1889.53,3/6/2018,1889.53,3/22/2018,Bank Draft
-2018,March,Misc,Grocery,46.17,3/8/2018,,,
-2018,April,CCBill,Amex,1789.66,4/12/2018,1789.66,4/27/2018,Bank Draft
-2018,April,Utility,Water,55.73,4/16/2018,55.73,4/26/2018,Check
-2018,April,Utility,Internet,41.03,4/28/2018,41.03,4/29/2018,Bank Draft
-2018,April,Utility,Power,74.67,4/24/2018,74.67,4/26/2018,Bank Draft
-2018,April,Mortgage,House1,1190.89,4/8/2018,,,
-2018,April,Mortgage,House2,1516.46,4/17/2018,1516.46,4/19/2018,Check
-2018,April,Misc,Grocery,82.34,4/8/2018,82.34,4/23/2018,Check
-2018,May,CCBill,Amex,1720.36,5/14/2018,1720.36,5/25/2018,Bank Draft
-2018,May,Utility,Water,20.86,5/10/2018,20.86,5/14/2018,Bank Draft
-2018,May,Utility,Internet,17.08,5/7/2018,17.08,5/15/2018,Check
-2018,May,Utility,Power,108.41,5/26/2018,108.41,5/29/2018,Check
-2018,May,Mortgage,House1,1842.83,5/18/2018,,,
-2018,May,Mortgage,House2,1437.23,5/28/2018,,,
-2018,May,Misc,Grocery,33.53,5/14/2018,33.53,5/18/2018,Bank Draft
-2018,June,CCBill,Amex,1456.86,6/13/2018,1456.86,6/15/2018,Bank Draft
-2018,June,Utility,Water,55.51,6/11/2018,,,
-2018,June,Utility,Internet,46.04,6/5/2018,46.04,6/13/2018,Bank Draft
-2018,June,Utility,Power,85.18,6/15/2018,85.18,6/23/2018,Check
-2018,June,Mortgage,House1,1096.63,6/6/2018,1096.63,6/16/2018,Check
-2018,June,Mortgage,House2,1019.1,6/23/2018,1019.1,6/29/2018,Bank Draft
-2018,June,Misc,Grocery,20.36,6/27/2018,,,
-2018,July,CCBill,Amex,946.65,7/28/2018,946.65,7/29/2018,Bank Draft
-2018,July,Utility,Water,86.5,7/29/2018,86.5,7/29/2018,Bank Draft
-2018,July,Utility,Internet,44.73,7/10/2018,44.73,7/16/2018,Check
-2018,July,Utility,Power,107.5,7/6/2018,107.5,7/9/2018,Bank Draft
-2018,July,Mortgage,House1,1394.0,7/22/2018,1394.0,7/22/2018,Bank Draft
-2018,July,Mortgage,House2,1496.88,7/22/2018,1496.88,7/27/2018,Bank Draft
-2018,July,Misc,Grocery,22.66,7/28/2018,22.66,7/28/2018,Check
-2018,August,CCBill,Amex,1269.9,8/20/2018,1269.9,8/20/2018,Bank Draft
-2018,August,Utility,Water,64.28,8/24/2018,64.28,8/24/2018,Check
-2018,August,Utility,Internet,12.48,8/6/2018,,,
-2018,August,Utility,Power,78.5,8/26/2018,78.5,8/28/2018,Bank Draft
-2018,August,Mortgage,House1,1080.08,8/5/2018,,,
-2018,August,Mortgage,House2,1933.57,8/6/2018,1933.57,8/9/2018,Bank Draft
-2018,August,Misc,Grocery,53.65,8/10/2018,53.65,8/28/2018,Check
-2018,September,CCBill,Amex,912.66,9/29/2018,912.66,9/29/2018,Check
-2018,September,Utility,Water,22.5,9/5/2018,,,
-2018,September,Utility,Internet,30.64,9/8/2018,,,
-2018,September,Utility,Power,84.19,9/29/2018,84.19,9/29/2018,Check
-2018,September,Mortgage,House1,1823.15,9/22/2018,1823.15,9/25/2018,Check
-2018,September,Mortgage,House2,1432.93,9/5/2018,1432.93,9/10/2018,Check
-2018,September,Misc,Grocery,62.27,9/5/2018,62.27,9/11/2018,Check
-2018,October,CCBill,Amex,1461.66,10/25/2018,1461.66,10/28/2018,Check
-2018,October,Utility,Water,60.43,10/4/2018,60.43,10/25/2018,Check
-2018,October,Utility,Internet,28.45,10/20/2018,28.45,10/23/2018,Bank Draft
-2018,October,Utility,Power,90.73,10/1/2018,90.73,10/19/2018,Bank Draft
-2018,October,Mortgage,House1,1748.86,10/4/2018,1748.86,10/28/2018,Bank Draft
-2018,October,Mortgage,House2,1490.14,10/10/2018,1490.14,10/22/2018,Check
-2018,October,Misc,Grocery,54.24,10/6/2018,,,
-2018,November,CCBill,Amex,839.76,11/10/2018,839.76,11/16/2018,Check
-2018,November,Utility,Water,72.56,11/13/2018,72.56,11/16/2018,Bank Draft
-2018,November,Utility,Internet,16.37,11/18/2018,,,
-2018,November,Utility,Power,88.89,11/16/2018,,,
-2018,November,Mortgage,House1,1679.48,11/19/2018,1679.48,11/21/2018,Check
-2018,November,Mortgage,House2,1344.04,11/12/2018,1344.04,11/13/2018,Check
-2018,November,Misc,Grocery,56.32,11/28/2018,56.32,11/29/2018,Check
-2018,December,CCBill,Amex,769.79,12/1/2018,769.79,12/16/2018,Check
-2018,December,Utility,Water,42.75,12/15/2018,42.75,12/24/2018,Bank Draft
-2018,December,Utility,Internet,44.43,12/1/2018,44.43,12/17/2018,Bank Draft
-2018,December,Utility,Power,104.15,12/12/2018,104.15,12/24/2018,Check
-2018,December,Mortgage,House1,1258.37,12/16/2018,1258.37,12/29/2018,Bank Draft
-2018,December,Mortgage,House2,1836.88,12/14/2018,,,
-2018,December,Misc,Grocery,48.29,12/29/2018,,,
+2018,January,CCBill,Amex,1607.88,1/2/2018,,,
+2018,January,Utility,Water,33.3,1/15/2018,33.3,1/22/2018,Check
+2018,January,Utility,Internet,12.81,1/8/2018,12.81,1/21/2018,Bank Draft
+2018,January,Utility,Power,89.2,1/29/2018,89.2,1/29/2018,Bank Draft
+2018,January,Mortgage,House1,1418.77,1/17/2018,1418.77,1/28/2018,Bank Draft
+2018,January,Mortgage,House2,1757.42,1/15/2018,,,
+2018,January,Misc,Grocery,66.88,1/5/2018,66.88,1/18/2018,Bank Draft
+2018,February,CCBill,Amex,1545.13,2/2/2018,1545.13,2/19/2018,Bank Draft
+2018,February,Utility,Water,49.14,2/10/2018,,,
+2018,February,Utility,Internet,7.16,2/21/2018,7.16,2/21/2018,Check
+2018,February,Utility,Power,98.05,2/6/2018,98.05,2/9/2018,Bank Draft
+2018,February,Mortgage,House1,1642.6,2/12/2018,1642.6,2/29/2018,Bank Draft
+2018,February,Mortgage,House2,1300.24,2/14/2018,1300.24,2/29/2018,Bank Draft
+2018,February,Misc,Grocery,86.06,2/11/2018,86.06,2/23/2018,Check
+2018,March,CCBill,Amex,923.56,3/19/2018,923.56,3/19/2018,Bank Draft
+2018,March,Utility,Water,89.34,3/18/2018,89.34,3/20/2018,Bank Draft
+2018,March,Utility,Internet,29.02,3/20/2018,29.02,3/23/2018,Bank Draft
+2018,March,Utility,Power,80.53,3/7/2018,,,
+2018,March,Mortgage,House1,1492.87,3/2/2018,1492.87,3/14/2018,Bank Draft
+2018,March,Mortgage,House2,1341.85,3/24/2018,1341.85,3/26/2018,Check
+2018,March,Misc,Grocery,102.39,3/10/2018,102.39,3/18/2018,Check
+2018,April,CCBill,Amex,1088.41,4/2/2018,1088.41,4/2/2018,Check
+2018,April,Utility,Water,68.19,4/25/2018,68.19,4/28/2018,Bank Draft
+2018,April,Utility,Internet,40.45,4/26/2018,,,
+2018,April,Utility,Power,94.36,4/8/2018,94.36,4/23/2018,Check
+2018,April,Mortgage,House1,1007.51,4/14/2018,1007.51,4/29/2018,Check
+2018,April,Mortgage,House2,1527.78,4/3/2018,,,
+2018,April,Misc,Grocery,105.02,4/24/2018,105.02,4/29/2018,Check
+2018,May,CCBill,Amex,1381.4,5/8/2018,1381.4,5/14/2018,Bank Draft
+2018,May,Utility,Water,68.48,5/8/2018,,,
+2018,May,Utility,Internet,43.55,5/6/2018,43.55,5/16/2018,Check
+2018,May,Utility,Power,77.84,5/2/2018,77.84,5/25/2018,Bank Draft
+2018,May,Mortgage,House1,1056.03,5/9/2018,1056.03,5/15/2018,Bank Draft
+2018,May,Mortgage,House2,1679.36,5/12/2018,1679.36,5/26/2018,Bank Draft
+2018,May,Misc,Grocery,76.03,5/3/2018,76.03,5/25/2018,Bank Draft
+2018,June,CCBill,Amex,1069.87,6/28/2018,1069.87,6/29/2018,Check
+2018,June,Utility,Water,55.12,6/13/2018,55.12,6/14/2018,Check
+2018,June,Utility,Internet,30.37,6/3/2018,30.37,6/28/2018,Bank Draft
+2018,June,Utility,Power,106.72,6/19/2018,106.72,6/29/2018,Bank Draft
+2018,June,Mortgage,House1,1204.6,6/6/2018,,,
+2018,June,Mortgage,House2,1950.14,6/18/2018,,,
+2018,June,Misc,Grocery,89.7,6/16/2018,,,
+2018,July,CCBill,Amex,1210.71,7/12/2018,1210.71,7/28/2018,Bank Draft
+2018,July,Utility,Water,58.13,7/4/2018,58.13,7/23/2018,Check
+2018,July,Utility,Internet,21.13,7/25/2018,21.13,7/28/2018,Bank Draft
+2018,July,Utility,Power,84.01,7/1/2018,84.01,7/2/2018,Bank Draft
+2018,July,Mortgage,House1,1378.83,7/11/2018,,,
+2018,July,Mortgage,House2,1802.14,7/14/2018,1802.14,7/18/2018,Bank Draft
+2018,July,Misc,Grocery,49.07,7/10/2018,49.07,7/25/2018,Bank Draft
+2018,August,CCBill,Amex,789.21,8/18/2018,789.21,8/25/2018,Bank Draft
+2018,August,Utility,Water,36.78,8/24/2018,36.78,8/28/2018,Bank Draft
+2018,August,Utility,Internet,18.38,8/6/2018,,,
+2018,August,Utility,Power,74.5,8/27/2018,74.5,8/28/2018,Bank Draft
+2018,August,Mortgage,House1,1640.29,8/12/2018,,,
+2018,August,Mortgage,House2,1140.39,8/24/2018,1140.39,8/26/2018,Check
+2018,August,Misc,Grocery,47.68,8/3/2018,,,
+2018,September,CCBill,Amex,651.83,9/3/2018,651.83,9/21/2018,Check
+2018,September,Utility,Water,86.71,9/16/2018,,,
+2018,September,Utility,Internet,25.53,9/7/2018,25.53,9/7/2018,Bank Draft
+2018,September,Utility,Power,108.58,9/14/2018,108.58,9/22/2018,Check
+2018,September,Mortgage,House1,1923.17,9/4/2018,1923.17,9/19/2018,Check
+2018,September,Mortgage,House2,1419.66,9/21/2018,1419.66,9/28/2018,Bank Draft
+2018,September,Misc,Grocery,89.74,9/6/2018,89.74,9/23/2018,Check
+2018,October,CCBill,Amex,1201.18,10/20/2018,1201.18,10/22/2018,Bank Draft
+2018,October,Utility,Water,43.79,10/20/2018,43.79,10/25/2018,Bank Draft
+2018,October,Utility,Internet,35.46,10/25/2018,35.46,10/25/2018,Bank Draft
+2018,October,Utility,Power,76.27,10/29/2018,76.27,10/29/2018,Bank Draft
+2018,October,Mortgage,House1,1910.86,10/18/2018,1910.86,10/21/2018,Bank Draft
+2018,October,Mortgage,House2,1135.41,10/13/2018,,,
+2018,October,Misc,Grocery,22.16,10/12/2018,,,
+2018,November,CCBill,Amex,1199.82,11/18/2018,,,
+2018,November,Utility,Water,38.25,11/3/2018,38.25,11/5/2018,Check
+2018,November,Utility,Internet,12.82,11/4/2018,12.82,11/24/2018,Check
+2018,November,Utility,Power,97.68,11/3/2018,97.68,11/8/2018,Check
+2018,November,Mortgage,House1,1251.47,11/19/2018,,,
+2018,November,Mortgage,House2,1191.8,11/24/2018,1191.8,11/24/2018,Check
+2018,November,Misc,Grocery,20.44,11/5/2018,20.44,11/6/2018,Check
+2018,December,CCBill,Amex,641.9,12/20/2018,641.9,12/22/2018,Check
+2018,December,Utility,Water,74.6,12/7/2018,74.6,12/14/2018,Bank Draft
+2018,December,Utility,Internet,36.64,12/9/2018,36.64,12/19/2018,Bank Draft
+2018,December,Utility,Power,88.04,12/16/2018,88.04,12/29/2018,Check
+2018,December,Mortgage,House1,1671.34,12/29/2018,1671.34,12/29/2018,Check
+2018,December,Mortgage,House2,1685.69,12/22/2018,1685.69,12/29/2018,Bank Draft
+2018,December,Misc,Grocery,84.23,12/28/2018,84.23,12/28/2018,Bank Draft

@@ -1,5 +1,9 @@
-# TODO OPTION D (optional)
-
+"""
+Author: Laasya Kallepalli
+Date: 6/20/2023
+Purpose: Holds all the functions for the Main menu to run
+Functions: add_new_expense, search_mod_expense, add_categ_name_method
+"""
 
 import datetime
 import calendar
@@ -19,17 +23,29 @@ with open("DefaultsRecord.txt", 'r', newline='') as defaults:
     Header = eval(Header)
     Payment_Method = groups[1]
     Payment_Method = eval(Payment_Method)
-    groups = re.findall(r'({.*?})', content)
+    groups = re.findall(r'(\{.*?\})', content)
     Expense_Dict = groups[0]
     Expense_Dict = eval(Expense_Dict)
     Expense_Category = list(Expense_Dict.keys())
     Expense_Name = list(Expense_Dict.values())
 
+new_Expense_Name = []
+for group in range(0, len(Expense_Name)):
+    for elem in range(len(Expense_Name[group])):
+        new_Expense_Name.append(str(Expense_Name[group][elem]))
+
+
 
 # ------------------------------------------- Option (a) Adding a new expense ------------------------------------------
-
-# adds a new expense row to any existing year datasheet or new datasheet            # *** DONE ***
 def add_new_expense():
+    """
+    Author: Laasya Kallepalli
+    Date: 6/20/2023
+    Purpose: adds a new expense row to any existing year datasheet or new datasheet
+    Input(s): asks for year, month, expense category and name, amount due, due date, amount paid, payment date,
+     and payment method
+    Output(s): adds the expense to the existing year datasheet or new one
+    """
     print("\nAdd a expense Function __________________________________________________________________________________")
 
     # get and validate year
@@ -66,7 +82,7 @@ def add_new_expense():
     while not_valid:
 
         # printing the menu
-        print("You will be shown a menu of the available expense categories.")
+        print("\nYou will be shown a menu of the available expense categories.")
         for categ in range(0, len(Expense_Category)):
             print(str(categ) + "  " + str(Expense_Category[categ]))
 
@@ -199,7 +215,7 @@ def add_new_expense():
                     not_valid = False
             except ValueError:
                 print("Can't input an input that isn't the associated 1 digit number, try again.\n")
-            method_change = Expense_Category[int(method_change)]
+            method_change = Payment_Method[int(method_change)]
 
     # double check all info and adding info to file
     print("\nThis will be added to the the " + year_change + " data sheet." )
@@ -248,9 +264,14 @@ def add_new_expense():
 
 
 # ------------------------------------ Option (b) Searching and modifying an expense -----------------------------------
-
-# searches and modifies an expense in a datasheet                               # *** DONE ***
 def search_mod_expense():
+    """
+    Author: Laasya Kallepalli
+    Date: 6/20/2023
+    Purpose: searches and modifies an expense in a datasheet
+    Input(s): asks for a string of fields and data to find records based on that search criteria
+    Output(s): prints all the records for that search criteria found and can modify specific fields for a record
+    """
     print("\nSearch/Modify an expense Function _______________________________________________________________________")
 
     # while loop until user enters valid search criteria
@@ -283,7 +304,11 @@ def search_mod_expense():
     # finds the criteria that is being searched and put into list
     criteria = search_validity(search_crit)
     print("This is the search criteria that will be searched for: ")
-    print(criteria)
+    search_printing = ""
+    for elem in criteria:
+        if not(elem == ""):
+            search_printing = search_printing + str(elem) + ", "
+    print(search_printing)
 
     # *** check if year is entered in str ***
     year_input = re.search(r"Year:(.*?)(?=,)", search_crit)
@@ -315,7 +340,7 @@ def search_mod_expense():
             criteria_exist =[]
             for i in range(len(criteria)):
                 if not(criteria[i] == ""):
-                    criteria_exist.append(i)
+                    criteria_exist.append(criteria[i])
 
             # appending what matches search criteria to another list
             for_printing = []
@@ -325,8 +350,8 @@ def search_mod_expense():
                 match = True
 
                 # for loop to check search criteria contents in a row
-                for num in criteria_exist:
-                    if not(criteria[num] == file_2d_array[rows][num]):
+                for elem in criteria_exist:
+                    if not (elem in file_2d_array[rows]):
                         match = False
                 if match:
                     for_printing.append(file_2d_array[rows])
@@ -454,7 +479,7 @@ def search_mod_expense():
         criteria_exist = []
         for i in range(len(criteria)):
             if not (criteria[i] == ""):
-                criteria_exist.append(i)
+                criteria_exist.append(criteria[i])
 
         # appending what matches search criteria to another list
         for_printing = []
@@ -464,14 +489,17 @@ def search_mod_expense():
             match = True
 
             # for loop to check search criteria contents in a row
-            for num in criteria_exist:
-                if not (criteria[num] == files_2d_array[rows][num]):
+            for elem in criteria_exist:
+                if not(elem in files_2d_array[rows]):
                     match = False
             if match:
                 for_printing.append(files_2d_array[rows])
 
-        # printing the search results when less than 10 of them
-        if len(for_printing) < 10:
+        # printing the search results when less than 10 of them or none
+        if len(for_printing) == 0:
+            print("\nNo Data for the Given Search")
+            return 0
+        elif len(for_printing) < 10:
             print("\nPrinting Search Results ...")
             for index in range(0, len(for_printing)):
                 print(str(index) + "  " + str(for_printing[index]))
@@ -559,10 +587,14 @@ def search_mod_expense():
         current_year_data = []
         year = new_row[0]
         filename = current_folder + "\\AnnualExpenseData\\" + str(year) + "MonthlyExpenses.csv"
-        with open(filename, 'r') as file:
-            reader = csv.reader(file)
-            for row in reader:
-                current_year_data.append(row)
+        try:
+            with open(filename, 'r') as file:
+                reader = csv.reader(file)
+                for row in reader:
+                    current_year_data.append(row)
+        except FileNotFoundError:
+            print("Year inputted doesn't have data, being directed to main menu.")
+            return 0
 
         # find index of where the record exists in current_year_data
         for line_num in range(len(current_year_data)):
@@ -570,8 +602,7 @@ def search_mod_expense():
                 index_whole = line_num
 
         # delete the row that is being modified
-        if (int(index_whole)) < len(current_year_data):
-            del current_year_data[(int(index_whole))]
+        del current_year_data[(int(index_whole))]
 
         # Write the updated data back to the CSV file
         with open(filename, 'w', newline='') as f:
@@ -582,9 +613,14 @@ def search_mod_expense():
 
 
 # ---------------------------- Option (c) Adding a expense category, name, or payment method ---------------------------
-
-# adding an expense category, expense name, or payment method to the defaults           # *** DONE ***
 def add_categ_name_method():
+    """
+    Author: Laasya Kallepalli
+    Date: 6/20/2023
+    Purpose: Adds an expense category, expense name, or payment method to the defaults
+    Input(s): asks how you want to change any of the defaults
+    Output(s): changes the specified default for future use
+    """
     print("\nAdd an Expense_Category, Expense_Name, or Payment Method Function _______________________________________")
 
     no_error = True
@@ -605,23 +641,39 @@ def add_categ_name_method():
 
         # typing in a new category and name or typing main
         elif to_change == "0":
-            print("\nThese are the current Expense_Categories: [Expense_Names] in a dictionary: ")
-            print(Expense_Dict)
-            categ_add = input("What Category do you want to add? (or type 'main' to return to the main menu.) : ")
-            if categ_add == "main":
-                return 0
-            name_add = input("What Name do you want to add to that Category? (or type 'main' to return to the main "
-                             "menu.) : ")
-            if name_add == "main":
-                return 0
-            Expense_Dict.update({categ_add: [name_add]})
-            print("Expense category and name added. Being directed to the main menu.")
-            no_error = False
+            not_valid = True
+            while not_valid:
+                print("\nThese are the current Expense_Categories: [Expense_Names] in a dictionary: ")
+                print(Expense_Dict)
+                Expense_Category = list(Expense_Dict.keys())
+                categ_add = input("What Category do you want to add? (or type 'main' to return to the main menu.) : ")
+                if categ_add == "main":
+                    return 0
+                elif categ_add in Expense_Category:
+                    print("Name already exists in Expense_Categories, try again.")
+                else:
+                    not_valid = False
+
+            not_valid = True
+            while not_valid:
+                name_add = input("What Name do you want to add to that Category? (or type 'main' to return to the main "
+                                 "menu.) : ")
+                if name_add == "main":
+                    return 0
+                elif name_add in new_Expense_Name:
+                    print("Name already exists in Expense_Names, try again.")
+                else:
+                    Expense_Dict.update({categ_add: [name_add]})
+                    print("Expense category and name added. Being directed to the main menu.")
+                    not_valid = False
+                    no_error = False
 
         # typing a new name for an existing category or typing main
         elif to_change == "1":
             not_valid = True
             while not_valid:
+
+                Expense_Category = list(Expense_Dict.keys())
 
                 # asking which category first
                 print("\nThese are the current Expense_Categories: ")
@@ -634,10 +686,16 @@ def add_categ_name_method():
                 try:
                     if not (int(categ) in range(0, len(Expense_Category))):
                         print("Can't input an input that isn't the associated 1 digit number, try again.\n")
+                    else:
+                        not_valid = False
                 except ValueError:
                     print("Can't input an input that isn't the associated 1 digit number, try again.\n")
 
+            not_valid = True
+            while not_valid:
+
                 # printing existing names in that category
+                Expense_Name = list(Expense_Dict.values())
                 print("These are the existing names in that category. : ")
                 print(Expense_Name[int(categ)])
 
@@ -646,22 +704,32 @@ def add_categ_name_method():
                              "menu.) : ")
                 if name == "main":
                     return 0
-                temp_list = Expense_Name[int(categ)] + [name]
-                Expense_Dict[Expense_Category[int(categ)]] = temp_list
-                print("Expense name added. Being directed to the main menu.")
-                not_valid = False
-                no_error = False
+                elif name in new_Expense_Name:
+                    print("Name already exists in Expense_Names, try again.")
+                else:
+                    temp_list = Expense_Name[int(categ)] + [name]
+                    Expense_Dict[Expense_Category[int(categ)]] = temp_list
+                    print("Expense name added. Being directed to the main menu.")
+                    not_valid = False
+                    no_error = False
 
         # adding a payment method
         elif to_change == "2":
-            print("\nThese are the current Payment_Methods: ")
-            print(Payment_Method)
-            method_add = input("What Payment Method do you want to add? (or type 'main' to return to the main menu.) : ")
-            if method_add == "main":
-                return 0
-            Payment_Method.append(method_add)
-            print("Payment method added. Being directed to the main menu.")
-            no_error = False
+            not_valid = True
+            while not_valid:
+                print("\nThese are the current Payment_Methods: ")
+                print(Payment_Method)
+                method_add = input("What Payment Method do you want to add? (or type 'main' to return to the "
+                                   "main menu.) : ")
+                if method_add == "main":
+                    return 0
+                elif method_add in Payment_Method:
+                    print("Method already exists in Payment_Methods, try again.")
+                else:
+                    Payment_Method.append(method_add)
+                    print("Payment method added. Being directed to the main menu.")
+                    not_valid = False
+                    no_error = False
 
         else:
             print("Can't input an input that isn't the associated 1 digit number, try again.\n")
@@ -674,3 +742,12 @@ def add_categ_name_method():
 
 
 # ------------------------------- Option (d) Import Expense Data from a csv or text file -------------------------------
+def import_exp_date():      # TODO
+    print("")
+# import a new csv or a text file (in the correct format) to import new expenses.
+# The new file expense entries should go through the same checks and validations.
+# As part of processing the new file, the following would be reported to the user before appending the new expenses
+# The records should be appended to the correct year csv file based on the year entry for the expense record
+# in the new file.
+# If there are any expense records with invalid data , do not add these to the existing file/s
+# Print total number of new expenses processed.  Append these to existing file.

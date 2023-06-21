@@ -1,5 +1,10 @@
-# sanity: check for any other inputs than those given and make sure not crashed
-
+"""
+Author: Laasya Kallepalli
+Date: 6/20/2023
+Purpose: Main program that runs the main menu to run each option
+Input(s): can take 1 commandline argument ('--report' or '--graph') to run other menus
+Output(s): takes user to the other functions
+"""
 
 import sys
 import re
@@ -13,6 +18,10 @@ from ReportAndGraphFunctions import graph                       # graph function
 
 
 # ------------------------------------------------- Main Menu Program --------------------------------------------------
+
+# telling user to download 3rd party library
+print("*** Before the Program can run, make sure you have installed matplotlib. Some functions will not run "
+      "without this library. ***")
 
 # taking the arguments to run different functions if typed in
 if len(sys.argv) > 1:
@@ -40,7 +49,6 @@ while not(prog_stop):
     print(" a. Add a new expense")
     print(" b. Search/Modify an expense")
     print(" c. Add an expense category or expense name")
-    print(" d. Import expense data (optional for bonus points)")
     print(" e. Close the program")
 
     # user input of option
@@ -52,9 +60,6 @@ while not(prog_stop):
         search_mod_expense()
     elif option == "c":
         add_categ_name_method()
-    elif option == "d":
-        print("Not made yet")
-        # run func
     elif option == "e":
         prog_stop = True
         break

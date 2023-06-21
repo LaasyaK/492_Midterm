@@ -1,4 +1,12 @@
-import calendar                 # *** DONE ***
+"""
+Author: Laasya Kallepalli
+Date: 6/20/2023
+Purpose: Generates fake user data to use to test the other files and functions
+Input(s): needs 3 commandline arguments, inputted as an example '-year1 2012 -year2 2015 -file AnnualExpenseData'
+Output(s): creates a file for each year containing fake user data in the folder name after '-file'
+"""
+
+import calendar
 import datetime
 import random
 import re

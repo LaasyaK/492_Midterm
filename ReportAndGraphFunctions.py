@@ -1,7 +1,9 @@
-# TODO GRAPH FUNCS
-# TODO TO ALL LEGENDS ADD NOTE: IF AMOUNT_DUE NOT SHOWN AMOUNT_DUE = AMOUNT_PAID
-
-
+"""
+Author: Laasya Kallepalli
+Date: 6/20/2023
+Purpose: Holds the functions that make the Reports and Graphs
+Functions: report, graph
+"""
 
 import re
 import os
@@ -9,6 +11,7 @@ import datetime
 import csv
 import calendar
 from matplotlib import pyplot as plt
+import numpy as np
 from OtherFunctions import search_all_expense_data
 
 
@@ -27,10 +30,21 @@ with open("DefaultsRecord.txt", 'r', newline='') as defaults:
     Expense_Category = list(Expense_Dict.keys())
     Expense_Name = list(Expense_Dict.values())
 
+new_Expense_Name = []
+for group in range(0, len(Expense_Name)):
+    for elem in range(len(Expense_Name[group])):
+        new_Expense_Name.append(str(Expense_Name[group][elem]))
 
-# function to run when user wants reports on expenses
+
+
 def report():
-
+    """
+    Author: Laasya Kallepalli
+    Date: 6/20/2023
+    Purpose: Prints a menu of the type of reports and asks user to pick an option
+    Input(s): asks the user for an option based on the menu
+    Output(s): runs the options for the reports
+    """
     print("\nMaking a Report__________________________________________________________________________________________")
 
     # give user menu and asks for option
@@ -115,9 +129,7 @@ def report():
             years = re.findall(r'(\d.*?)Mon', str(years_files))
 
             try:
-                if int(year1) < 1980 or int(year1) > datetime.date.today().year:
-                    print("Can't input an invalid year, try again.\n")
-                elif not(year1 in years):
+                if not(year1 in years) or int(year1) < 1980 or int(year1) > datetime.date.today().year:
                     print("Can't input a year with no data available, try again.\n")
                 else:
                     not_valid = False
@@ -135,11 +147,9 @@ def report():
                 return 0
 
             try:
-                if int(year2) < 1980 or int(year2) > datetime.date.today().year:
-                    print("Can't input an invalid year, try again.\n")
-                elif int(year2) < int(year1):
+                if int(year2) < int(year1):
                     print("Can't input an end year that is smaller than the start year, try again.\n")
-                elif not (year2 in years):
+                elif not (year2 in years) or int(year2) < 1980 or int(year2) > datetime.date.today().year:
                     print("Can't input a year with no data available, try again.\n")
                 else:
                     not_valid = False
@@ -178,21 +188,21 @@ def report():
         # add rows of data to csv file in ExpenseReports
         current_folder = os.path.dirname(os.path.abspath(__file__))
         if int(report_type) == 0:
-            filename = current_folder + "\\ExpenseReports\\" + str(categ_pick) + "_Category_Expense_" + str(year1)\
-                       + "_to_" +str(year2) + ".csv"
+            report_name = str(categ_pick) + "_Category_Expense_" + str(year1) + "_to_" +str(year2) + ".csv"
+            filename = current_folder + "\\ExpenseReports\\" + report_name
             with open(filename, 'w', newline='') as f:
                 writer = csv.writer(f)
                 writer.writerows(data_for_report)
 
         # add rows of data to txt file in ExpenseReports
         else:
-            filename = current_folder + "\\ExpenseReports\\" + str(categ_pick) + "_Category_Expense_" + str(year1)\
-                       + "_to_" + str(year2) + ".txt"
+            report_name = str(categ_pick) + "_Category_Expense_" + str(year1) + "_to_" + str(year2) + ".txt"
+            filename = current_folder + "\\ExpenseReports\\" + report_name
             with open(filename, 'w') as f:
                 for n in data_for_report:
                     f.write(str(n) + "\n")
 
-        print("Report made")
+        print("\nReport made. Report is called " + report_name + ". It is stored in the folder ExpenseReports.")
 
 
     # *** making 2nd report ***
@@ -255,9 +265,7 @@ def report():
             years = re.findall(r'(\d.*?)Mon', str(years_files))
 
             try:
-                if int(year1) < 1980 or int(year1) > datetime.date.today().year:
-                    print("Can't input an invalid year, try again.\n")
-                elif not (year1 in years):
+                if not (year1 in years) or int(year1) < 1980 or int(year1) > datetime.date.today().year:
                     print("Can't input a year with no data available, try again.\n")
                 else:
                     not_valid = False
@@ -276,11 +284,9 @@ def report():
                 return 0
 
             try:
-                if int(year2) < 1980 or int(year2) > datetime.date.today().year:
-                    print("Can't input an invalid year, try again.\n")
-                elif int(year2) < int(year1):
+                if int(year2) < int(year1):
                     print("Can't input an end year that is smaller than the start year, try again.\n")
-                elif not (year2 in years):
+                elif not (year2 in years) or int(year2) < 1980 or int(year2) > datetime.date.today().year:
                     print("Can't input a year with no data available, try again.\n")
                 else:
                     not_valid = False
@@ -331,21 +337,23 @@ def report():
         # add rows of data to csv file in ExpenseReports
         current_folder = os.path.dirname(os.path.abspath(__file__))
         if int(report_type) == 0:
-            filename = current_folder + "\\ExpenseReports\\" + "Each_Expense_Name_Expense_in_" + \
+            report_name = "Each_Expense_Name_Expense_in_" + \
                        str(Expense_Category[int(categ_pick)]) + "_" + str(year1) + "_to_" + str(year2) + ".csv"
+            filename = current_folder + "\\ExpenseReports\\" + report_name
             with open(filename, 'w', newline='') as f:
                 writer = csv.writer(f)
                 writer.writerows(data_for_report)
 
         # add rows of data to txt file in ExpenseReports
         else:
-            filename = current_folder + "\\ExpenseReports\\" + "Each_Expense_Name_Expense_in_" + \
+            report_name = "Each_Expense_Name_Expense_in_" + \
                        str(Expense_Category[int(categ_pick)]) + "_" + str(year1) + "_to_" + str(year2) + ".txt"
+            filename = current_folder + "\\ExpenseReports\\" + report_name
             with open(filename, 'w') as f:
                 for n in data_for_report:
                     f.write(str(n) + "\n")
 
-        print("Report made")
+        print("\nReport made. Report is called " + report_name + ". It is stored in the folder ExpenseReports.")
 
 
     # *** making the 3rd report ***
@@ -495,25 +503,32 @@ def report():
         # add rows of data to csv file in ExpenseReports
         current_folder = os.path.dirname(os.path.abspath(__file__))
         if int(report_type) == 0:
-            filename = current_folder + "\\ExpenseReports\\" + "Monthly_Expenses_for_" + str(year) + ".csv"
+            report_name = "Monthly_Expenses_for_" + str(year) + ".csv"
+            filename = current_folder + "\\ExpenseReports\\" + report_name
             with open(filename, 'w', newline='') as f:
                 writer = csv.writer(f)
                 writer.writerows(data_for_report)
 
         # add rows of data to txt file in ExpenseReports
         else:
-            filename = current_folder + "\\ExpenseReports\\" + "Monthly_Expenses_for_" + str(year) + ".txt"
+            report_name = "Monthly_Expenses_for_" + str(year) + ".txt"
+            filename = current_folder + "\\ExpenseReports\\" + report_name
             with open(filename, 'w') as f:
                 for n in data_for_report:
                     f.write(str(n) + "\n")
 
-        print("Report made")
+        print("\nReport made. Report is called " + report_name + ". It is stored in the folder ExpenseReports.")
 
 
 
-
-# function to run when user wants graphs
-def graph():            # TODO TO ALL LEGENDS ADD NOTE: IF AMOUNT_DUE NOT SHOWN AMOUNT_DUE = AMOUNT_PAID
+def graph():
+    """
+    Author: Laasya Kallepalli
+    Date: 6/20/2023
+    Purpose: Prints a menu of the type of graphs and asks user to pick an option
+    Input(s): asks the user for an option based on the menu
+    Output(s): runs the options for the graphs
+    """
     print("\nMaking a Graph___________________________________________________________________________________________")
 
     # give user menu and asks for option
@@ -522,7 +537,7 @@ def graph():            # TODO TO ALL LEGENDS ADD NOTE: IF AMOUNT_DUE NOT SHOWN 
 
         print("\nYou will be shown a menu of options of what report can be made.")
         print("0  Bar graph for Annual Yearly Expense Category or Name for inputted range of years.")
-        print("1  Sub Bar graphs for Annual Yearly Expense Categories or Names for inputted range of years.")
+        print("1  Sub Bar graphs for Annual Yearly Expense Categories for inputted range of years.")
         print("2  Pie Chart for Annual Yearly Expense Categories or Names for a year.")
         print("3  Bar Graph for Annual Monthly Expense each month for a year.")
         option_pick = input("Which option do you want to make a report for? (type in the number "
@@ -540,7 +555,7 @@ def graph():            # TODO TO ALL LEGENDS ADD NOTE: IF AMOUNT_DUE NOT SHOWN 
             print("Can't input an input that isn't the associated 1 digit number, try again.\n")
 
 
-    # *** making the 1st graph ***                                 # *** DONE ***
+    # *** making the 1st graph ***
 
     if int(option_pick) == 0:
         print("\nBar graph for Annual Yearly Expense Category or Name___________________________________________________")
@@ -623,9 +638,7 @@ def graph():            # TODO TO ALL LEGENDS ADD NOTE: IF AMOUNT_DUE NOT SHOWN 
             years = re.findall(r'(\d.*?)Mon', str(years_files))
 
             try:
-                if int(year1) < 1980 or int(year1) > datetime.date.today().year:
-                    print("Can't input an invalid year, try again.\n")
-                elif not (year1 in years):
+                if not (year1 in years) or int(year1) < 1980 or int(year1) > datetime.date.today().year:
                     print("Can't input a year with no data available, try again.\n")
                 else:
                     not_valid = False
@@ -644,11 +657,9 @@ def graph():            # TODO TO ALL LEGENDS ADD NOTE: IF AMOUNT_DUE NOT SHOWN 
                 return 0
 
             try:
-                if int(year2) < 1980 or int(year2) > datetime.date.today().year:
-                    print("Can't input an invalid year, try again.\n")
-                elif int(year2) < int(year1):
+                if int(year2) < int(year1):
                     print("Can't input an end year that is smaller than the start year, try again.\n")
-                elif not (year2 in years):
+                elif not (year2 in years) or int(year2) < 1980 or int(year2) > datetime.date.today().year:
                     print("Can't input a year with no data available, try again.\n")
                 else:
                     not_valid = False
@@ -703,35 +714,14 @@ def graph():            # TODO TO ALL LEGENDS ADD NOTE: IF AMOUNT_DUE NOT SHOWN 
             plt.xlabel("Year")
             plt.ylabel("Amount of Expense ($)")
             plt.title("The " + str(name_pick) + " Expense for Each Year " + str(year1) + " to " + str(year2))
-        plt.legend(["Amount_Due", "Amount_Paid"])
+        plt.legend(["Amount_Due", "Amount_Paid"], title="If no Amount_Due, Amount_Due = Amount_Paid")
         plt.show()
 
 
-    # *** making the 2nd graph ***     # TODO THIS CODE BLOCK IS RUNNING FOREVER
+    # *** making the 2nd graph ***
 
     elif int(option_pick) == 1:
-        print("\nSub Bar graphs for Annual Yearly Expense Categories or Names___________________________________________")
-
-        print("IN PROGRESS DIRECTED TO MAIN MENU")
-        return 0
-
-        # ask user to pick a specific expense category or name and check if input is valid
-        not_valid = True
-        while not_valid:
-
-            print("\n0  Expense_Category")
-            print("1  Expense_Name")
-            categ_name = input("Which option do you want to get data from ? (type in the number associated or type "
-                               "'main' to return to the main menu.) : ")
-            if categ_name == "main":
-                return 0
-            try:
-                if not (int(categ_name) in range(2)):
-                    print("Can't input an input that isn't the associated 1 digit number, try again.\n")
-                else:
-                    not_valid = False
-            except ValueError:
-                print("Can't input an input that isn't the associated 1 digit number, try again.\n")
+        print("\nSub Bar graphs for Annual Yearly Expense Categories__________________________________________________")
 
         # ask user to enter year1 in the range of years and validate it
         not_valid = True
@@ -751,9 +741,7 @@ def graph():            # TODO TO ALL LEGENDS ADD NOTE: IF AMOUNT_DUE NOT SHOWN 
             years = re.findall(r'(\d.*?)Mon', str(years_files))
 
             try:
-                if int(year1) < 1980 or int(year1) > datetime.date.today().year:
-                    print("Can't input an invalid year, try again.\n")
-                elif not (year1 in years):
+                if not (year1 in years) or int(year1) < 1980 or int(year1) > datetime.date.today().year:
                     print("Can't input a year with no data available, try again.\n")
                 else:
                     not_valid = False
@@ -772,11 +760,9 @@ def graph():            # TODO TO ALL LEGENDS ADD NOTE: IF AMOUNT_DUE NOT SHOWN 
                 return 0
 
             try:
-                if int(year2) < 1980 or int(year2) > datetime.date.today().year:
-                    print("Can't input an invalid year, try again.\n")
-                elif int(year2) < int(year1):
+                if int(year2) < int(year1):
                     print("Can't input an end year that is smaller than the start year, try again.\n")
-                elif not (year2 in years):
+                elif not (year2 in years) or int(year2) < 1980 or int(year2) > datetime.date.today().year:
                     print("Can't input a year with no data available, try again.\n")
                 else:
                     not_valid = False
@@ -790,44 +776,18 @@ def graph():            # TODO TO ALL LEGENDS ADD NOTE: IF AMOUNT_DUE NOT SHOWN 
             year_list.append(year_num)
             year_num = year_num + 1
 
-        # make x_axis list # of categories or name for all the years
-        new_Expense_Name = []
-        for group in range(0, len(Expense_Name)):
-            for elem in range(len(Expense_Name[group])):
-                new_Expense_Name.append(str(Expense_Name[group][elem]))
-        divider = []
-        for i in range(year_num):
-            if categ_name == 0:
-                for elem in Expense_Category:
-                    divider.append(elem)
-            else:
-                for elem in new_Expense_Name:
-                    divider.append(elem)
+        # make a 2D list to hold lists of expenses for each category for Amount_Due and Amount_Paid
+        Data = []
+        Data2 = []
+        for j in Expense_Category:
+            Data.append([])
+            Data2.append([])
 
-        # make the y_axis for each category or name for all the years
-        # for each year
-        due_y_axis = []
-        paid_y_axis = []
-        for year in year_list:
+        # for each data list, store the Amount_Due and Amount_Paid in each respective list
+        for n in range(len(Data)):
+            for year in year_list:
 
-            # for each category or name
-            word_num = 0
-            for word in divider:
-
-                # putting info from user into a str
-                search_criteria = "Year:" + str(year)
-                if categ_name == 0:
-                    search_criteria = search_criteria + ", Expense_Category:" + str(Expense_Category[word_num])
-                    word_num = word_num + 1
-                    if word_num >= len(Expense_Category):
-                        word_num = 0
-                else:
-                    search_criteria = search_criteria + ", Expense_Name:" + str(new_Expense_Name[word_num])
-                    word_num = word_num + 1
-                    if word_num >= len(new_Expense_Name):
-                        word_num = 0
-
-                # get all searched results based on criteria and sum up amt paid and due
+                search_criteria = "Year:" + str(year) + ", Expense_Category:" + str(Expense_Category[n])
                 to_search = search_all_expense_data(str(search_criteria))
 
                 amt_due_sum = 0
@@ -839,22 +799,35 @@ def graph():            # TODO TO ALL LEGENDS ADD NOTE: IF AMOUNT_DUE NOT SHOWN 
                     if not (each_ro[6] == ''):
                         amt_paid_sum = amt_paid_sum + float(each_ro[6])
 
-                # add the expense to category or name
-                due_y_axis.append(round(amt_due_sum, 2))
-                paid_y_axis.append(round(amt_paid_sum, 2))
+                Data[n].append(round(amt_due_sum, 2))
+                Data2[n].append(round(amt_paid_sum, 2))
 
-        # add the data to a plot and plot it
-        plt.bar(divider, due_y_axis)
-        plt.bar(divider, paid_y_axis)
-        plt.xlabel("Expenses for each Year")
-        plt.ylabel("Amount of Expense ($)")
-        plt.title("The Expenses according to Type Each Year for " + str(year1) + " to " + str(year2))
-        plt.legend(["Amount_Due", "Amount_Paid"])
+        # make 2 sub bars graph
+        fig, (ax, ax2) = plt.subplots(1, 2, figsize=(10, 5))
+
+        main_positions = np.arange(len(year_list))
+        main_width = 0.2
+        for bar_num in range(len(Data)):
+            ax.bar(main_positions + (bar_num*main_width), Data[bar_num], main_width, label=str(Expense_Category[bar_num]))
+        ax.set_xticks(main_positions + (main_width*len(Data))/2 - 0.1)
+        ax.set_xticklabels(year_list)
+        ax.set_ylabel("Amount of Expense ($)")
+        ax.set_xlabel("Year")
+        ax.set_title('Each Amount_Due Expense')
+        ax.legend()
+
+        for bar_num2 in range(len(Data2)):
+            ax2.bar(main_positions + (bar_num2*main_width), Data2[bar_num2], main_width, label=str(Expense_Category[bar_num2]))
+        ax2.set_xticks(main_positions + (main_width*len(Data2))/2 - 0.1)
+        ax2.set_xticklabels(year_list)
+        ax2.set_ylabel("Amount of Expense ($)")
+        ax2.set_xlabel("Year")
+        ax2.set_title('Each Amount_Paid Expense')
+        ax2.legend()
+
+        fig.suptitle("Each Expense for Each Category for " + str(year1) + " to " + str(year2))
+        plt.tight_layout()
         plt.show()
-
-
-
-
 
 
     # *** making the 3rd graph ***
@@ -863,28 +836,106 @@ def graph():            # TODO TO ALL LEGENDS ADD NOTE: IF AMOUNT_DUE NOT SHOWN 
         print(
             "\nPie Chart for Annual Year Expense Categories or Names__________________________________________________")
 
-        print("IN PROGRESS DIRECTED TO MAIN MENU")
-        return 0
-
-        # A pie chart which has slices representing expense in each expense type or category for a given year.
-
         # ask user to pick a specific expense category or name and check if input is valid
-        # printing and choosing a category
-        # printing and choosing a name
-        # ask user to enter year to get data from and validate it
-        # for each category or name get amount due and paid (make 2 pie charts for due and paid)
-        # make pie chart
+        not_valid = True
+        while not_valid:
+
+            print("\n0  Expense_Category")
+            print("1  Expense_Name")
+            categ_name = input("Which option do you want to get data from ? (type in the number associated or type "
+                               "'main' to return to the main menu.) : ")
+            if categ_name == "main":
+                return 0
+            try:
+                if not (int(categ_name) in range(2)):
+                    print("Can't input an input that isn't the associated 1 digit number, try again.\n")
+                else:
+                    not_valid = False
+            except ValueError:
+                print("Can't input an input that isn't the associated 1 digit number, try again.\n")
+            categ_name = int(categ_name)
+
+        # ask user to enter a year and validate it
+        not_valid = True
+        while not_valid:
+
+            year1 = input(
+                "\nFor what year do you want to get data from? (needs to be in format"
+                " yyyy, needs to be a year that has data available, "
+                "or type 'main' to return to the main menu.) :  ")
+            if year1 == "main":
+                return 0
+
+            # collecting all the years available
+            current_folder = os.path.dirname(os.path.abspath(__file__))
+            filename = current_folder + "\\AnnualExpenseData"
+            years_files = os.listdir(filename)
+            years = re.findall(r'(\d.*?)Mon', str(years_files))
+
+            try:
+                if not (year1 in years) or int(year1) < 1980 or int(year1) > datetime.date.today().year:
+                    print("Can't input a year with no data available, try again.\n")
+                else:
+                    not_valid = False
+            except ValueError:
+                print("Can't input an input that isn't the associated 1 digit number, try again.\n")
+
+        new_Expense_Name = []
+        for group in range(0, len(Expense_Name)):
+            for elem in range(len(Expense_Name[group])):
+                new_Expense_Name.append(str(Expense_Name[group][elem]))
+
+        # get data for Amount_Due for each category or name
+        due_exp_list = []
+        paid_exp_list = []
+        if categ_name == 0:
+            label = Expense_Category
+            word = "Expense Category"
+            for categ in Expense_Category:
+                search_criteria = "Year:" + str(year1) + ", Expense_Category:" + str(categ)
+                to_search = search_all_expense_data(str(search_criteria))
+
+                amt_due_sum = 0
+                for each_row in to_search:
+                    amt_due_sum = amt_due_sum + float(each_row[4])
+                due_exp_list.append(round(amt_due_sum, 2))
+
+                amt_paid_sum = 0
+                for each_ro in to_search:
+                    if not (each_ro[6] == ''):
+                        amt_paid_sum = amt_paid_sum + float(each_ro[6])
+                paid_exp_list.append(round(amt_paid_sum, 2))
+        else:
+            label = new_Expense_Name
+            word = "Expense Name"
+            for name in new_Expense_Name:
+                search_criteria = "Year:" + str(year1) + ", Expense_Name:" + str(name)
+                to_search = search_all_expense_data(str(search_criteria))
+
+                amt_due_sum = 0
+                for each_row in to_search:
+                    amt_due_sum = amt_due_sum + float(each_row[4])
+                due_exp_list.append(round(amt_due_sum, 2))
+
+                amt_paid_sum = 0
+                for each_ro in to_search:
+                    if not (each_ro[6] == ''):
+                        amt_paid_sum = amt_paid_sum + float(each_ro[6])
+                paid_exp_list.append(round(amt_paid_sum, 2))
+
+        # make 2 pie charts
+        fig, (ax1, ax2) = plt.subplots(1, 2)
+        ax1.pie(due_exp_list, labels=label, autopct='%1.1f%%', startangle=90)
+        ax1.set_title("Amount Due Expense")
+        ax2.pie(paid_exp_list, labels=label, autopct='%1.1f%%', startangle=90)
+        ax2.set_title("Amount Paid Expense")
+        fig.legend(label, loc="lower center")
+        fig.suptitle("Annual Yearly " + word + " for " + str(year1))
+        plt.tight_layout()
+        plt.show()
 
 
-
-
-
-
-
-
-
-
-    # *** making the 4th graph ***                                 # *** DONE ***
+    # *** making the 4th graph ***
 
     elif int(option_pick) == 3:
         print(
@@ -948,5 +999,5 @@ def graph():            # TODO TO ALL LEGENDS ADD NOTE: IF AMOUNT_DUE NOT SHOWN 
         plt.xlabel("Months")
         plt.ylabel("Amount of Monthly Expense ($)")
         plt.title("The Monthly Expenses for " + str(year1))
-        plt.legend(["Amount_Due", "Amount_Paid"])
+        plt.legend(["Amount_Due", "Amount_Paid"], title="If no Amount_Due, Amount_Due = Amount_Paid")
         plt.show()

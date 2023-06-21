@@ -1,85 +1,85 @@
 Year,Month,Expense_Category,Expense_Name,Amount_Due,Due_Date,Amount_Paid,Payment_Date,Payment_Method
-2011,January,CCBill,Amex,1473.02,1/23/2011,,,
-2011,January,Utility,Water,88.66,1/18/2011,,,
-2011,January,Utility,Internet,12.67,1/3/2011,,,
-2011,January,Utility,Power,91.6,1/20/2011,,,
-2011,January,Mortgage,House1,1286.28,1/19/2011,1286.28,1/29/2011,Check
-2011,January,Mortgage,House2,1933.29,1/13/2011,1933.29,1/19/2011,Check
-2011,January,Misc,Grocery,46.7,1/25/2011,46.7,1/26/2011,Bank Draft
-2011,February,CCBill,Amex,884.93,2/29/2011,884.93,2/29/2011,Bank Draft
-2011,February,Utility,Water,37.05,2/1/2011,37.05,2/3/2011,Check
-2011,February,Utility,Internet,27.76,2/3/2011,,,
-2011,February,Utility,Power,75.03,2/10/2011,75.03,2/16/2011,Bank Draft
-2011,February,Mortgage,House1,1361.73,2/19/2011,1361.73,2/24/2011,Check
-2011,February,Mortgage,House2,1517.64,2/27/2011,1517.64,2/27/2011,Check
-2011,February,Misc,Grocery,109.81,2/25/2011,109.81,2/28/2011,Bank Draft
-2011,March,CCBill,Amex,1366.88,3/15/2011,1366.88,3/29/2011,Bank Draft
-2011,March,Utility,Water,33.72,3/12/2011,33.72,3/26/2011,Bank Draft
-2011,March,Utility,Internet,46.1,3/11/2011,46.1,3/25/2011,Bank Draft
-2011,March,Utility,Power,75.82,3/9/2011,75.82,3/17/2011,Check
-2011,March,Mortgage,House1,1363.45,3/25/2011,1363.45,3/27/2011,Check
-2011,March,Mortgage,House2,1353.83,3/15/2011,,,
-2011,March,Misc,Grocery,80.61,3/5/2011,,,
-2011,April,CCBill,Amex,1796.25,4/21/2011,1796.25,4/28/2011,Check
-2011,April,Utility,Water,53.31,4/26/2011,,,
-2011,April,Utility,Internet,5.14,4/22/2011,5.14,4/27/2011,Check
-2011,April,Utility,Power,92.34,4/11/2011,92.34,4/25/2011,Bank Draft
-2011,April,Mortgage,House1,1743.24,4/25/2011,,,
-2011,April,Mortgage,House2,1678.99,4/11/2011,1678.99,4/18/2011,Check
-2011,April,Misc,Grocery,68.92,4/29/2011,68.92,4/29/2011,Check
-2011,May,CCBill,Amex,1653.73,5/24/2011,1653.73,5/29/2011,Bank Draft
-2011,May,Utility,Water,21.45,5/13/2011,21.45,5/15/2011,Bank Draft
-2011,May,Utility,Internet,6.3,5/28/2011,6.3,5/28/2011,Check
-2011,May,Utility,Power,80.74,5/4/2011,80.74,5/7/2011,Bank Draft
-2011,May,Mortgage,House1,1866.76,5/1/2011,1866.76,5/21/2011,Bank Draft
-2011,May,Mortgage,House2,1397.06,5/7/2011,1397.06,5/14/2011,Bank Draft
-2011,May,Misc,Grocery,74.36,5/15/2011,74.36,5/25/2011,Bank Draft
-2011,June,CCBill,Amex,1428.21,6/13/2011,1428.21,6/18/2011,Check
-2011,June,Utility,Water,81.16,6/27/2011,81.16,6/28/2011,Bank Draft
-2011,June,Utility,Internet,19.09,6/26/2011,19.09,6/26/2011,Bank Draft
-2011,June,Utility,Power,91.32,6/20/2011,91.32,6/27/2011,Bank Draft
-2011,June,Mortgage,House1,1101.17,6/15/2011,1101.17,6/21/2011,Bank Draft
-2011,June,Mortgage,House2,1124.43,6/1/2011,,,
-2011,June,Misc,Grocery,90.1,6/10/2011,90.1,6/17/2011,Bank Draft
-2011,July,CCBill,Amex,1520.12,7/26/2011,1520.12,7/28/2011,Bank Draft
-2011,July,Utility,Water,77.84,7/27/2011,77.84,7/27/2011,Check
-2011,July,Utility,Internet,11.07,7/18/2011,,,
-2011,July,Utility,Power,101.8,7/20/2011,,,
-2011,July,Mortgage,House1,1335.35,7/1/2011,1335.35,7/18/2011,Check
-2011,July,Mortgage,House2,1421.47,7/3/2011,1421.47,7/12/2011,Check
-2011,July,Misc,Grocery,22.38,7/24/2011,22.38,7/28/2011,Bank Draft
-2011,August,CCBill,Amex,711.03,8/21/2011,711.03,8/23/2011,Bank Draft
-2011,August,Utility,Water,67.85,8/8/2011,67.85,8/8/2011,Bank Draft
-2011,August,Utility,Internet,18.43,8/5/2011,18.43,8/16/2011,Bank Draft
-2011,August,Utility,Power,104.46,8/20/2011,104.46,8/28/2011,Bank Draft
-2011,August,Mortgage,House1,1549.86,8/28/2011,1549.86,8/28/2011,Bank Draft
-2011,August,Mortgage,House2,1980.2,8/12/2011,1980.2,8/27/2011,Check
-2011,August,Misc,Grocery,41.95,8/8/2011,,,
-2011,September,CCBill,Amex,1761.88,9/2/2011,1761.88,9/18/2011,Check
-2011,September,Utility,Water,51.89,9/16/2011,51.89,9/16/2011,Check
-2011,September,Utility,Internet,43.29,9/4/2011,43.29,9/29/2011,Check
-2011,September,Utility,Power,73.27,9/17/2011,73.27,9/20/2011,Bank Draft
-2011,September,Mortgage,House1,1457.79,9/18/2011,1457.79,9/22/2011,Check
-2011,September,Mortgage,House2,1731.92,9/15/2011,1731.92,9/26/2011,Bank Draft
-2011,September,Misc,Grocery,85.1,9/16/2011,85.1,9/22/2011,Check
-2011,October,CCBill,Amex,893.5,10/28/2011,,,
-2011,October,Utility,Water,25.19,10/26/2011,,,
-2011,October,Utility,Internet,13.68,10/29/2011,,,
-2011,October,Utility,Power,102.05,10/2/2011,,,
-2011,October,Mortgage,House1,1594.95,10/3/2011,1594.95,10/24/2011,Check
-2011,October,Mortgage,House2,1507.65,10/22/2011,1507.65,10/24/2011,Check
-2011,October,Misc,Grocery,21.05,10/15/2011,,,
-2011,November,CCBill,Amex,1232.45,11/21/2011,1232.45,11/28/2011,Check
-2011,November,Utility,Water,49.29,11/6/2011,49.29,11/8/2011,Check
-2011,November,Utility,Internet,30.09,11/22/2011,,,
-2011,November,Utility,Power,83.89,11/12/2011,83.89,11/20/2011,Check
-2011,November,Mortgage,House1,1295.05,11/1/2011,,,
-2011,November,Mortgage,House2,1437.04,11/2/2011,1437.04,11/2/2011,Bank Draft
-2011,November,Misc,Grocery,30.85,11/9/2011,30.85,11/20/2011,Check
-2011,December,CCBill,Amex,1229.5,12/9/2011,1229.5,12/23/2011,Bank Draft
-2011,December,Utility,Water,80.07,12/1/2011,80.07,12/21/2011,Bank Draft
-2011,December,Utility,Internet,21.48,12/19/2011,21.48,12/22/2011,Bank Draft
-2011,December,Utility,Power,90.9,12/21/2011,,,
-2011,December,Mortgage,House1,1853.57,12/2/2011,,,
-2011,December,Mortgage,House2,1804.7,12/11/2011,,,
-2011,December,Misc,Grocery,72.89,12/22/2011,72.89,12/22/2011,Bank Draft
+2011,January,CCBill,Amex,1059.14,1/11/2011,1059.14,1/22/2011,Check
+2011,January,Utility,Water,39.68,1/8/2011,39.68,1/29/2011,Check
+2011,January,Utility,Internet,44.24,1/15/2011,44.24,1/22/2011,Check
+2011,January,Utility,Power,80.27,1/25/2011,,,
+2011,January,Mortgage,House1,1199.24,1/29/2011,1199.24,1/29/2011,Bank Draft
+2011,January,Mortgage,House2,1407.48,1/10/2011,,,
+2011,January,Misc,Grocery,23.6,1/11/2011,23.6,1/23/2011,Bank Draft
+2011,February,CCBill,Amex,1370.37,2/10/2011,1370.37,2/13/2011,Check
+2011,February,Utility,Water,42.48,2/19/2011,,,
+2011,February,Utility,Internet,41.05,2/25/2011,,,
+2011,February,Utility,Power,100.15,2/13/2011,100.15,2/22/2011,Bank Draft
+2011,February,Mortgage,House1,1371.96,2/13/2011,1371.96,2/13/2011,Bank Draft
+2011,February,Mortgage,House2,1231.21,2/19/2011,1231.21,2/24/2011,Check
+2011,February,Misc,Grocery,44.79,2/10/2011,44.79,2/13/2011,Check
+2011,March,CCBill,Amex,889.65,3/15/2011,889.65,3/21/2011,Bank Draft
+2011,March,Utility,Water,67.01,3/11/2011,67.01,3/22/2011,Bank Draft
+2011,March,Utility,Internet,14.28,3/25/2011,,,
+2011,March,Utility,Power,108.71,3/7/2011,,,
+2011,March,Mortgage,House1,1624.5,3/15/2011,,,
+2011,March,Mortgage,House2,1569.8,3/13/2011,,,
+2011,March,Misc,Grocery,39.48,3/11/2011,,,
+2011,April,CCBill,Amex,827.38,4/28/2011,827.38,4/28/2011,Check
+2011,April,Utility,Water,45.28,4/17/2011,,,
+2011,April,Utility,Internet,34.81,4/18/2011,,,
+2011,April,Utility,Power,74.51,4/26/2011,74.51,4/28/2011,Bank Draft
+2011,April,Mortgage,House1,1862.81,4/14/2011,1862.81,4/24/2011,Bank Draft
+2011,April,Mortgage,House2,1698.61,4/21/2011,1698.61,4/23/2011,Bank Draft
+2011,April,Misc,Grocery,94.1,4/23/2011,94.1,4/27/2011,Check
+2011,May,CCBill,Amex,982.44,5/18/2011,982.44,5/26/2011,Check
+2011,May,Utility,Water,69.3,5/23/2011,69.3,5/28/2011,Check
+2011,May,Utility,Internet,37.43,5/1/2011,37.43,5/23/2011,Check
+2011,May,Utility,Power,74.4,5/27/2011,74.4,5/28/2011,Bank Draft
+2011,May,Mortgage,House1,1633.53,5/25/2011,,,
+2011,May,Mortgage,House2,1433.76,5/1/2011,1433.76,5/15/2011,Bank Draft
+2011,May,Misc,Grocery,86.7,5/26/2011,,,
+2011,June,CCBill,Amex,622.35,6/13/2011,622.35,6/27/2011,Bank Draft
+2011,June,Utility,Water,22.1,6/10/2011,22.1,6/20/2011,Check
+2011,June,Utility,Internet,9.59,6/18/2011,,,
+2011,June,Utility,Power,97.9,6/6/2011,,,
+2011,June,Mortgage,House1,1374.0,6/28/2011,1374.0,6/29/2011,Check
+2011,June,Mortgage,House2,1088.87,6/13/2011,,,
+2011,June,Misc,Grocery,66.92,6/28/2011,66.92,6/29/2011,Check
+2011,July,CCBill,Amex,1190.47,7/12/2011,1190.47,7/13/2011,Check
+2011,July,Utility,Water,89.12,7/22/2011,,,
+2011,July,Utility,Internet,47.92,7/16/2011,47.92,7/22/2011,Check
+2011,July,Utility,Power,95.04,7/7/2011,95.04,7/9/2011,Bank Draft
+2011,July,Mortgage,House1,1974.96,7/11/2011,,,
+2011,July,Mortgage,House2,1048.14,7/2/2011,,,
+2011,July,Misc,Grocery,64.79,7/13/2011,64.79,7/29/2011,Bank Draft
+2011,August,CCBill,Amex,1305.01,8/6/2011,1305.01,8/25/2011,Bank Draft
+2011,August,Utility,Water,46.49,8/14/2011,46.49,8/22/2011,Bank Draft
+2011,August,Utility,Internet,20.17,8/18/2011,20.17,8/25/2011,Bank Draft
+2011,August,Utility,Power,89.67,8/6/2011,89.67,8/26/2011,Bank Draft
+2011,August,Mortgage,House1,1855.33,8/6/2011,1855.33,8/22/2011,Check
+2011,August,Mortgage,House2,1305.8,8/4/2011,1305.8,8/7/2011,Bank Draft
+2011,August,Misc,Grocery,101.47,8/22/2011,101.47,8/29/2011,Check
+2011,September,CCBill,Amex,1780.03,9/8/2011,,,
+2011,September,Utility,Water,49.74,9/19/2011,49.74,9/24/2011,Bank Draft
+2011,September,Utility,Internet,35.95,9/9/2011,35.95,9/12/2011,Bank Draft
+2011,September,Utility,Power,107.06,9/4/2011,,,
+2011,September,Mortgage,House1,1394.9,9/16/2011,1394.9,9/16/2011,Bank Draft
+2011,September,Mortgage,House2,1658.99,9/6/2011,1658.99,9/20/2011,Bank Draft
+2011,September,Misc,Grocery,29.57,9/14/2011,29.57,9/19/2011,Bank Draft
+2011,October,CCBill,Amex,1564.37,10/26/2011,1564.37,10/27/2011,Bank Draft
+2011,October,Utility,Water,38.76,10/28/2011,38.76,10/28/2011,Bank Draft
+2011,October,Utility,Internet,48.14,10/1/2011,48.14,10/19/2011,Check
+2011,October,Utility,Power,93.35,10/13/2011,93.35,10/24/2011,Bank Draft
+2011,October,Mortgage,House1,1171.79,10/1/2011,1171.79,10/18/2011,Bank Draft
+2011,October,Mortgage,House2,1306.26,10/5/2011,1306.26,10/21/2011,Bank Draft
+2011,October,Misc,Grocery,70.82,10/5/2011,70.82,10/27/2011,Bank Draft
+2011,November,CCBill,Amex,1769.85,11/14/2011,1769.85,11/28/2011,Bank Draft
+2011,November,Utility,Water,81.16,11/3/2011,81.16,11/11/2011,Check
+2011,November,Utility,Internet,19.97,11/11/2011,19.97,11/25/2011,Check
+2011,November,Utility,Power,92.88,11/1/2011,92.88,11/11/2011,Check
+2011,November,Mortgage,House1,1318.9,11/8/2011,,,
+2011,November,Mortgage,House2,1858.9,11/3/2011,,,
+2011,November,Misc,Grocery,68.97,11/5/2011,,,
+2011,December,CCBill,Amex,1544.07,12/15/2011,1544.07,12/28/2011,Bank Draft
+2011,December,Utility,Water,25.14,12/5/2011,,,
+2011,December,Utility,Internet,46.53,12/14/2011,,,
+2011,December,Utility,Power,96.19,12/8/2011,96.19,12/16/2011,Check
+2011,December,Mortgage,House1,1080.48,12/29/2011,1080.48,12/29/2011,Check
+2011,December,Mortgage,House2,1945.55,12/9/2011,1945.55,12/24/2011,Check
+2011,December,Misc,Grocery,101.58,12/29/2011,,,
