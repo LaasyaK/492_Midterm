@@ -10,6 +10,7 @@ import datetime
 import calendar
 import os
 import csv
+import platform
 
 
 
@@ -26,6 +27,8 @@ with open("DefaultsRecord.txt", 'r', newline='') as defaults:
     Expense_Dict = eval(Expense_Dict)
     Expense_Category = list(Expense_Dict.keys())
     Expense_Name = list(Expense_Dict.values())
+
+operating_system = platform.system()
 
 
 def search_validity(search_crit):
@@ -472,7 +475,10 @@ def search_all_expense_data(search_crit):
         else:
             year_search = year_input2.group(1)
         current_folder = os.path.dirname(os.path.abspath(__file__))
-        filename = current_folder + "\\AnnualExpenseData\\" + str(year_search) + "MonthlyExpenses.csv"
+        if operating_system == "Windows":
+            filename = current_folder + "\\AnnualExpenseData\\" + str(year_search) + "MonthlyExpenses.csv"
+        else:
+            filename = current_folder + "/AnnualExpenseData/" + str(year_search) + "MonthlyExpenses.csv"
 
         # data for that year doesn't exist
         if not (os.path.exists(filename)):
@@ -517,7 +523,10 @@ def search_all_expense_data(search_crit):
 
         # find how many files in the AnnualExpenseData folder
         current_folder = os.path.dirname(os.path.abspath(__file__))
-        filename = current_folder + "\\AnnualExpenseData"
+        if operating_system == "Windows":
+            filename = current_folder + "\\AnnualExpenseData"
+        else:
+            filename = current_folder + "/AnnualExpenseData"
         years_files = os.listdir(filename)
         years_files_count = len(os.listdir(filename))
 
@@ -526,7 +535,10 @@ def search_all_expense_data(search_crit):
 
         # open each file and put all the data into files_2d_array
         for file in years_files:
-            filename = current_folder + "\\AnnualExpenseData\\" + str(file)
+            if operating_system == "Windows":
+                filename = current_folder + "\\AnnualExpenseData\\" + str(file)
+            else:
+                filename = current_folder + "/AnnualExpenseData/" + str(file)
             with open(filename, 'r') as f:
                 reader = csv.reader(f)
                 for row in reader:

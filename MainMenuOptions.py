@@ -10,6 +10,7 @@ import calendar
 import re
 import csv
 import os
+import platform
 from OtherFunctions import search_validity
 from OtherFunctions import date_validity
 
@@ -33,6 +34,8 @@ new_Expense_Name = []
 for group in range(0, len(Expense_Name)):
     for elem in range(len(Expense_Name[group])):
         new_Expense_Name.append(str(Expense_Name[group][elem]))
+
+operating_system = platform.system()
 
 
 
@@ -234,7 +237,10 @@ def add_new_expense():
             return 0
         elif response == "y":
             current_folder = os.path.dirname(os.path.abspath(__file__))
-            filename = current_folder + "\\AnnualExpenseData\\" + str(year_change) + "MonthlyExpenses.csv"
+            if operating_system == "Windows":
+                filename = current_folder + "\\AnnualExpenseData\\" + str(year_change) + "MonthlyExpenses.csv"
+            else:
+                filename = current_folder + "/AnnualExpenseData/" + str(year_change) + "MonthlyExpenses.csv"
             row = []
             row.append(str(year_change))
             row.append(str(month_change))
@@ -319,7 +325,10 @@ def search_mod_expense():
         else:
             year_search = year_input2.group(1)
         current_folder = os.path.dirname(os.path.abspath(__file__))
-        filename = current_folder + "\\AnnualExpenseData\\" + str(year_search) + "MonthlyExpenses.csv"
+        if operating_system == "Windows":
+            filename = current_folder + "\\AnnualExpenseData\\" + str(year_search) + "MonthlyExpenses.csv"
+        else:
+            filename = current_folder + "/AnnualExpenseData/" + str(year_search) + "MonthlyExpenses.csv"
 
         # data for that year doesn't exist
         if not(os.path.exists(filename)):
@@ -460,7 +469,10 @@ def search_mod_expense():
 
         # find how many files in the AnnualExpenseData folder
         current_folder = os.path.dirname(os.path.abspath(__file__))
-        filename = current_folder + "\\AnnualExpenseData"
+        if operating_system == "Windows":
+            filename = current_folder + "\\AnnualExpenseData"
+        else:
+            filename = current_folder + "/AnnualExpenseData"
         years_files = os.listdir(filename)
         years_files_count = len(os.listdir(filename))
 
@@ -469,7 +481,10 @@ def search_mod_expense():
 
         # open each file and put all the data into files_2d_array
         for file in years_files:
-            filename = current_folder + "\\AnnualExpenseData\\" + str(file)
+            if operating_system == "Windows":
+                filename = current_folder + "\\AnnualExpenseData\\" + str(file)
+            else:
+                filename = current_folder + "/AnnualExpenseData/" + str(file)
             with open(filename, 'r') as f:
                 reader = csv.reader(f)
                 for row in reader:
@@ -586,7 +601,10 @@ def search_mod_expense():
         # make new list of which year file the record is being held
         current_year_data = []
         year = new_row[0]
-        filename = current_folder + "\\AnnualExpenseData\\" + str(year) + "MonthlyExpenses.csv"
+        if operating_system == "Windows":
+            filename = current_folder + "\\AnnualExpenseData\\" + str(year) + "MonthlyExpenses.csv"
+        else:
+            filename = current_folder + "/AnnualExpenseData/" + str(year) + "MonthlyExpenses.csv"
         try:
             with open(filename, 'r') as file:
                 reader = csv.reader(file)

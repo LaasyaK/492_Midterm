@@ -8,6 +8,7 @@ Output(s): takes user to the other functions
 
 import sys
 import re
+import platform
 from MainMenuOptions import add_new_expense                     # option a
 from MainMenuOptions import search_mod_expense                  # option b
 from MainMenuOptions import add_categ_name_method               # option c

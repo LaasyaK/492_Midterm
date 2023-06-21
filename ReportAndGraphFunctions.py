@@ -10,6 +10,7 @@ import os
 import datetime
 import csv
 import calendar
+import platform
 from matplotlib import pyplot as plt
 import numpy as np
 from OtherFunctions import search_all_expense_data
@@ -34,6 +35,8 @@ new_Expense_Name = []
 for group in range(0, len(Expense_Name)):
     for elem in range(len(Expense_Name[group])):
         new_Expense_Name.append(str(Expense_Name[group][elem]))
+
+operating_system = platform.system()
 
 
 
@@ -124,7 +127,10 @@ def report():
 
             # collecting all the years available
             current_folder = os.path.dirname(os.path.abspath(__file__))
-            filename = current_folder + "\\AnnualExpenseData"
+            if operating_system == "Windows":
+                filename = current_folder + "\\AnnualExpenseData"
+            else:
+                filename = current_folder + "/AnnualExpenseData"
             years_files = os.listdir(filename)
             years = re.findall(r'(\d.*?)Mon', str(years_files))
 
@@ -189,7 +195,10 @@ def report():
         current_folder = os.path.dirname(os.path.abspath(__file__))
         if int(report_type) == 0:
             report_name = str(categ_pick) + "_Category_Expense_" + str(year1) + "_to_" +str(year2) + ".csv"
-            filename = current_folder + "\\ExpenseReports\\" + report_name
+            if operating_system == "Windows":
+                filename = current_folder + "\\ExpenseReports\\" + report_name
+            else:
+                filename = current_folder + "/ExpenseReports/" + report_name
             with open(filename, 'w', newline='') as f:
                 writer = csv.writer(f)
                 writer.writerows(data_for_report)
@@ -197,7 +206,10 @@ def report():
         # add rows of data to txt file in ExpenseReports
         else:
             report_name = str(categ_pick) + "_Category_Expense_" + str(year1) + "_to_" + str(year2) + ".txt"
-            filename = current_folder + "\\ExpenseReports\\" + report_name
+            if operating_system == "Windows":
+                filename = current_folder + "\\ExpenseReports\\" + report_name
+            else:
+                filename = current_folder + "/ExpenseReports/" + report_name
             with open(filename, 'w') as f:
                 for n in data_for_report:
                     f.write(str(n) + "\n")
@@ -260,7 +272,10 @@ def report():
 
             # collecting all the years available
             current_folder = os.path.dirname(os.path.abspath(__file__))
-            filename = current_folder + "\\AnnualExpenseData"
+            if operating_system == "Windows":
+                filename = current_folder + "\\AnnualExpenseData"
+            else:
+                filename = current_folder + "/AnnualExpenseData"
             years_files = os.listdir(filename)
             years = re.findall(r'(\d.*?)Mon', str(years_files))
 
@@ -339,7 +354,10 @@ def report():
         if int(report_type) == 0:
             report_name = "Each_Expense_Name_Expense_in_" + \
                        str(Expense_Category[int(categ_pick)]) + "_" + str(year1) + "_to_" + str(year2) + ".csv"
-            filename = current_folder + "\\ExpenseReports\\" + report_name
+            if operating_system == "Windows":
+                filename = current_folder + "\\ExpenseReports\\" + report_name
+            else:
+                filename = current_folder + "/ExpenseReports/" + report_name
             with open(filename, 'w', newline='') as f:
                 writer = csv.writer(f)
                 writer.writerows(data_for_report)
@@ -348,7 +366,10 @@ def report():
         else:
             report_name = "Each_Expense_Name_Expense_in_" + \
                        str(Expense_Category[int(categ_pick)]) + "_" + str(year1) + "_to_" + str(year2) + ".txt"
-            filename = current_folder + "\\ExpenseReports\\" + report_name
+            if operating_system == "Windows":
+                filename = current_folder + "\\ExpenseReports\\" + report_name
+            else:
+                filename = current_folder + "/ExpenseReports/" + report_name
             with open(filename, 'w') as f:
                 for n in data_for_report:
                     f.write(str(n) + "\n")
@@ -390,7 +411,10 @@ def report():
 
             # collecting all the years available
             current_folder = os.path.dirname(os.path.abspath(__file__))
-            filename = current_folder + "\\AnnualExpenseData"
+            if operating_system == "Windows":
+                filename = current_folder + "\\AnnualExpenseData"
+            else:
+                filename = current_folder + "/AnnualExpenseData"
             years_files = os.listdir(filename)
             years = re.findall(r'(\d.*?)Mon', str(years_files))
 
@@ -504,7 +528,10 @@ def report():
         current_folder = os.path.dirname(os.path.abspath(__file__))
         if int(report_type) == 0:
             report_name = "Monthly_Expenses_for_" + str(year) + ".csv"
-            filename = current_folder + "\\ExpenseReports\\" + report_name
+            if operating_system == "Windows":
+                filename = current_folder + "\\ExpenseReports\\" + report_name
+            else:
+                filename = current_folder + "/ExpenseReports/" + report_name
             with open(filename, 'w', newline='') as f:
                 writer = csv.writer(f)
                 writer.writerows(data_for_report)
@@ -512,7 +539,10 @@ def report():
         # add rows of data to txt file in ExpenseReports
         else:
             report_name = "Monthly_Expenses_for_" + str(year) + ".txt"
-            filename = current_folder + "\\ExpenseReports\\" + report_name
+            if operating_system == "Windows":
+                filename = current_folder + "\\ExpenseReports\\" + report_name
+            else:
+                filename = current_folder + "/ExpenseReports/" + report_name
             with open(filename, 'w') as f:
                 for n in data_for_report:
                     f.write(str(n) + "\n")
@@ -633,7 +663,10 @@ def graph():
 
             # collecting all the years available
             current_folder = os.path.dirname(os.path.abspath(__file__))
-            filename = current_folder + "\\AnnualExpenseData"
+            if operating_system == "Windows":
+                filename = current_folder + "\\AnnualExpenseData"
+            else:
+                filename = current_folder + "/AnnualExpenseData"
             years_files = os.listdir(filename)
             years = re.findall(r'(\d.*?)Mon', str(years_files))
 
@@ -736,7 +769,10 @@ def graph():
 
             # collecting all the years available
             current_folder = os.path.dirname(os.path.abspath(__file__))
-            filename = current_folder + "\\AnnualExpenseData"
+            if operating_system == "Windows":
+                filename = current_folder + "\\AnnualExpenseData"
+            else:
+                filename = current_folder + "/AnnualExpenseData"
             years_files = os.listdir(filename)
             years = re.findall(r'(\d.*?)Mon', str(years_files))
 
@@ -868,7 +904,10 @@ def graph():
 
             # collecting all the years available
             current_folder = os.path.dirname(os.path.abspath(__file__))
-            filename = current_folder + "\\AnnualExpenseData"
+            if operating_system == "Windows":
+                filename = current_folder + "\\AnnualExpenseData"
+            else:
+                filename = current_folder + "/AnnualExpenseData"
             years_files = os.listdir(filename)
             years = re.findall(r'(\d.*?)Mon', str(years_files))
 
@@ -954,7 +993,10 @@ def graph():
 
             # collecting all the years available
             current_folder = os.path.dirname(os.path.abspath(__file__))
-            filename = current_folder + "\\AnnualExpenseData"
+            if operating_system == "Windows":
+                filename = current_folder + "\\AnnualExpenseData"
+            else:
+                filename = current_folder + "/AnnualExpenseData"
             years_files = os.listdir(filename)
             years = re.findall(r'(\d.*?)Mon', str(years_files))
 
@@ -1001,3 +1043,4 @@ def graph():
         plt.title("The Monthly Expenses for " + str(year1))
         plt.legend(["Amount_Due", "Amount_Paid"], title="If no Amount_Due, Amount_Due = Amount_Paid")
         plt.show()
+

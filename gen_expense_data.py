@@ -13,6 +13,7 @@ import re
 import sys
 import csv
 import os
+import platform
 
 
 
@@ -29,6 +30,8 @@ with open("DefaultsRecord.txt", 'r', newline='') as defaults:
     Expense_Dict = eval(Expense_Dict)
     Expense_Category = list(Expense_Dict.keys())
     Expense_Name = list(Expense_Dict.values())
+
+operating_system = platform.system()
 
 # checking for command line arguments
 if len(sys.argv) < 7:
@@ -122,7 +125,10 @@ for i in range(0, years_length):
 
     # putting year data in existing or new file
     current_folder = os.path.dirname(os.path.abspath(__file__))
-    insert_filename = current_folder + "\\AnnualExpenseData\\" + year_filename
+    if operating_system == "Windows":
+        insert_filename = current_folder + "\\AnnualExpenseData\\" + year_filename
+    else:
+        insert_filename = current_folder + "/AnnualExpenseData/" + year_filename
     try:
         with open(insert_filename, 'a', newline='') as file:
             add = csv.writer(file)
