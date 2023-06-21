@@ -482,7 +482,7 @@ def search_all_expense_data(search_crit):
 
         # data for that year doesn't exist
         if not (os.path.exists(filename)):
-            print("The year entered doesn't have data, so no data will be printed. Being directed to the main menu.")
+            print("The year entered or range doesn't have data, so no data will be printed. Being directed to the main menu.")
             return 0
 
         # data for that year exists

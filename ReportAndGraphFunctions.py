@@ -179,6 +179,8 @@ def report():
 
             # get all searched results based on criteria and sum up amt paid and due
             to_search = search_all_expense_data(str(search_criteria))
+            if to_search == 0:
+                return 0
 
             amt_due_sum = 0
             for each_row in to_search:
@@ -334,6 +336,8 @@ def report():
 
                 # get all searched results based on criteria and sum up amt paid and due
                 to_search = search_all_expense_data(str(search_criteria))
+                if to_search == 0:
+                    return 0
 
                 amt_due_sum = 0
                 for each_row in to_search:
@@ -431,6 +435,8 @@ def report():
         # get all the data for the specified year
         search_criteria = "Year:" + year
         to_search = search_all_expense_data(str(search_criteria))
+        if to_search == 0:
+            return 0
 
         # for each row sum amount due and paid expenses for each month
         jan1 = 0
@@ -721,6 +727,8 @@ def graph():
 
             # get all searched results based on criteria and sum up amt paid and due
             to_search = search_all_expense_data(str(search_criteria))
+            if to_search == 0:
+                return 0
 
             amt_due_sum = 0
             for each_row in to_search:
@@ -825,6 +833,8 @@ def graph():
 
                 search_criteria = "Year:" + str(year) + ", Expense_Category:" + str(Expense_Category[n])
                 to_search = search_all_expense_data(str(search_criteria))
+                if to_search == 0:
+                    return 0
 
                 amt_due_sum = 0
                 for each_row in to_search:
@@ -933,6 +943,8 @@ def graph():
             for categ in Expense_Category:
                 search_criteria = "Year:" + str(year1) + ", Expense_Category:" + str(categ)
                 to_search = search_all_expense_data(str(search_criteria))
+                if to_search == 0:
+                    return 0
 
                 amt_due_sum = 0
                 for each_row in to_search:
@@ -950,6 +962,8 @@ def graph():
             for name in new_Expense_Name:
                 search_criteria = "Year:" + str(year1) + ", Expense_Name:" + str(name)
                 to_search = search_all_expense_data(str(search_criteria))
+                if to_search == 0:
+                    return 0
 
                 amt_due_sum = 0
                 for each_row in to_search:
@@ -1020,6 +1034,8 @@ def graph():
 
             search_criteria = "Year:" + str(year1) + ", Month:" + month
             to_search = search_all_expense_data(str(search_criteria))
+            if to_search == 0:
+                return 0
 
             amt_due_sum = 0
             for each_row in to_search:
