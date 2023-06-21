@@ -1,0 +1,170 @@
+Year,Month,Expense_Category,Expense_Name,Amount_Due,Due_Date,Amount_Paid,Payment_Date,Payment_Method
+2002,January,CCBill,Amex,679.48,1/5/2002,679.48,1/26/2002,Check
+2002,January,Utility,Water,85.24,1/15/2002,85.24,1/15/2002,Bank Draft
+2002,January,Utility,Internet,42.02,1/28/2002,42.02,1/28/2002,Check
+2002,January,Utility,Power,97.76,1/3/2002,97.76,1/11/2002,Check
+2002,January,Mortgage,House1,1971.26,1/5/2002,1971.26,1/8/2002,Bank Draft
+2002,January,Mortgage,House2,1433.24,1/11/2002,,,
+2002,January,Misc,Grocery,94.48,1/11/2002,94.48,1/14/2002,Bank Draft
+2002,February,CCBill,Amex,615.75,2/2/2002,615.75,2/16/2002,Bank Draft
+2002,February,Utility,Water,88.37,2/13/2002,,,
+2002,February,Utility,Internet,24.57,2/27/2002,,,
+2002,February,Utility,Power,77.68,2/10/2002,77.68,2/21/2002,Check
+2002,February,Mortgage,House1,1483.56,2/7/2002,1483.56,2/10/2002,Bank Draft
+2002,February,Mortgage,House2,1385.02,2/28/2002,1385.02,2/29/2002,Check
+2002,February,Misc,Grocery,36.37,2/13/2002,,,
+2002,March,CCBill,Amex,1639.57,3/4/2002,1639.57,3/10/2002,Bank Draft
+2002,March,Utility,Water,48.43,3/6/2002,48.43,3/26/2002,Bank Draft
+2002,March,Utility,Internet,29.0,3/5/2002,29.0,3/23/2002,Check
+2002,March,Utility,Power,77.34,3/26/2002,77.34,3/26/2002,Bank Draft
+2002,March,Mortgage,House1,1705.69,3/7/2002,1705.69,3/16/2002,Bank Draft
+2002,March,Mortgage,House2,1551.24,3/3/2002,1551.24,3/19/2002,Bank Draft
+2002,March,Misc,Grocery,88.58,3/6/2002,88.58,3/9/2002,Check
+2002,April,CCBill,Amex,730.31,4/17/2002,,,
+2002,April,Utility,Water,37.68,4/18/2002,37.68,4/18/2002,Check
+2002,April,Utility,Internet,16.86,4/4/2002,,,
+2002,April,Utility,Power,96.26,4/18/2002,96.26,4/27/2002,Bank Draft
+2002,April,Mortgage,House1,1147.42,4/18/2002,1147.42,4/28/2002,Bank Draft
+2002,April,Mortgage,House2,1631.77,4/2/2002,1631.77,4/25/2002,Bank Draft
+2002,April,Misc,Grocery,106.92,4/18/2002,106.92,4/26/2002,Bank Draft
+2002,May,CCBill,Amex,1352.35,5/8/2002,,,
+2002,May,Utility,Water,62.21,5/7/2002,62.21,5/27/2002,Check
+2002,May,Utility,Internet,31.74,5/7/2002,31.74,5/27/2002,Bank Draft
+2002,May,Utility,Power,94.61,5/18/2002,94.61,5/26/2002,Bank Draft
+2002,May,Mortgage,House1,1525.99,5/12/2002,1525.99,5/27/2002,Check
+2002,May,Mortgage,House2,1416.73,5/20/2002,,,
+2002,May,Misc,Grocery,36.65,5/29/2002,36.65,5/29/2002,Bank Draft
+2002,June,CCBill,Amex,873.01,6/24/2002,873.01,6/27/2002,Check
+2002,June,Utility,Water,58.6,6/17/2002,58.6,6/29/2002,Check
+2002,June,Utility,Internet,13.94,6/27/2002,13.94,6/29/2002,Check
+2002,June,Utility,Power,98.41,6/4/2002,98.41,6/4/2002,Bank Draft
+2002,June,Mortgage,House1,1026.82,6/14/2002,1026.82,6/28/2002,Bank Draft
+2002,June,Mortgage,House2,1143.54,6/9/2002,,,
+2002,June,Misc,Grocery,76.95,6/2/2002,76.95,6/22/2002,Check
+2002,July,CCBill,Amex,1217.42,7/16/2002,1217.42,7/16/2002,Check
+2002,July,Utility,Water,71.36,7/13/2002,,,
+2002,July,Utility,Internet,19.45,7/2/2002,19.45,7/21/2002,Bank Draft
+2002,July,Utility,Power,104.0,7/20/2002,104.0,7/21/2002,Bank Draft
+2002,July,Mortgage,House1,1183.83,7/13/2002,1183.83,7/20/2002,Check
+2002,July,Mortgage,House2,1329.63,7/10/2002,1329.63,7/25/2002,Bank Draft
+2002,July,Misc,Grocery,71.45,7/29/2002,,,
+2002,August,CCBill,Amex,1082.35,8/3/2002,1082.35,8/23/2002,Bank Draft
+2002,August,Utility,Water,57.47,8/25/2002,57.47,8/26/2002,Check
+2002,August,Utility,Internet,49.51,8/19/2002,49.51,8/20/2002,Bank Draft
+2002,August,Utility,Power,85.37,8/29/2002,85.37,8/29/2002,Bank Draft
+2002,August,Mortgage,House1,1743.99,8/22/2002,1743.99,8/24/2002,Bank Draft
+2002,August,Mortgage,House2,1666.89,8/23/2002,1666.89,8/24/2002,Check
+2002,August,Misc,Grocery,95.92,8/5/2002,95.92,8/6/2002,Check
+2002,September,CCBill,Amex,1538.45,9/4/2002,1538.45,9/28/2002,Bank Draft
+2002,September,Utility,Water,30.85,9/15/2002,30.85,9/28/2002,Check
+2002,September,Utility,Internet,36.25,9/18/2002,36.25,9/21/2002,Check
+2002,September,Utility,Power,104.93,9/18/2002,104.93,9/23/2002,Bank Draft
+2002,September,Mortgage,House1,1197.53,9/6/2002,1197.53,9/26/2002,Check
+2002,September,Mortgage,House2,1278.02,9/9/2002,,,
+2002,September,Misc,Grocery,73.23,9/18/2002,73.23,9/21/2002,Check
+2002,October,CCBill,Amex,709.45,10/25/2002,709.45,10/28/2002,Bank Draft
+2002,October,Utility,Water,62.54,10/7/2002,62.54,10/27/2002,Check
+2002,October,Utility,Internet,7.07,10/15/2002,7.07,10/22/2002,Bank Draft
+2002,October,Utility,Power,92.62,10/1/2002,92.62,10/23/2002,Bank Draft
+2002,October,Mortgage,House1,1213.02,10/24/2002,1213.02,10/29/2002,Bank Draft
+2002,October,Mortgage,House2,1822.61,10/28/2002,,,
+2002,October,Misc,Grocery,27.02,10/20/2002,,,
+2002,November,CCBill,Amex,913.58,11/9/2002,913.58,11/18/2002,Check
+2002,November,Utility,Water,56.97,11/15/2002,56.97,11/25/2002,Bank Draft
+2002,November,Utility,Internet,40.94,11/9/2002,40.94,11/21/2002,Bank Draft
+2002,November,Utility,Power,83.67,11/21/2002,83.67,11/29/2002,Check
+2002,November,Mortgage,House1,1389.5,11/3/2002,1389.5,11/16/2002,Bank Draft
+2002,November,Mortgage,House2,1959.27,11/8/2002,,,
+2002,November,Misc,Grocery,70.81,11/9/2002,70.81,11/19/2002,Bank Draft
+2002,December,CCBill,Amex,694.47,12/16/2002,694.47,12/20/2002,Check
+2002,December,Utility,Water,50.59,12/25/2002,50.59,12/29/2002,Check
+2002,December,Utility,Internet,15.82,12/21/2002,15.82,12/28/2002,Check
+2002,December,Utility,Power,103.19,12/25/2002,103.19,12/29/2002,Bank Draft
+2002,December,Mortgage,House1,1186.16,12/10/2002,1186.16,12/24/2002,Check
+2002,December,Mortgage,House2,1488.27,12/27/2002,1488.27,12/27/2002,Check
+2002,December,Misc,Grocery,56.13,12/20/2002,,,
+Year,Month,Expense_Category,Expense_Name,Amount_Due,Due_Date,Amount_Paid,Payment_Date,Payment_Method
+2002,January,CCBill,Amex,641.94,1/29/2002,641.94,1/29/2002,Bank Draft
+2002,January,Utility,Water,82.32,1/25/2002,82.32,1/25/2002,Check
+2002,January,Utility,Internet,48.0,1/10/2002,,,
+2002,January,Utility,Power,74.49,1/27/2002,74.49,1/28/2002,Check
+2002,January,Mortgage,House1,1504.2,1/28/2002,1504.2,1/29/2002,Bank Draft
+2002,January,Mortgage,House2,1957.66,1/25/2002,1957.66,1/28/2002,Check
+2002,January,Misc,Grocery,69.65,1/24/2002,69.65,1/24/2002,Check
+2002,February,CCBill,Amex,1032.87,2/19/2002,1032.87,2/23/2002,Bank Draft
+2002,February,Utility,Water,83.96,2/18/2002,83.96,2/19/2002,Bank Draft
+2002,February,Utility,Internet,31.7,2/9/2002,31.7,2/13/2002,Bank Draft
+2002,February,Utility,Power,109.78,2/22/2002,109.78,2/25/2002,Check
+2002,February,Mortgage,House1,1658.26,2/19/2002,1658.26,2/28/2002,Check
+2002,February,Mortgage,House2,1978.3,2/20/2002,1978.3,2/23/2002,Check
+2002,February,Misc,Grocery,82.72,2/20/2002,82.72,2/25/2002,Check
+2002,March,CCBill,Amex,1356.45,3/17/2002,1356.45,3/29/2002,Check
+2002,March,Utility,Water,42.12,3/5/2002,42.12,3/8/2002,Check
+2002,March,Utility,Internet,49.51,3/12/2002,49.51,3/12/2002,Bank Draft
+2002,March,Utility,Power,98.52,3/13/2002,98.52,3/20/2002,Check
+2002,March,Mortgage,House1,1503.69,3/12/2002,1503.69,3/29/2002,Check
+2002,March,Mortgage,House2,1896.48,3/3/2002,,,
+2002,March,Misc,Grocery,57.9,3/9/2002,,,
+2002,April,CCBill,Amex,1422.87,4/14/2002,,,
+2002,April,Utility,Water,57.4,4/6/2002,57.4,4/22/2002,Bank Draft
+2002,April,Utility,Internet,49.25,4/27/2002,49.25,4/28/2002,Bank Draft
+2002,April,Utility,Power,103.76,4/15/2002,103.76,4/15/2002,Check
+2002,April,Mortgage,House1,1818.82,4/25/2002,1818.82,4/27/2002,Check
+2002,April,Mortgage,House2,1106.23,4/8/2002,1106.23,4/10/2002,Bank Draft
+2002,April,Misc,Grocery,100.18,4/24/2002,100.18,4/24/2002,Check
+2002,May,CCBill,Amex,1755.72,5/27/2002,1755.72,5/29/2002,Check
+2002,May,Utility,Water,83.23,5/13/2002,83.23,5/18/2002,Check
+2002,May,Utility,Internet,17.34,5/29/2002,17.34,5/29/2002,Check
+2002,May,Utility,Power,82.61,5/17/2002,82.61,5/27/2002,Check
+2002,May,Mortgage,House1,1182.34,5/23/2002,1182.34,5/28/2002,Check
+2002,May,Mortgage,House2,1446.84,5/14/2002,1446.84,5/14/2002,Bank Draft
+2002,May,Misc,Grocery,90.24,5/8/2002,90.24,5/17/2002,Bank Draft
+2002,June,CCBill,Amex,699.49,6/21/2002,699.49,6/21/2002,Check
+2002,June,Utility,Water,87.74,6/13/2002,,,
+2002,June,Utility,Internet,29.34,6/29/2002,,,
+2002,June,Utility,Power,90.04,6/14/2002,,,
+2002,June,Mortgage,House1,1441.48,6/8/2002,1441.48,6/27/2002,Bank Draft
+2002,June,Mortgage,House2,1517.3,6/15/2002,1517.3,6/18/2002,Check
+2002,June,Misc,Grocery,28.86,6/12/2002,28.86,6/18/2002,Bank Draft
+2002,July,CCBill,Amex,1197.07,7/11/2002,1197.07,7/13/2002,Check
+2002,July,Utility,Water,20.44,7/3/2002,20.44,7/19/2002,Bank Draft
+2002,July,Utility,Internet,38.75,7/12/2002,38.75,7/17/2002,Check
+2002,July,Utility,Power,84.75,7/3/2002,84.75,7/21/2002,Bank Draft
+2002,July,Mortgage,House1,1742.36,7/28/2002,1742.36,7/28/2002,Check
+2002,July,Mortgage,House2,1176.78,7/18/2002,,,
+2002,July,Misc,Grocery,58.42,7/24/2002,58.42,7/27/2002,Check
+2002,August,CCBill,Amex,1708.78,8/10/2002,,,
+2002,August,Utility,Water,24.69,8/17/2002,24.69,8/28/2002,Check
+2002,August,Utility,Internet,42.12,8/10/2002,42.12,8/26/2002,Bank Draft
+2002,August,Utility,Power,104.47,8/17/2002,,,
+2002,August,Mortgage,House1,1316.31,8/6/2002,,,
+2002,August,Mortgage,House2,1588.91,8/7/2002,1588.91,8/13/2002,Check
+2002,August,Misc,Grocery,21.36,8/13/2002,,,
+2002,September,CCBill,Amex,1628.96,9/4/2002,1628.96,9/17/2002,Check
+2002,September,Utility,Water,61.0,9/4/2002,,,
+2002,September,Utility,Internet,47.42,9/4/2002,47.42,9/25/2002,Bank Draft
+2002,September,Utility,Power,99.42,9/27/2002,99.42,9/28/2002,Check
+2002,September,Mortgage,House1,1150.38,9/17/2002,1150.38,9/20/2002,Check
+2002,September,Mortgage,House2,1881.75,9/6/2002,1881.75,9/12/2002,Bank Draft
+2002,September,Misc,Grocery,43.67,9/13/2002,43.67,9/27/2002,Check
+2002,October,CCBill,Amex,1464.36,10/7/2002,1464.36,10/26/2002,Check
+2002,October,Utility,Water,51.14,10/14/2002,51.14,10/15/2002,Check
+2002,October,Utility,Internet,8.59,10/29/2002,8.59,10/29/2002,Bank Draft
+2002,October,Utility,Power,73.05,10/18/2002,73.05,10/25/2002,Bank Draft
+2002,October,Mortgage,House1,1454.77,10/18/2002,1454.77,10/18/2002,Bank Draft
+2002,October,Mortgage,House2,1969.94,10/24/2002,1969.94,10/28/2002,Bank Draft
+2002,October,Misc,Grocery,54.67,10/6/2002,54.67,10/6/2002,Bank Draft
+2002,November,CCBill,Amex,1663.62,11/20/2002,,,
+2002,November,Utility,Water,82.53,11/21/2002,82.53,11/29/2002,Bank Draft
+2002,November,Utility,Internet,38.52,11/27/2002,,,
+2002,November,Utility,Power,90.49,11/12/2002,,,
+2002,November,Mortgage,House1,1548.6,11/12/2002,1548.6,11/19/2002,Bank Draft
+2002,November,Mortgage,House2,1749.84,11/22/2002,1749.84,11/22/2002,Bank Draft
+2002,November,Misc,Grocery,35.59,11/11/2002,35.59,11/27/2002,Check
+2002,December,CCBill,Amex,1287.21,12/10/2002,1287.21,12/24/2002,Bank Draft
+2002,December,Utility,Water,82.85,12/14/2002,82.85,12/18/2002,Check
+2002,December,Utility,Internet,30.91,12/21/2002,30.91,12/26/2002,Bank Draft
+2002,December,Utility,Power,84.53,12/2/2002,84.53,12/18/2002,Check
+2002,December,Mortgage,House1,1796.85,12/8/2002,1796.85,12/13/2002,Check
+2002,December,Mortgage,House2,1627.56,12/3/2002,1627.56,12/15/2002,Bank Draft
+2002,December,Misc,Grocery,86.83,12/13/2002,86.83,12/19/2002,Check

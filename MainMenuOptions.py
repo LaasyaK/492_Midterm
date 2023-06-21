@@ -73,7 +73,7 @@ def add_new_expense():
                              " letter of the month or type 'main' to return to the main menu.) : ")
         if month_change == "main":
             return 0
-        for month in range(0, 12):
+        for month in range(1, 13):
             if month_change == calendar.month_name[month]:
                 not_valid = False
                 break

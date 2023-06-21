@@ -1,0 +1,85 @@
+Year,Month,Expense_Category,Expense_Name,Amount_Due,Due_Date,Amount_Paid,Payment_Date,Payment_Method
+2006,January,CCBill,Amex,1563.82,1/17/2006,1563.82,1/20/2006,Check
+2006,January,Utility,Water,67.44,1/29/2006,67.44,1/29/2006,Check
+2006,January,Utility,Internet,30.49,1/28/2006,30.49,1/29/2006,Bank Draft
+2006,January,Utility,Power,93.21,1/19/2006,93.21,1/19/2006,Bank Draft
+2006,January,Mortgage,House1,1056.24,1/14/2006,,,
+2006,January,Mortgage,House2,1247.39,1/1/2006,,,
+2006,January,Misc,Grocery,62.72,1/28/2006,62.72,1/28/2006,Bank Draft
+2006,February,CCBill,Amex,1412.4,2/17/2006,,,
+2006,February,Utility,Water,62.18,2/19/2006,62.18,2/27/2006,Bank Draft
+2006,February,Utility,Internet,14.21,2/3/2006,14.21,2/15/2006,Check
+2006,February,Utility,Power,96.03,2/4/2006,96.03,2/21/2006,Check
+2006,February,Mortgage,House1,1411.14,2/16/2006,1411.14,2/23/2006,Check
+2006,February,Mortgage,House2,1313.17,2/22/2006,1313.17,2/24/2006,Check
+2006,February,Misc,Grocery,107.08,2/29/2006,,,
+2006,March,CCBill,Amex,649.2,3/22/2006,649.2,3/28/2006,Check
+2006,March,Utility,Water,36.18,3/9/2006,36.18,3/15/2006,Check
+2006,March,Utility,Internet,46.63,3/28/2006,46.63,3/29/2006,Check
+2006,March,Utility,Power,76.26,3/29/2006,76.26,3/29/2006,Bank Draft
+2006,March,Mortgage,House1,1860.57,3/3/2006,1860.57,3/19/2006,Bank Draft
+2006,March,Mortgage,House2,1342.03,3/13/2006,1342.03,3/15/2006,Bank Draft
+2006,March,Misc,Grocery,103.56,3/14/2006,103.56,3/23/2006,Bank Draft
+2006,April,CCBill,Amex,1038.27,4/23/2006,,,
+2006,April,Utility,Water,33.03,4/28/2006,33.03,4/29/2006,Bank Draft
+2006,April,Utility,Internet,18.81,4/28/2006,18.81,4/28/2006,Bank Draft
+2006,April,Utility,Power,103.77,4/28/2006,,,
+2006,April,Mortgage,House1,1644.83,4/28/2006,,,
+2006,April,Mortgage,House2,1534.56,4/13/2006,,,
+2006,April,Misc,Grocery,82.31,4/15/2006,82.31,4/28/2006,Check
+2006,May,CCBill,Amex,1644.37,5/19/2006,,,
+2006,May,Utility,Water,47.26,5/23/2006,47.26,5/27/2006,Check
+2006,May,Utility,Internet,37.38,5/16/2006,37.38,5/27/2006,Check
+2006,May,Utility,Power,96.75,5/3/2006,96.75,5/14/2006,Check
+2006,May,Mortgage,House1,1336.61,5/25/2006,,,
+2006,May,Mortgage,House2,1831.56,5/29/2006,1831.56,5/29/2006,Check
+2006,May,Misc,Grocery,28.11,5/4/2006,,,
+2006,June,CCBill,Amex,1199.41,6/20/2006,1199.41,6/24/2006,Bank Draft
+2006,June,Utility,Water,61.38,6/7/2006,61.38,6/19/2006,Check
+2006,June,Utility,Internet,43.04,6/10/2006,43.04,6/27/2006,Check
+2006,June,Utility,Power,106.93,6/27/2006,106.93,6/28/2006,Bank Draft
+2006,June,Mortgage,House1,1133.27,6/19/2006,1133.27,6/26/2006,Bank Draft
+2006,June,Mortgage,House2,1312.97,6/5/2006,,,
+2006,June,Misc,Grocery,76.49,6/6/2006,76.49,6/16/2006,Bank Draft
+2006,July,CCBill,Amex,1112.38,7/29/2006,1112.38,7/29/2006,Bank Draft
+2006,July,Utility,Water,29.07,7/3/2006,29.07,7/9/2006,Bank Draft
+2006,July,Utility,Internet,30.28,7/14/2006,30.28,7/14/2006,Bank Draft
+2006,July,Utility,Power,92.11,7/2/2006,92.11,7/21/2006,Check
+2006,July,Mortgage,House1,1363.55,7/13/2006,1363.55,7/21/2006,Bank Draft
+2006,July,Mortgage,House2,1374.46,7/19/2006,1374.46,7/24/2006,Check
+2006,July,Misc,Grocery,77.85,7/23/2006,77.85,7/23/2006,Check
+2006,August,CCBill,Amex,1482.39,8/9/2006,1482.39,8/9/2006,Check
+2006,August,Utility,Water,80.98,8/13/2006,80.98,8/22/2006,Bank Draft
+2006,August,Utility,Internet,40.77,8/12/2006,,,
+2006,August,Utility,Power,105.74,8/3/2006,105.74,8/8/2006,Check
+2006,August,Mortgage,House1,1688.84,8/19/2006,1688.84,8/19/2006,Check
+2006,August,Mortgage,House2,1635.57,8/8/2006,1635.57,8/24/2006,Check
+2006,August,Misc,Grocery,25.37,8/18/2006,25.37,8/21/2006,Bank Draft
+2006,September,CCBill,Amex,1064.31,9/23/2006,,,
+2006,September,Utility,Water,67.06,9/15/2006,,,
+2006,September,Utility,Internet,29.31,9/28/2006,,,
+2006,September,Utility,Power,79.37,9/29/2006,,,
+2006,September,Mortgage,House1,1067.47,9/24/2006,1067.47,9/28/2006,Check
+2006,September,Mortgage,House2,1548.06,9/21/2006,1548.06,9/25/2006,Check
+2006,September,Misc,Grocery,49.5,9/9/2006,49.5,9/25/2006,Bank Draft
+2006,October,CCBill,Amex,1039.89,10/15/2006,1039.89,10/27/2006,Check
+2006,October,Utility,Water,23.38,10/28/2006,23.38,10/29/2006,Bank Draft
+2006,October,Utility,Internet,29.37,10/25/2006,29.37,10/26/2006,Check
+2006,October,Utility,Power,78.81,10/16/2006,78.81,10/23/2006,Bank Draft
+2006,October,Mortgage,House1,1115.76,10/8/2006,,,
+2006,October,Mortgage,House2,1974.92,10/10/2006,,,
+2006,October,Misc,Grocery,43.15,10/4/2006,43.15,10/5/2006,Bank Draft
+2006,November,CCBill,Amex,641.25,11/21/2006,641.25,11/24/2006,Check
+2006,November,Utility,Water,67.36,11/15/2006,67.36,11/26/2006,Bank Draft
+2006,November,Utility,Internet,16.7,11/3/2006,16.7,11/25/2006,Check
+2006,November,Utility,Power,91.58,11/12/2006,91.58,11/13/2006,Bank Draft
+2006,November,Mortgage,House1,1946.16,11/21/2006,1946.16,11/26/2006,Bank Draft
+2006,November,Mortgage,House2,1096.27,11/2/2006,1096.27,11/23/2006,Bank Draft
+2006,November,Misc,Grocery,21.43,11/19/2006,21.43,11/29/2006,Check
+2006,December,CCBill,Amex,1532.0,12/12/2006,1532.0,12/25/2006,Bank Draft
+2006,December,Utility,Water,81.5,12/10/2006,,,
+2006,December,Utility,Internet,14.75,12/2/2006,14.75,12/14/2006,Bank Draft
+2006,December,Utility,Power,92.3,12/29/2006,92.3,12/29/2006,Check
+2006,December,Mortgage,House1,1453.01,12/5/2006,1453.01,12/27/2006,Bank Draft
+2006,December,Mortgage,House2,1168.69,12/23/2006,1168.69,12/26/2006,Bank Draft
+2006,December,Misc,Grocery,48.4,12/7/2006,48.4,12/12/2006,Bank Draft

@@ -1,0 +1,170 @@
+Year,Month,Expense_Category,Expense_Name,Amount_Due,Due_Date,Amount_Paid,Payment_Date,Payment_Method
+2004,January,CCBill,Amex,1213.38,1/1/2004,1213.38,1/8/2004,Bank Draft
+2004,January,Utility,Water,48.93,1/26/2004,48.93,1/29/2004,Check
+2004,January,Utility,Internet,30.84,1/7/2004,30.84,1/12/2004,Check
+2004,January,Utility,Power,87.13,1/17/2004,87.13,1/18/2004,Bank Draft
+2004,January,Mortgage,House1,1165.99,1/4/2004,1165.99,1/19/2004,Check
+2004,January,Mortgage,House2,1747.43,1/27/2004,1747.43,1/29/2004,Bank Draft
+2004,January,Misc,Grocery,53.72,1/14/2004,53.72,1/19/2004,Check
+2004,February,CCBill,Amex,1641.28,2/14/2004,,,
+2004,February,Utility,Water,75.21,2/13/2004,75.21,2/15/2004,Check
+2004,February,Utility,Internet,14.84,2/4/2004,,,
+2004,February,Utility,Power,78.56,2/8/2004,78.56,2/11/2004,Bank Draft
+2004,February,Mortgage,House1,1513.74,2/15/2004,1513.74,2/21/2004,Check
+2004,February,Mortgage,House2,1433.12,2/3/2004,1433.12,2/24/2004,Bank Draft
+2004,February,Misc,Grocery,63.43,2/17/2004,63.43,2/19/2004,Check
+2004,March,CCBill,Amex,1533.41,3/9/2004,1533.41,3/25/2004,Check
+2004,March,Utility,Water,66.98,3/22/2004,66.98,3/26/2004,Check
+2004,March,Utility,Internet,47.74,3/7/2004,47.74,3/15/2004,Bank Draft
+2004,March,Utility,Power,87.44,3/17/2004,87.44,3/26/2004,Bank Draft
+2004,March,Mortgage,House1,1459.89,3/24/2004,1459.89,3/29/2004,Bank Draft
+2004,March,Mortgage,House2,1189.09,3/13/2004,1189.09,3/29/2004,Check
+2004,March,Misc,Grocery,106.79,3/2/2004,106.79,3/28/2004,Check
+2004,April,CCBill,Amex,1450.12,4/21/2004,1450.12,4/24/2004,Check
+2004,April,Utility,Water,38.28,4/4/2004,,,
+2004,April,Utility,Internet,12.72,4/11/2004,12.72,4/22/2004,Check
+2004,April,Utility,Power,71.24,4/4/2004,71.24,4/10/2004,Bank Draft
+2004,April,Mortgage,House1,1838.31,4/12/2004,1838.31,4/20/2004,Bank Draft
+2004,April,Mortgage,House2,1779.78,4/16/2004,,,
+2004,April,Misc,Grocery,55.71,4/1/2004,55.71,4/19/2004,Bank Draft
+2004,May,CCBill,Amex,1346.73,5/21/2004,1346.73,5/21/2004,Check
+2004,May,Utility,Water,53.95,5/1/2004,53.95,5/16/2004,Bank Draft
+2004,May,Utility,Internet,33.63,5/28/2004,33.63,5/29/2004,Bank Draft
+2004,May,Utility,Power,79.74,5/27/2004,79.74,5/28/2004,Bank Draft
+2004,May,Mortgage,House1,1298.39,5/15/2004,1298.39,5/19/2004,Bank Draft
+2004,May,Mortgage,House2,1315.4,5/25/2004,1315.4,5/28/2004,Check
+2004,May,Misc,Grocery,65.45,5/3/2004,,,
+2004,June,CCBill,Amex,982.17,6/1/2004,982.17,6/27/2004,Check
+2004,June,Utility,Water,55.38,6/2/2004,55.38,6/12/2004,Bank Draft
+2004,June,Utility,Internet,34.83,6/13/2004,34.83,6/23/2004,Check
+2004,June,Utility,Power,99.6,6/14/2004,99.6,6/15/2004,Bank Draft
+2004,June,Mortgage,House1,1069.17,6/13/2004,,,
+2004,June,Mortgage,House2,1300.51,6/26/2004,1300.51,6/26/2004,Bank Draft
+2004,June,Misc,Grocery,78.03,6/2/2004,78.03,6/2/2004,Bank Draft
+2004,July,CCBill,Amex,1354.65,7/15/2004,1354.65,7/29/2004,Check
+2004,July,Utility,Water,65.67,7/14/2004,65.67,7/28/2004,Check
+2004,July,Utility,Internet,36.95,7/21/2004,36.95,7/24/2004,Check
+2004,July,Utility,Power,104.39,7/15/2004,104.39,7/19/2004,Bank Draft
+2004,July,Mortgage,House1,1339.56,7/12/2004,1339.56,7/22/2004,Check
+2004,July,Mortgage,House2,1205.48,7/26/2004,1205.48,7/27/2004,Check
+2004,July,Misc,Grocery,97.37,7/21/2004,97.37,7/29/2004,Check
+2004,August,CCBill,Amex,716.01,8/18/2004,716.01,8/21/2004,Bank Draft
+2004,August,Utility,Water,29.57,8/1/2004,29.57,8/28/2004,Bank Draft
+2004,August,Utility,Internet,35.26,8/18/2004,35.26,8/27/2004,Bank Draft
+2004,August,Utility,Power,103.61,8/10/2004,103.61,8/21/2004,Check
+2004,August,Mortgage,House1,1110.38,8/22/2004,1110.38,8/29/2004,Bank Draft
+2004,August,Mortgage,House2,1645.2,8/17/2004,,,
+2004,August,Misc,Grocery,102.0,8/15/2004,,,
+2004,September,CCBill,Amex,1591.7,9/14/2004,1591.7,9/24/2004,Bank Draft
+2004,September,Utility,Water,46.98,9/22/2004,46.98,9/29/2004,Check
+2004,September,Utility,Internet,38.58,9/27/2004,38.58,9/28/2004,Check
+2004,September,Utility,Power,96.64,9/27/2004,96.64,9/27/2004,Bank Draft
+2004,September,Mortgage,House1,1320.9,9/12/2004,1320.9,9/20/2004,Bank Draft
+2004,September,Mortgage,House2,1822.69,9/12/2004,1822.69,9/28/2004,Check
+2004,September,Misc,Grocery,35.13,9/1/2004,35.13,9/24/2004,Bank Draft
+2004,October,CCBill,Amex,893.35,10/21/2004,893.35,10/21/2004,Check
+2004,October,Utility,Water,83.22,10/28/2004,,,
+2004,October,Utility,Internet,26.2,10/11/2004,,,
+2004,October,Utility,Power,79.48,10/2/2004,79.48,10/10/2004,Bank Draft
+2004,October,Mortgage,House1,1456.82,10/28/2004,1456.82,10/28/2004,Check
+2004,October,Mortgage,House2,1269.41,10/25/2004,,,
+2004,October,Misc,Grocery,45.97,10/20/2004,45.97,10/29/2004,Check
+2004,November,CCBill,Amex,821.26,11/13/2004,821.26,11/22/2004,Bank Draft
+2004,November,Utility,Water,51.39,11/3/2004,51.39,11/24/2004,Bank Draft
+2004,November,Utility,Internet,9.64,11/10/2004,9.64,11/20/2004,Bank Draft
+2004,November,Utility,Power,99.44,11/18/2004,99.44,11/28/2004,Bank Draft
+2004,November,Mortgage,House1,1063.07,11/1/2004,1063.07,11/4/2004,Bank Draft
+2004,November,Mortgage,House2,1809.15,11/7/2004,1809.15,11/24/2004,Check
+2004,November,Misc,Grocery,97.66,11/22/2004,97.66,11/25/2004,Check
+2004,December,CCBill,Amex,923.9,12/9/2004,,,
+2004,December,Utility,Water,29.4,12/14/2004,29.4,12/19/2004,Check
+2004,December,Utility,Internet,48.62,12/7/2004,48.62,12/22/2004,Bank Draft
+2004,December,Utility,Power,86.63,12/16/2004,86.63,12/17/2004,Check
+2004,December,Mortgage,House1,1159.35,12/26/2004,1159.35,12/28/2004,Bank Draft
+2004,December,Mortgage,House2,1298.76,12/23/2004,1298.76,12/26/2004,Bank Draft
+2004,December,Misc,Grocery,48.77,12/15/2004,48.77,12/21/2004,Bank Draft
+Year,Month,Expense_Category,Expense_Name,Amount_Due,Due_Date,Amount_Paid,Payment_Date,Payment_Method
+2004,January,CCBill,Amex,1305.36,1/8/2004,1305.36,1/12/2004,Bank Draft
+2004,January,Utility,Water,72.73,1/29/2004,72.73,1/29/2004,Check
+2004,January,Utility,Internet,27.94,1/15/2004,,,
+2004,January,Utility,Power,109.22,1/3/2004,109.22,1/9/2004,Check
+2004,January,Mortgage,House1,1983.78,1/22/2004,1983.78,1/27/2004,Check
+2004,January,Mortgage,House2,1915.92,1/10/2004,1915.92,1/12/2004,Bank Draft
+2004,January,Misc,Grocery,99.6,1/18/2004,99.6,1/20/2004,Check
+2004,February,CCBill,Amex,890.02,2/11/2004,890.02,2/24/2004,Bank Draft
+2004,February,Utility,Water,74.16,2/28/2004,74.16,2/28/2004,Check
+2004,February,Utility,Internet,9.43,2/13/2004,9.43,2/26/2004,Check
+2004,February,Utility,Power,73.88,2/10/2004,73.88,2/23/2004,Bank Draft
+2004,February,Mortgage,House1,1506.87,2/2/2004,1506.87,2/20/2004,Check
+2004,February,Mortgage,House2,1780.64,2/2/2004,1780.64,2/17/2004,Bank Draft
+2004,February,Misc,Grocery,40.93,2/1/2004,40.93,2/29/2004,Bank Draft
+2004,March,CCBill,Amex,1036.16,3/23/2004,1036.16,3/28/2004,Bank Draft
+2004,March,Utility,Water,88.89,3/19/2004,88.89,3/20/2004,Bank Draft
+2004,March,Utility,Internet,49.85,3/28/2004,,,
+2004,March,Utility,Power,96.71,3/9/2004,96.71,3/23/2004,Check
+2004,March,Mortgage,House1,1667.89,3/11/2004,,,
+2004,March,Mortgage,House2,1663.29,3/11/2004,1663.29,3/20/2004,Check
+2004,March,Misc,Grocery,109.12,3/26/2004,109.12,3/29/2004,Bank Draft
+2004,April,CCBill,Amex,1230.87,4/4/2004,,,
+2004,April,Utility,Water,87.24,4/18/2004,87.24,4/27/2004,Bank Draft
+2004,April,Utility,Internet,40.49,4/4/2004,40.49,4/19/2004,Bank Draft
+2004,April,Utility,Power,100.6,4/2/2004,100.6,4/26/2004,Check
+2004,April,Mortgage,House1,1533.72,4/11/2004,1533.72,4/22/2004,Bank Draft
+2004,April,Mortgage,House2,1187.27,4/3/2004,1187.27,4/26/2004,Check
+2004,April,Misc,Grocery,30.37,4/7/2004,,,
+2004,May,CCBill,Amex,638.78,5/28/2004,638.78,5/29/2004,Bank Draft
+2004,May,Utility,Water,76.71,5/14/2004,76.71,5/15/2004,Bank Draft
+2004,May,Utility,Internet,49.06,5/28/2004,49.06,5/28/2004,Check
+2004,May,Utility,Power,81.11,5/29/2004,81.11,5/29/2004,Check
+2004,May,Mortgage,House1,1861.18,5/23/2004,1861.18,5/29/2004,Bank Draft
+2004,May,Mortgage,House2,1057.09,5/1/2004,1057.09,5/4/2004,Bank Draft
+2004,May,Misc,Grocery,80.99,5/27/2004,80.99,5/27/2004,Check
+2004,June,CCBill,Amex,1648.03,6/22/2004,1648.03,6/28/2004,Bank Draft
+2004,June,Utility,Water,58.76,6/6/2004,58.76,6/7/2004,Check
+2004,June,Utility,Internet,8.9,6/12/2004,8.9,6/22/2004,Check
+2004,June,Utility,Power,100.24,6/16/2004,100.24,6/19/2004,Check
+2004,June,Mortgage,House1,1535.22,6/26/2004,,,
+2004,June,Mortgage,House2,1206.32,6/17/2004,1206.32,6/28/2004,Bank Draft
+2004,June,Misc,Grocery,40.38,6/14/2004,40.38,6/15/2004,Bank Draft
+2004,July,CCBill,Amex,1431.1,7/19/2004,1431.1,7/24/2004,Bank Draft
+2004,July,Utility,Water,30.13,7/5/2004,30.13,7/25/2004,Bank Draft
+2004,July,Utility,Internet,25.06,7/28/2004,25.06,7/29/2004,Check
+2004,July,Utility,Power,82.16,7/13/2004,82.16,7/29/2004,Check
+2004,July,Mortgage,House1,1526.41,7/29/2004,1526.41,7/29/2004,Bank Draft
+2004,July,Mortgage,House2,1646.92,7/11/2004,1646.92,7/13/2004,Check
+2004,July,Misc,Grocery,73.14,7/25/2004,,,
+2004,August,CCBill,Amex,805.47,8/10/2004,,,
+2004,August,Utility,Water,20.25,8/7/2004,,,
+2004,August,Utility,Internet,21.91,8/18/2004,21.91,8/29/2004,Bank Draft
+2004,August,Utility,Power,97.29,8/14/2004,,,
+2004,August,Mortgage,House1,1946.4,8/23/2004,,,
+2004,August,Mortgage,House2,1063.88,8/10/2004,1063.88,8/10/2004,Check
+2004,August,Misc,Grocery,29.62,8/28/2004,29.62,8/28/2004,Bank Draft
+2004,September,CCBill,Amex,1754.45,9/16/2004,1754.45,9/28/2004,Bank Draft
+2004,September,Utility,Water,60.53,9/9/2004,,,
+2004,September,Utility,Internet,7.45,9/12/2004,7.45,9/18/2004,Check
+2004,September,Utility,Power,93.35,9/2/2004,,,
+2004,September,Mortgage,House1,1874.17,9/3/2004,1874.17,9/27/2004,Bank Draft
+2004,September,Mortgage,House2,1154.36,9/15/2004,1154.36,9/28/2004,Bank Draft
+2004,September,Misc,Grocery,35.83,9/20/2004,35.83,9/21/2004,Check
+2004,October,CCBill,Amex,1030.46,10/13/2004,1030.46,10/21/2004,Bank Draft
+2004,October,Utility,Water,49.2,10/26/2004,49.2,10/26/2004,Bank Draft
+2004,October,Utility,Internet,31.55,10/19/2004,31.55,10/21/2004,Bank Draft
+2004,October,Utility,Power,98.02,10/15/2004,98.02,10/16/2004,Check
+2004,October,Mortgage,House1,1421.3,10/14/2004,1421.3,10/18/2004,Bank Draft
+2004,October,Mortgage,House2,1046.01,10/21/2004,1046.01,10/29/2004,Bank Draft
+2004,October,Misc,Grocery,27.03,10/20/2004,27.03,10/25/2004,Bank Draft
+2004,November,CCBill,Amex,1032.59,11/26/2004,1032.59,11/27/2004,Bank Draft
+2004,November,Utility,Water,55.22,11/3/2004,55.22,11/12/2004,Check
+2004,November,Utility,Internet,31.99,11/4/2004,31.99,11/22/2004,Bank Draft
+2004,November,Utility,Power,86.24,11/21/2004,,,
+2004,November,Mortgage,House1,1123.98,11/18/2004,1123.98,11/26/2004,Bank Draft
+2004,November,Mortgage,House2,1183.66,11/27/2004,,,
+2004,November,Misc,Grocery,107.49,11/17/2004,107.49,11/18/2004,Bank Draft
+2004,December,CCBill,Amex,1154.75,12/12/2004,1154.75,12/29/2004,Check
+2004,December,Utility,Water,30.59,12/10/2004,30.59,12/24/2004,Bank Draft
+2004,December,Utility,Internet,40.59,12/18/2004,40.59,12/23/2004,Bank Draft
+2004,December,Utility,Power,78.0,12/20/2004,78.0,12/29/2004,Bank Draft
+2004,December,Mortgage,House1,1739.37,12/28/2004,1739.37,12/28/2004,Bank Draft
+2004,December,Mortgage,House2,1874.18,12/21/2004,1874.18,12/27/2004,Bank Draft
+2004,December,Misc,Grocery,72.73,12/12/2004,,,

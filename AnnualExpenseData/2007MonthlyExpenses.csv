@@ -1,0 +1,85 @@
+Year,Month,Expense_Category,Expense_Name,Amount_Due,Due_Date,Amount_Paid,Payment_Date,Payment_Method
+2007,January,CCBill,Amex,739.35,1/11/2007,739.35,1/12/2007,Bank Draft
+2007,January,Utility,Water,54.71,1/13/2007,54.71,1/24/2007,Bank Draft
+2007,January,Utility,Internet,41.28,1/13/2007,41.28,1/13/2007,Check
+2007,January,Utility,Power,107.11,1/24/2007,,,
+2007,January,Mortgage,House1,1020.67,1/28/2007,1020.67,1/29/2007,Bank Draft
+2007,January,Mortgage,House2,1467.6,1/3/2007,1467.6,1/20/2007,Check
+2007,January,Misc,Grocery,21.4,1/21/2007,21.4,1/29/2007,Bank Draft
+2007,February,CCBill,Amex,1679.29,2/14/2007,1679.29,2/17/2007,Check
+2007,February,Utility,Water,85.78,2/11/2007,85.78,2/15/2007,Bank Draft
+2007,February,Utility,Internet,22.17,2/25/2007,22.17,2/28/2007,Bank Draft
+2007,February,Utility,Power,94.14,2/11/2007,94.14,2/28/2007,Check
+2007,February,Mortgage,House1,1384.02,2/28/2007,1384.02,2/29/2007,Bank Draft
+2007,February,Mortgage,House2,1851.38,2/19/2007,1851.38,2/29/2007,Check
+2007,February,Misc,Grocery,29.37,2/15/2007,29.37,2/15/2007,Check
+2007,March,CCBill,Amex,1033.79,3/27/2007,1033.79,3/28/2007,Bank Draft
+2007,March,Utility,Water,66.98,3/2/2007,66.98,3/19/2007,Bank Draft
+2007,March,Utility,Internet,8.02,3/12/2007,8.02,3/19/2007,Check
+2007,March,Utility,Power,94.45,3/18/2007,94.45,3/23/2007,Check
+2007,March,Mortgage,House1,1005.8,3/19/2007,1005.8,3/23/2007,Bank Draft
+2007,March,Mortgage,House2,1862.09,3/8/2007,,,
+2007,March,Misc,Grocery,96.72,3/22/2007,96.72,3/25/2007,Check
+2007,April,CCBill,Amex,1353.87,4/20/2007,1353.87,4/20/2007,Check
+2007,April,Utility,Water,50.37,4/21/2007,50.37,4/29/2007,Check
+2007,April,Utility,Internet,17.16,4/9/2007,,,
+2007,April,Utility,Power,85.4,4/7/2007,85.4,4/8/2007,Bank Draft
+2007,April,Mortgage,House1,1897.87,4/25/2007,1897.87,4/29/2007,Bank Draft
+2007,April,Mortgage,House2,1254.89,4/6/2007,,,
+2007,April,Misc,Grocery,29.52,4/14/2007,,,
+2007,May,CCBill,Amex,829.59,5/13/2007,829.59,5/19/2007,Check
+2007,May,Utility,Water,86.45,5/22/2007,86.45,5/28/2007,Check
+2007,May,Utility,Internet,18.26,5/20/2007,18.26,5/27/2007,Bank Draft
+2007,May,Utility,Power,109.35,5/8/2007,109.35,5/18/2007,Bank Draft
+2007,May,Mortgage,House1,1529.74,5/10/2007,1529.74,5/26/2007,Check
+2007,May,Mortgage,House2,1006.5,5/8/2007,1006.5,5/21/2007,Check
+2007,May,Misc,Grocery,63.15,5/11/2007,,,
+2007,June,CCBill,Amex,1136.09,6/12/2007,,,
+2007,June,Utility,Water,79.95,6/9/2007,79.95,6/17/2007,Check
+2007,June,Utility,Internet,19.12,6/6/2007,19.12,6/17/2007,Bank Draft
+2007,June,Utility,Power,105.13,6/5/2007,105.13,6/16/2007,Check
+2007,June,Mortgage,House1,1364.49,6/1/2007,1364.49,6/24/2007,Bank Draft
+2007,June,Mortgage,House2,1047.21,6/18/2007,1047.21,6/28/2007,Check
+2007,June,Misc,Grocery,37.1,6/19/2007,37.1,6/19/2007,Bank Draft
+2007,July,CCBill,Amex,620.35,7/7/2007,,,
+2007,July,Utility,Water,83.61,7/27/2007,,,
+2007,July,Utility,Internet,29.21,7/23/2007,29.21,7/25/2007,Bank Draft
+2007,July,Utility,Power,77.54,7/17/2007,77.54,7/20/2007,Bank Draft
+2007,July,Mortgage,House1,1368.63,7/10/2007,1368.63,7/28/2007,Bank Draft
+2007,July,Mortgage,House2,1909.26,7/16/2007,1909.26,7/28/2007,Check
+2007,July,Misc,Grocery,63.34,7/2/2007,63.34,7/18/2007,Bank Draft
+2007,August,CCBill,Amex,810.48,8/15/2007,810.48,8/22/2007,Check
+2007,August,Utility,Water,73.23,8/13/2007,73.23,8/17/2007,Check
+2007,August,Utility,Internet,39.38,8/1/2007,39.38,8/26/2007,Bank Draft
+2007,August,Utility,Power,72.07,8/26/2007,,,
+2007,August,Mortgage,House1,1354.85,8/4/2007,1354.85,8/5/2007,Check
+2007,August,Mortgage,House2,1917.43,8/4/2007,1917.43,8/27/2007,Bank Draft
+2007,August,Misc,Grocery,108.65,8/27/2007,,,
+2007,September,CCBill,Amex,738.7,9/15/2007,738.7,9/27/2007,Check
+2007,September,Utility,Water,21.01,9/19/2007,,,
+2007,September,Utility,Internet,20.54,9/11/2007,,,
+2007,September,Utility,Power,84.22,9/20/2007,84.22,9/22/2007,Bank Draft
+2007,September,Mortgage,House1,1357.18,9/19/2007,1357.18,9/29/2007,Check
+2007,September,Mortgage,House2,1209.43,9/8/2007,1209.43,9/26/2007,Bank Draft
+2007,September,Misc,Grocery,20.82,9/6/2007,20.82,9/26/2007,Check
+2007,October,CCBill,Amex,837.41,10/12/2007,,,
+2007,October,Utility,Water,32.3,10/3/2007,,,
+2007,October,Utility,Internet,13.2,10/29/2007,13.2,10/29/2007,Bank Draft
+2007,October,Utility,Power,108.05,10/29/2007,108.05,10/29/2007,Check
+2007,October,Mortgage,House1,1210.22,10/29/2007,1210.22,10/29/2007,Check
+2007,October,Mortgage,House2,1300.69,10/24/2007,,,
+2007,October,Misc,Grocery,71.05,10/9/2007,71.05,10/25/2007,Check
+2007,November,CCBill,Amex,1523.8,11/23/2007,1523.8,11/26/2007,Check
+2007,November,Utility,Water,38.01,11/3/2007,38.01,11/6/2007,Check
+2007,November,Utility,Internet,13.85,11/26/2007,,,
+2007,November,Utility,Power,86.14,11/18/2007,86.14,11/26/2007,Bank Draft
+2007,November,Mortgage,House1,1238.83,11/8/2007,1238.83,11/12/2007,Check
+2007,November,Mortgage,House2,1813.55,11/1/2007,1813.55,11/25/2007,Check
+2007,November,Misc,Grocery,103.82,11/14/2007,,,
+2007,December,CCBill,Amex,1424.46,12/7/2007,1424.46,12/14/2007,Bank Draft
+2007,December,Utility,Water,72.27,12/3/2007,,,
+2007,December,Utility,Internet,35.84,12/17/2007,35.84,12/28/2007,Bank Draft
+2007,December,Utility,Power,76.81,12/20/2007,76.81,12/26/2007,Bank Draft
+2007,December,Mortgage,House1,1280.46,12/27/2007,1280.46,12/28/2007,Check
+2007,December,Mortgage,House2,1316.75,12/6/2007,1316.75,12/28/2007,Check
+2007,December,Misc,Grocery,63.2,12/9/2007,63.2,12/28/2007,Bank Draft
