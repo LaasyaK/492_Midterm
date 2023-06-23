@@ -20,5 +20,5 @@ This program has multiple functions:
       - startYear, endYear, and folderName are command line arugments that determine the range of years and where the CSV files will be located
 
 This program was written for the ECE 492 Python in Engineering class.
-Author: Laasya Kallepalli
+Author: Laasya Kallepalli,
 Date: 6/23/2023
